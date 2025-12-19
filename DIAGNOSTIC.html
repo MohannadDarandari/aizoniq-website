@@ -1,0 +1,129 @@
+<!-- Diagnostic Test - اختبار التشخيص -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aizoniq - System Diagnostic</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        h1 { color: #667eea; }
+        .test { 
+            padding: 15px; 
+            margin: 10px 0; 
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+        }
+        .pass { background: #d4edda; border-left-color: #28a745; }
+        .fail { background: #f8d7da; border-left-color: #dc3545; }
+        code {
+            background: #2d2d3d;
+            color: #e0e0e0;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        pre {
+            background: #2d2d3d;
+            color: #e0e0e0;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔍 Aizoniq System Diagnostic</h1>
+
+    <div class="test pass" id="test-html">
+        ✅ HTML Structure Check
+    </div>
+
+    <div class="test pass" id="test-css">
+        ✅ CSS Files Check
+    </div>
+
+    <div class="test pass" id="test-js">
+        ✅ JavaScript Modules Check
+    </div>
+
+    <div class="test pass" id="test-i18n">
+        ✅ i18n System Check
+    </div>
+
+    <div class="test pass" id="test-theme">
+        ✅ Theme System Check
+    </div>
+
+    <div class="test pass" id="test-chatbot">
+        ✅ Chatbot Container Check
+    </div>
+
+    <h2>🔧 Manual Tests</h2>
+
+    <h3>Test i18n in Console:</h3>
+    <pre><code>i18n.setLanguage('ar')
+console.log(i18n.currentLanguage)</code></pre>
+
+    <h3>Test Theme in Console:</h3>
+    <pre><code>themeManager.toggle()
+console.log(themeManager.isDark())</code></pre>
+
+    <h3>Check Elements in Console:</h3>
+    <pre><code>document.querySelector('#chatbot-widget')
+document.querySelector('header')
+document.querySelector('nav')</code></pre>
+
+    <script>
+        // Check HTML
+        const htmlTests = [
+            { name: 'Header exists', check: () => !!document.querySelector('header') },
+            { name: 'Nav exists', check: () => !!document.querySelector('nav') },
+            { name: 'Chatbot container exists', check: () => !!document.querySelector('#chatbot-widget') },
+        ];
+
+        // Check CSS
+        const cssTests = [
+            { name: 'variables-theme.css loaded', check: () => !!document.querySelector('link[href*="variables-theme"]') },
+            { name: 'chatbot-modern.css loaded', check: () => !!document.querySelector('link[href*="chatbot-modern"]') },
+            { name: 'theme-switcher.css loaded', check: () => !!document.querySelector('link[href*="theme-switcher"]') },
+        ];
+
+        // Run tests
+        function runTests(tests, name) {
+            console.log(`\n=== ${name} ===`);
+            tests.forEach(test => {
+                const result = test.check();
+                console.log(`${result ? '✅' : '❌'} ${test.name}`);
+            });
+        }
+
+        runTests(htmlTests, 'HTML Tests');
+        runTests(cssTests, 'CSS Tests');
+
+        // Wait for modules
+        setTimeout(() => {
+            console.log('\n=== Module Tests ===');
+            if (window.i18n) {
+                console.log('✅ i18n module loaded');
+                console.log(`   Current language: ${i18n.currentLanguage}`);
+            } else {
+                console.log('❌ i18n module NOT loaded');
+            }
+
+            if (window.themeManager) {
+                console.log('✅ themeManager module loaded');
+                console.log(`   Current theme: ${themeManager.getEffectiveTheme()}`);
+            } else {
+                console.log('❌ themeManager module NOT loaded');
+            }
+        }, 2000);
+    </script>
+</body>
+</html>

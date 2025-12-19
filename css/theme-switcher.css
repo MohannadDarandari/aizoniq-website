@@ -1,0 +1,170 @@
+/* ================================
+   THEME & LANGUAGE SWITCHER STYLES
+   ================================ */
+
+.theme-switchers {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-left: auto;
+  padding: 0 16px;
+}
+
+[dir="rtl"] .theme-switchers {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* Switcher Button Base */
+.switcher-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.switcher-btn:hover {
+  background: var(--bg-tertiary);
+  border-color: var(--primary-color);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
+  transform: translateY(-1px);
+}
+
+.switcher-btn:active {
+  transform: translateY(0);
+}
+
+.switcher-btn:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Switcher Icon/Flag */
+.switcher-flag,
+.switcher-icon {
+  display: inline-block;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.switcher-text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Language Switcher Specific */
+.language-switcher {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+}
+
+.language-switcher:hover {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
+}
+
+/* Theme Switcher Specific */
+.theme-switcher {
+  background: linear-gradient(135deg, rgba(255, 193, 7, 0.1), rgba(244, 67, 54, 0.1));
+}
+
+.theme-switcher:hover {
+  background: linear-gradient(135deg, rgba(255, 193, 7, 0.2), rgba(244, 67, 54, 0.2));
+}
+
+/* Animation for icon toggle */
+.switcher-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-fast);
+}
+
+.switcher-btn:hover .switcher-icon {
+  transform: scale(1.1) rotate(10deg);
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+   ================================ */
+
+@media (max-width: 768px) {
+  .theme-switchers {
+    gap: 8px;
+    padding: 0 8px;
+  }
+
+  .switcher-btn {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+
+  .switcher-flag,
+  .switcher-icon {
+    font-size: 1rem;
+  }
+
+  .switcher-text {
+    display: none;
+  }
+
+  /* Show text only on small devices when needed */
+  @media (max-width: 480px) {
+    .theme-switchers {
+      gap: 6px;
+    }
+
+    .switcher-btn {
+      padding: 4px 8px;
+    }
+  }
+}
+
+/* ================================
+   DARK MODE SPECIFIC
+   ================================ */
+
+[data-theme="dark"] .switcher-btn {
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .switcher-btn:hover {
+  background: var(--bg-tertiary);
+  border-color: var(--primary-color);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+/* ================================
+   ACCESSIBILITY
+   ================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .switcher-btn,
+  .switcher-icon {
+    transition: none;
+  }
+
+  .switcher-btn:hover .switcher-icon {
+    transform: none;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: more) {
+  .switcher-btn {
+    border-width: 2px;
+  }
+
+  .switcher-btn:hover {
+    box-shadow: 0 0 0 3px var(--primary-color);
+  }
+}
