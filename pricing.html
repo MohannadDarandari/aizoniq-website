@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="pricing.title">Pricing - aizoniq</title>
+    <meta name="description" content="Flexible pricing plans for AI automation and analytics solutions">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/pricing.css">
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span>🚀 aizoniq</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" data-i18n="nav.home">Home</a>
+                <a href="services.html" data-i18n="nav.services">Services</a>
+                <a href="advanced-services.html" data-i18n="nav.advanced">Advanced AI</a>
+                <a href="features.html" data-i18n="nav.features">Features</a>
+                <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+                <a href="contact.html" data-i18n="nav.contact">Contact</a>
+                <button id="langToggle" class="lang-toggle">EN | AR</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pricing-hero">
+        <div class="hero-content">
+            <h1 data-i18n="pricing.hero.title">Simple, Transparent Pricing</h1>
+            <p data-i18n="pricing.hero.subtitle">Choose the perfect plan for your business needs</p>
+            
+            <div class="billing-toggle">
+                <span data-i18n="pricing.billing.monthly">Monthly</span>
+                <label class="switch">
+                    <input type="checkbox" id="billingToggle" checked>
+                    <span class="slider"></span>
+                </label>
+                <span data-i18n="pricing.billing.annual">Annual (Save 20%)</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Plans Section -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="pricing-grid">
+                <!-- Starter Plan -->
+                <div class="pricing-card starter">
+                    <div class="plan-header">
+                        <h3 data-i18n="pricing.plans.starter.name">Starter</h3>
+                        <div class="price" id="starterPrice">
+                            <span class="currency">$</span>
+                            <span class="amount">49</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <p data-i18n="pricing.plans.starter.desc" class="plan-desc">Perfect for getting started with AI automation</p>
+                    
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> <span data-i18n="pricing.features.users">Up to 3 team members</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="pricing.features.workflows">10 automation workflows</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="pricing.features.dashboards">5 custom dashboards</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="pricing.features.api.calls">10K API calls/month</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="pricing.features.support.email">Email support</span></li>
+                        <li class="disabled"><i class="fas fa-times"></i> <span data-i18n="pricing.features.training">Priority training</span></li>
+                        <li class="disabled"><i class="fas fa-times"></i> <span data-i18n="pricing.features.sso">Advanced analytics</span></li>
+                    </ul>
+
+                    <button class="btn btn-outline" data-i18n="pricing.cta.get">Get Started</button>
+                </div>
+
+                <!-- Professional Plan (Popular) -->
+                <div class="pricing-card professional popular">
+                    <div class="popular-badge" data-i18n="pricing.badge.popular">Most Popular</div>
+                    <div class="plan-header">
+                        <h3 data-i18n="pricing.plans.professional.name">Professional</h3>
+                        <div class="price" id="professionalPrice">
+                            <span class="currency">$</span>
+                            <span class="amount">149</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <p data-i18n="pricing.plans.professional.desc" class="plan-desc">For growing businesses with advanced needs</p>
+                    
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> <span data-i18n="pricing.features.users.unlimited">Up to 20 team members</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="pricing.features.workflows.unlimited">Unlimited workflows</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="pricing.features.dashboards.unlimited">Unlimited dashboards</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="pricing.features.api.calls.unlimited">100K API calls/month</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="pricing.features.support.priority">Priority support</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="pricing.features.training">Training & onboarding</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="pricing.features.analytics">Advanced analytics</span></li>
+                    </ul>
+
+                    <button class="btn btn-primary" data-i18n="pricing.cta.start">Start Free Trial</button>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="pricing-card enterprise">
+                    <div class="plan-header">
+                        <h3 data-i18n="pricing.plans.enterprise.name">Enterprise</h3>
+                        <div class="price">
+                            <span class="currency"></span>
+                            <span class="amount" data-i18n="pricing.plans.enterprise.price">Custom</span>
+                            <span class="period" data-i18n="pricing.billing.contact">Contact us</span>
+                        </div>
+                    </div>
+                    <p data-i18n="pricing.plans.enterprise.desc" class="plan-desc">For large-scale deployments with custom needs</p>
+                    
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> <span data-i18n="pricing.features.teams">Unlimited team members</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="pricing.features.workflows.custom">Custom workflows & integrations</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="pricing.features.dashboards.custom">Advanced dashboards & reports</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="pricing.features.api.unlimited">Unlimited API calls</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="pricing.features.support.dedicated">Dedicated support</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="pricing.features.sso">SSO & advanced security</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="pricing.features.sla">SLA & compliance</span></li>
+                    </ul>
+
+                    <button class="btn btn-outline" data-i18n="pricing.cta.contact">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Comparison Table -->
+    <section class="comparison-features">
+        <div class="container">
+            <h2 data-i18n="pricing.comparison.title">Detailed Features Comparison</h2>
+            
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th data-i18n="pricing.comparison.feature">Feature</th>
+                            <th data-i18n="pricing.plans.starter.name">Starter</th>
+                            <th data-i18n="pricing.plans.professional.name">Professional</th>
+                            <th data-i18n="pricing.plans.enterprise.name">Enterprise</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="section-header">
+                            <td colspan="4" data-i18n="pricing.section.automation">🤖 Automation & Workflows</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="pricing.features.workflows">Automation Workflows</td>
+                            <td>10</td>
+                            <td>Unlimited</td>
+                            <td>Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="pricing.features.triggers">Custom Triggers</td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="pricing.features.integrations">Third-party Integrations</td>
+                            <td>50+</td>
+                            <td>500+</td>
+                            <td>Unlimited Custom</td>
+                        </tr>
+                        
+                        <tr class="section-header">
+                            <td colspan="4" data-i18n="pricing.section.analytics">📊 Analytics & Dashboards</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="pricing.features.dashboards">Custom Dashboards</td>
+                            <td>5</td>
+                            <td>Unlimited</td>
+                            <td>Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="pricing.features.reports">Real-time Reports</td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="pricing.features.dataretention">Data Retention</td>
+                            <td>30 days</td>
+                            <td>1 year</td>
+                            <td>Unlimited</td>
+                        </tr>
+
+                        <tr class="section-header">
+                            <td colspan="4" data-i18n="pricing.section.ai">🧠 AI & Machine Learning</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="pricing.features.nlp">NLP Processing</td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="pricing.features.predictive">Predictive Analytics</td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td>Basic</td>
+                            <td>Advanced</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="pricing.features.customml">Custom ML Models</td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+
+                        <tr class="section-header">
+                            <td colspan="4" data-i18n="pricing.section.security">🔒 Security & Compliance</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="pricing.features.encryption">Data Encryption</td>
+                            <td>AES-128</td>
+                            <td>AES-256</td>
+                            <td>Military Grade</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="pricing.features.sso">SSO & OAuth</td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="pricing.features.compliance">Compliance</td>
+                            <td>GDPR</td>
+                            <td>GDPR, CCPA</td>
+                            <td>GDPR, CCPA, HIPAA, SOC2</td>
+                        </tr>
+
+                        <tr class="section-header">
+                            <td colspan="4" data-i18n="pricing.section.support">👥 Support & Services</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="pricing.features.support.general">Support Channel</td>
+                            <td>Email</td>
+                            <td>Chat & Email</td>
+                            <td>24/7 Phone & Dedicated</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="pricing.features.sla">SLA Guarantee</td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td>99%</td>
+                            <td>99.99%</td>
+                        </tr>
+                        <tr>
+                            <td data-i18n="pricing.features.onboarding">Implementation Support</td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td>Included</td>
+                            <td>Dedicated Team</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add-ons Section -->
+    <section class="addons-section">
+        <div class="container">
+            <h2 data-i18n="pricing.addons.title">Add-ons & Extras</h2>
+            <p data-i18n="pricing.addons.subtitle">Enhance your plan with additional features</p>
+            
+            <div class="addons-grid">
+                <div class="addon-card">
+                    <div class="addon-icon">📱</div>
+                    <h3 data-i18n="pricing.addon.mobile.title">Mobile App</h3>
+                    <p data-i18n="pricing.addon.mobile.desc">Access dashboards on the go</p>
+                    <p class="addon-price">$29/month</p>
+                </div>
+
+                <div class="addon-card">
+                    <div class="addon-icon">🧑‍🏫</div>
+                    <h3 data-i18n="pricing.addon.training.title">Advanced Training</h3>
+                    <p data-i18n="pricing.addon.training.desc">Expert-led workshop sessions</p>
+                    <p class="addon-price">$499/month</p>
+                </div>
+
+                <div class="addon-card">
+                    <div class="addon-icon">🔗</div>
+                    <h3 data-i18n="pricing.addon.integration.title">Custom Integration</h3>
+                    <p data-i18n="pricing.addon.integration.desc">Connect with your systems</p>
+                    <p class="addon-price">$299/month</p>
+                </div>
+
+                <div class="addon-card">
+                    <div class="addon-icon">📈</div>
+                    <h3 data-i18n="pricing.addon.analytics.title">Advanced Analytics</h3>
+                    <p data-i18n="pricing.addon.analytics.desc">Deep insights & predictions</p>
+                    <p class="addon-price">$199/month</p>
+                </div>
+
+                <div class="addon-card">
+                    <div class="addon-icon">🎯</div>
+                    <h3 data-i18n="pricing.addon.consulting.title">Consulting Hours</h3>
+                    <p data-i18n="pricing.addon.consulting.desc">Expert strategy & implementation</p>
+                    <p class="addon-price">$150/hour</p>
+                </div>
+
+                <div class="addon-card">
+                    <div class="addon-icon">⚡</div>
+                    <h3 data-i18n="pricing.addon.performance.title">Performance Optimization</h3>
+                    <p data-i18n="pricing.addon.performance.desc">Speed up your workflows</p>
+                    <p class="addon-price">$99/month</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 data-i18n="pricing.faq.title">Frequently Asked Questions</h2>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span data-i18n="pricing.faq.q1">Can I upgrade or downgrade my plan anytime?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="pricing.faq.a1">Yes! You can change your plan at any time. Changes take effect immediately, and we'll prorate your billing accordingly.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span data-i18n="pricing.faq.q2">Do you offer a free trial?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="pricing.faq.a2">Yes! All plans include a 14-day free trial with full access to all features. No credit card required.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span data-i18n="pricing.faq.q3">What payment methods do you accept?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="pricing.faq.a3">We accept all major credit cards, PayPal, and wire transfers for enterprise customers.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span data-i18n="pricing.faq.q4">What happens if I exceed my plan limits?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="pricing.faq.a4">We'll notify you when approaching limits. You can then upgrade your plan or purchase add-ons to continue.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span data-i18n="pricing.faq.q5">Is there a cancellation fee?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="pricing.faq.a5">No hidden fees! Cancel anytime with a month's notice. You'll have access through your billing period.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span data-i18n="pricing.faq.q6">Do you offer volume discounts?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="pricing.faq.a6">Yes! Contact our sales team for custom pricing on multi-seat or multi-year contracts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-pricing">
+        <div class="cta-content">
+            <h2 data-i18n="pricing.cta.title">Ready to get started?</h2>
+            <p data-i18n="pricing.cta.subtitle">Join hundreds of companies automating their workflows with aizoniq</p>
+            <div class="cta-buttons">
+                <button class="btn btn-primary" data-i18n="pricing.cta.free">Start Free Trial</button>
+                <button class="btn btn-outline" data-i18n="pricing.cta.demo">Schedule a Demo</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>aizoniq</h4>
+                    <p>Advanced AI automation and analytics platform</p>
+                </div>
+                <div class="footer-section">
+                    <h5>Product</h5>
+                    <ul>
+                        <li><a href="features.html" data-i18n="nav.features">Features</a></li>
+                        <li><a href="pricing.html" data-i18n="nav.pricing">Pricing</a></li>
+                        <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                        <li><a href="advanced-services.html" data-i18n="nav.advanced">Advanced AI</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="about.html" data-i18n="nav.about">About</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                        <li><a href="#" data-i18n="footer.blog">Blog</a></li>
+                        <li><a href="#" data-i18n="footer.careers">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 aizoniq. All rights reserved. 🚀</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/i18n.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/pricing.js"></script>
+</body>
+</html>
