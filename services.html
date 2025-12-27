@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animated.css">
+    <link rel="stylesheet" href="css/svg-icons.css">
     <link rel="stylesheet" href="css/services.css">
     <link rel="stylesheet" href="css/chatbot.css">
 </head>
@@ -30,15 +32,16 @@
                 </div>
                 
                 <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="services.html" class="nav-link active">Services</a></li>
-                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+                    <li><a href="services.html" class="nav-link active" data-i18n="nav.services">Services</a></li>
+                    <li><a href="portfolio.html" class="nav-link" data-i18n="nav.portfolio">Portfolio</a></li>
+                    <li><a href="about.html" class="nav-link" data-i18n="nav.about">About</a></li>
+                    <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
                 </ul>
                 
                 <div class="nav-buttons">
-                    <a href="contact.html" class="btn btn-primary">Get Started</a>
+                    <button id="language-toggle" class="btn btn-secondary" style="background: #667eea; color: white; border: none; cursor: pointer; padding: 10px 15px; border-radius: 6px; font-weight: 600;">AR</button>
+                    <a href="contact.html" class="btn btn-primary" data-i18n="nav.getStarted">Get Started</a>
                 </div>
                 
                 <div class="hamburger">
@@ -58,9 +61,9 @@
         </div>
         <div class="container">
             <div class="page-header-content" data-aos="fade-up">
-                <span class="page-badge">Our Services</span>
-                <h1>Comprehensive AI Solutions</h1>
-                <p>Discover how our cutting-edge AI services can transform your business operations and drive unprecedented growth</p>
+                <span class="page-badge" data-i18n="services.badge">Our Services</span>
+                <h1 data-i18n="services.title">Comprehensive AI Solutions</h1>
+                <p data-i18n="services.description">Discover how our cutting-edge AI services can transform your business operations and drive unprecedented growth</p>
             </div>
         </div>
     </section>
@@ -74,36 +77,36 @@
                         <i class="fas fa-pen-fancy"></i>
                         <span>Content Creation</span>
                     </div>
-                    <h2>AI Content Writing</h2>
-                    <p class="lead">Generate high-quality, engaging content in seconds with our advanced AI writing tools powered by GPT-4 and custom language models.</p>
+                    <h2 data-i18n="service.writing">AI Content Writing</h2>
+                    <p class="lead" data-i18n="service.writing.lead">Generate high-quality, engaging content in seconds with our advanced AI writing tools powered by GPT-4 and custom language models.</p>
                     
                     <div class="service-features">
                         <div class="feature-item">
                             <i class="fas fa-check-circle"></i>
                             <div>
-                                <h4>Blog Posts & Articles</h4>
-                                <p>SEO-optimized long-form content that ranks and engages</p>
+                                <h4 data-i18n="service.writing.feature1">Blog Posts & Articles</h4>
+                                <p data-i18n="service.writing.feature1.desc">SEO-optimized long-form content that ranks and engages</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-check-circle"></i>
                             <div>
-                                <h4>Social Media Content</h4>
-                                <p>Viral-worthy posts tailored to each platform</p>
+                                <h4 data-i18n="service.writing.feature2">Social Media Content</h4>
+                                <p data-i18n="service.writing.feature2.desc">Viral-worthy posts tailored to each platform</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-check-circle"></i>
                             <div>
-                                <h4>Product Descriptions</h4>
-                                <p>Compelling copy that converts browsers into buyers</p>
+                                <h4 data-i18n="service.writing.feature3">Product Descriptions</h4>
+                                <p data-i18n="service.writing.feature3.desc">Compelling copy that converts browsers into buyers</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-check-circle"></i>
                             <div>
-                                <h4>Email Campaigns</h4>
-                                <p>Personalized email sequences that drive engagement</p>
+                                <h4 data-i18n="service.writing.feature4">Email Campaigns</h4>
+                                <p data-i18n="service.writing.feature4.desc">Personalized email sequences that drive engagement</p>
                             </div>
                         </div>
                     </div>
@@ -139,15 +142,15 @@
                             <div class="stat-mini-item">
                                 <i class="fas fa-bolt"></i>
                                 <div>
-                                    <h5>10x Faster</h5>
-                                    <p>Than manual writing</p>
+                                    <h5 data-i18n="service.writing.stat1">10x Faster</h5>
+                                    <p data-i18n="service.writing.stat1.desc">Than manual writing</p>
                                 </div>
                             </div>
                             <div class="stat-mini-item">
                                 <i class="fas fa-chart-line"></i>
                                 <div>
-                                    <h5>95% Quality</h5>
-                                    <p>Client satisfaction</p>
+                                    <h5 data-i18n="service.writing.stat2">95% Quality</h5>
+                                    <p data-i18n="service.writing.stat2.desc">Client satisfaction</p>
                                 </div>
                             </div>
                         </div>
@@ -197,8 +200,8 @@
                         <i class="fas fa-image"></i>
                         <span>Visual AI</span>
                     </div>
-                    <h2>AI Image Generation</h2>
-                    <p class="lead">Create stunning, unique visuals from text descriptions using state-of-the-art AI models like DALL-E, Midjourney, and Stable Diffusion.</p>
+                    <h2 data-i18n="service.image">AI Image Generation</h2>
+                    <p class="lead" data-i18n="service.image.lead">Create stunning, unique visuals from text descriptions using state-of-the-art AI models like DALL-E, Midjourney, and Stable Diffusion.</p>
                     
                     <div class="service-features">
                         <div class="feature-item">
@@ -690,8 +693,8 @@
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/init.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/chatbot.js"></script>
-    <script src="js/analytics.js"></script>
 </body>
 </html>

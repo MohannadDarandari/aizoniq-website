@@ -1,0 +1,479 @@
+/**
+ * Animated Backgrounds & Effects
+ * خلفيات متحركة ورسوم متحركة مبهرة لكل خدمة
+ */
+
+/* ============================================
+   ANIMATED GRADIENT BACKGROUNDS
+   ============================================ */
+
+.service-card {
+    position: relative;
+    overflow: hidden;
+    background: var(--card-bg);
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent, rgba(99, 102, 241, 0.1), transparent);
+    animation: shimmer 3s infinite;
+    pointer-events: none;
+}
+
+.service-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.2) 0%, transparent 70%);
+    animation: float 6s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    50% {
+        transform: translate(-30px, -30px) scale(1.1);
+    }
+}
+
+/* ============================================
+   SERVICE-SPECIFIC ANIMATIONS
+   ============================================ */
+
+/* AI Content Writing - Wave Animation */
+.service-card:nth-child(1)::before {
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(168, 85, 247, 0.2),
+        transparent
+    );
+    animation: waveLeft 4s ease-in-out infinite;
+}
+
+.service-card:nth-child(1)::after {
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(168, 85, 247, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(99, 102, 241, 0.2) 0%, transparent 50%);
+    animation: pulse-service 5s ease-in-out infinite;
+}
+
+@keyframes waveLeft {
+    0%, 100% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(100%);
+    }
+}
+
+/* AI Image Generation - Pixel Glow */
+.service-card:nth-child(2)::before {
+    background: linear-gradient(
+        135deg,
+        transparent,
+        rgba(236, 72, 153, 0.2),
+        transparent
+    );
+    animation: pixelFlow 3.5s ease-in-out infinite;
+}
+
+.service-card:nth-child(2)::after {
+    background: 
+        radial-gradient(circle at 30% 70%, rgba(236, 72, 153, 0.25) 0%, transparent 40%),
+        radial-gradient(circle at 70% 30%, rgba(168, 85, 247, 0.2) 0%, transparent 40%);
+    animation: glitch 4s ease-in-out infinite;
+}
+
+@keyframes pixelFlow {
+    0% {
+        transform: translateX(-100%) skew(20deg);
+    }
+    50% {
+        transform: translateX(50%) skew(0deg);
+    }
+    100% {
+        transform: translateX(100%) skew(-20deg);
+    }
+}
+
+@keyframes glitch {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(-5px, 5px);
+    }
+    50% {
+        transform: translate(5px, -5px);
+    }
+    75% {
+        transform: translate(-5px, -5px);
+    }
+}
+
+/* AI Chatbots - Ripple Effect */
+.service-card:nth-child(3)::before {
+    background: linear-gradient(
+        -45deg,
+        transparent,
+        rgba(59, 130, 246, 0.2),
+        transparent
+    );
+    animation: rippleWave 3s ease-in-out infinite;
+}
+
+.service-card:nth-child(3)::after {
+    background: 
+        radial-gradient(circle at center, rgba(59, 130, 246, 0.3) 0%, transparent 50%);
+    animation: expandPulse 4s ease-out infinite;
+}
+
+@keyframes rippleWave {
+    0% {
+        transform: translateY(-100%) rotate(0deg);
+    }
+    50% {
+        transform: translateY(50%) rotate(180deg);
+    }
+    100% {
+        transform: translateY(100%) rotate(360deg);
+    }
+}
+
+@keyframes expandPulse {
+    0% {
+        transform: scale(0.5);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* Data Analytics - Bars Rising */
+.service-card:nth-child(4)::before {
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(34, 197, 94, 0.2),
+        transparent
+    );
+    animation: barRise 3s ease-in-out infinite;
+}
+
+.service-card:nth-child(4)::after {
+    background: 
+        linear-gradient(to top, rgba(34, 197, 94, 0.2) 0%, transparent 100%);
+    animation: chartFlow 5s ease-in-out infinite;
+}
+
+@keyframes barRise {
+    0%, 100% {
+        transform: translateY(100%);
+    }
+    50% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes chartFlow {
+    0% {
+        transform: skewY(0deg) scale(1);
+    }
+    50% {
+        transform: skewY(2deg) scale(1.05);
+    }
+    100% {
+        transform: skewY(0deg) scale(1);
+    }
+}
+
+/* AI Video - Film Strip Animation */
+.service-card:nth-child(5)::before {
+    background: repeating-linear-gradient(
+        90deg,
+        rgba(239, 68, 68, 0.1) 0px,
+        rgba(239, 68, 68, 0.2) 10px,
+        rgba(239, 68, 68, 0.1) 20px
+    );
+    animation: filmScroll 4s linear infinite;
+}
+
+.service-card:nth-child(5)::after {
+    background: 
+        radial-gradient(circle at 50% 0%, rgba(239, 68, 68, 0.3) 0%, transparent 50%);
+    animation: frameFlip 3s ease-in-out infinite;
+}
+
+@keyframes filmScroll {
+    0% {
+        background-position: 0 0;
+        transform: translateX(0);
+    }
+    100% {
+        background-position: 20px 0;
+        transform: translateX(100%);
+    }
+}
+
+@keyframes frameFlip {
+    0%, 100% {
+        transform: rotateX(0deg) scale(1);
+    }
+    50% {
+        transform: rotateX(180deg) scale(1.05);
+    }
+}
+
+/* Custom AI Solutions - Orbit Animation */
+.service-card:nth-child(6)::before {
+    background: linear-gradient(
+        45deg,
+        transparent,
+        rgba(139, 92, 246, 0.2),
+        transparent
+    );
+    animation: orbitSpin 5s linear infinite;
+}
+
+.service-card:nth-child(6)::after {
+    background: 
+        radial-gradient(circle at center, rgba(139, 92, 246, 0.25) 0%, transparent 70%);
+    animation: orbitRotate 6s linear infinite;
+}
+
+@keyframes orbitSpin {
+    0% {
+        transform: rotate(0deg) translateX(0);
+    }
+    100% {
+        transform: rotate(360deg) translateX(20px);
+    }
+}
+
+@keyframes orbitRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+/* ============================================
+   ANIMATED SVG ICONS
+   ============================================ */
+
+.service-icon {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: rgba(99, 102, 241, 0.1);
+    border: 2px solid rgba(99, 102, 241, 0.2);
+    border-radius: 20px;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+    animation: iconBounce 2s ease-in-out infinite;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+    background: rgba(99, 102, 241, 0.2);
+    border-color: rgba(99, 102, 241, 0.4);
+}
+
+@keyframes iconBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* SVG Animation for Icons */
+.service-icon svg {
+    width: 100%;
+    height: 100%;
+    animation: iconRotate 3s ease-in-out infinite;
+}
+
+@keyframes iconRotate {
+    0%, 100% {
+        transform: rotate(0deg) scale(1);
+        filter: drop-shadow(0 0 0px rgba(99, 102, 241, 0.5));
+    }
+    50% {
+        transform: rotate(5deg) scale(1.05);
+        filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.8));
+    }
+}
+
+/* ============================================
+   ENHANCED SERVICE CARD EFFECTS
+   ============================================ */
+
+.service-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(20px);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
+}
+
+.service-card:hover::before {
+    animation-duration: 1.5s !important;
+}
+
+.service-card:hover::after {
+    animation-duration: 2s !important;
+}
+
+/* ============================================
+   GLOW EFFECTS
+   ============================================ */
+
+.service-glow {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150%;
+    height: 100px;
+    background: radial-gradient(ellipse at center, rgba(99, 102, 241, 0.3), transparent);
+    filter: blur(40px);
+    animation: glowPulse 3s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        transform: translateX(-50%) scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translateX(-50%) scale(1.2);
+        opacity: 0.8;
+    }
+}
+
+.service-card:nth-child(1) .service-glow {
+    background: radial-gradient(ellipse at center, rgba(168, 85, 247, 0.3), transparent);
+}
+
+.service-card:nth-child(2) .service-glow {
+    background: radial-gradient(ellipse at center, rgba(236, 72, 153, 0.3), transparent);
+}
+
+.service-card:nth-child(3) .service-glow {
+    background: radial-gradient(ellipse at center, rgba(59, 130, 246, 0.3), transparent);
+}
+
+.service-card:nth-child(4) .service-glow {
+    background: radial-gradient(ellipse at center, rgba(34, 197, 94, 0.3), transparent);
+}
+
+.service-card:nth-child(5) .service-glow {
+    background: radial-gradient(ellipse at center, rgba(239, 68, 68, 0.3), transparent);
+}
+
+.service-card:nth-child(6) .service-glow {
+    background: radial-gradient(ellipse at center, rgba(139, 92, 246, 0.3), transparent);
+}
+
+/* ============================================
+   PARTICLE EFFECT
+   ============================================ */
+
+.particle {
+    position: absolute;
+    pointer-events: none;
+}
+
+.particle::before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 4px;
+    background: rgba(99, 102, 241, 0.6);
+    border-radius: 50%;
+    animation: particleFloat 4s ease-out forwards;
+}
+
+@keyframes particleFloat {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(var(--tx), var(--ty));
+    }
+}
+
+/* ============================================
+   TEXT ANIMATIONS
+   ============================================ */
+
+.service-card h3 {
+    position: relative;
+    z-index: 2;
+    animation: titleGlow 2s ease-in-out infinite;
+}
+
+@keyframes titleGlow {
+    0%, 100% {
+        text-shadow: 0 0 0px rgba(99, 102, 241, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 15px rgba(99, 102, 241, 0.8), 0 0 30px rgba(99, 102, 241, 0.4);
+    }
+}
+
+.service-card p {
+    position: relative;
+    z-index: 2;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .service-card::before,
+    .service-card::after {
+        animation-duration: 2s;
+    }
+    
+    .service-glow {
+        height: 50px;
+    }
+}

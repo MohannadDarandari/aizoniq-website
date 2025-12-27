@@ -308,7 +308,7 @@ app.get('/api/blog', (req, res) => {
       id: 1,
       title: 'How AI is Revolutionizing Content Creation',
       slug: 'ai-revolutionizing-content',
-      author: 'Sarah Johnson',
+      author: 'Mohannad Darandari',
       date: '2025-01-10',
       category: 'AI Trends',
       image: '/assets/blog/post1.jpg',

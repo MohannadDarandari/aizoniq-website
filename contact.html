@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animated.css">
+    <link rel="stylesheet" href="css/svg-icons.css">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/chatbot.css">
 </head>
@@ -30,15 +32,16 @@
                 </div>
                 
                 <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="services.html" class="nav-link">Services</a></li>
-                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                    <li><a href="index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+                    <li><a href="services.html" class="nav-link" data-i18n="nav.services">Services</a></li>
+                    <li><a href="portfolio.html" class="nav-link" data-i18n="nav.portfolio">Portfolio</a></li>
+                    <li><a href="about.html" class="nav-link" data-i18n="nav.about">About</a></li>
+                    <li><a href="contact.html" class="nav-link active" data-i18n="nav.contact">Contact</a></li>
                 </ul>
                 
                 <div class="nav-buttons">
-                    <a href="contact.html" class="btn btn-primary">Get Started</a>
+                    <button id="language-toggle" class="btn btn-secondary" style="background: #667eea; color: white; border: none; cursor: pointer; padding: 10px 15px; border-radius: 6px; font-weight: 600;">AR</button>
+                    <a href="contact.html" class="btn btn-primary" data-i18n="nav.getStarted">Get Started</a>
                 </div>
                 
                 <div class="hamburger">
@@ -59,9 +62,9 @@
         
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <span class="section-badge">Get In Touch</span>
-                <h1>Let's Build Something Amazing</h1>
-                <p>Have a project in mind? Let's discuss how our AI solutions can help you achieve your goals</p>
+                <span class="section-badge" data-i18n="contact.badge">Get In Touch</span>
+                <h1 data-i18n="contact.title">Let's Build Something Amazing</h1>
+                <p data-i18n="contact.description">Have a project in mind? Let's discuss how our AI solutions can help you achieve your goals</p>
             </div>
             
             <div class="contact-content">
@@ -70,71 +73,71 @@
                     <form class="contact-form" id="contactForm">
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="firstName">First Name *</label>
+                                <label for="firstName" data-i18n="contact.form.firstName">First Name *</label>
                                 <input type="text" id="firstName" name="firstName" required>
                             </div>
                             <div class="form-group">
-                                <label for="lastName">Last Name *</label>
+                                <label for="lastName" data-i18n="contact.form.lastName">Last Name *</label>
                                 <input type="text" id="lastName" name="lastName" required>
                             </div>
                         </div>
                         
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="email">Email Address *</label>
+                                <label for="email" data-i18n="contact.form.email">Email Address *</label>
                                 <input type="email" id="email" name="email" required>
                             </div>
                             <div class="form-group">
-                                <label for="phone">Phone Number</label>
+                                <label for="phone" data-i18n="contact.form.phone">Phone Number</label>
                                 <input type="tel" id="phone" name="phone">
                             </div>
                         </div>
                         
                         <div class="form-group">
-                            <label for="company">Company Name</label>
+                            <label for="company" data-i18n="contact.form.company">Company Name</label>
                             <input type="text" id="company" name="company">
                         </div>
                         
                         <div class="form-group">
-                            <label for="service">Service Interested In *</label>
+                            <label for="service" data-i18n="contact.form.service">Service Interested In *</label>
                             <select id="service" name="service" required>
-                                <option value="">Select a service</option>
-                                <option value="content-writing">AI Content Writing</option>
-                                <option value="image-generation">AI Image Generation</option>
-                                <option value="chatbot">AI Chatbots</option>
-                                <option value="data-analytics">Data Analytics</option>
-                                <option value="video-creation">Video Creation</option>
-                                <option value="custom-ai">Custom AI Solutions</option>
-                                <option value="consultation">General Consultation</option>
+                                <option value="" data-i18n="contact.form.selectService">Select a service</option>
+                                <option value="content-writing" data-i18n="contact.form.service1">AI Content Writing</option>
+                                <option value="image-generation" data-i18n="contact.form.service2">AI Image Generation</option>
+                                <option value="chatbot" data-i18n="contact.form.service3">AI Chatbots</option>
+                                <option value="data-analytics" data-i18n="contact.form.service4">Data Analytics</option>
+                                <option value="video-creation" data-i18n="contact.form.service5">Video Creation</option>
+                                <option value="custom-ai" data-i18n="contact.form.service6">Custom AI Solutions</option>
+                                <option value="consultation" data-i18n="contact.form.service7">General Consultation</option>
                             </select>
                         </div>
                         
                         <div class="form-group">
-                            <label for="budget">Project Budget</label>
+                            <label for="budget" data-i18n="contact.form.budget">Project Budget</label>
                             <select id="budget" name="budget">
-                                <option value="">Select budget range</option>
-                                <option value="under-5k">Under $5,000</option>
-                                <option value="5k-10k">$5,000 - $10,000</option>
-                                <option value="10k-25k">$10,000 - $25,000</option>
-                                <option value="25k-50k">$25,000 - $50,000</option>
-                                <option value="50k-plus">$50,000+</option>
+                                <option value="" data-i18n="contact.form.selectBudget">Select budget range</option>
+                                <option value="under-5k" data-i18n="contact.form.budget1">Under $5,000</option>
+                                <option value="5k-10k" data-i18n="contact.form.budget2">$5,000 - $10,000</option>
+                                <option value="10k-25k" data-i18n="contact.form.budget3">$10,000 - $25,000</option>
+                                <option value="25k-50k" data-i18n="contact.form.budget4">$25,000 - $50,000</option>
+                                <option value="50k-plus" data-i18n="contact.form.budget5">$50,000+</option>
                             </select>
                         </div>
                         
                         <div class="form-group">
-                            <label for="message">Tell us about your project *</label>
+                            <label for="message" data-i18n="contact.form.message">Tell us about your project *</label>
                             <textarea id="message" name="message" rows="5" required></textarea>
                         </div>
                         
                         <div class="form-group checkbox-group">
                             <label class="checkbox-label">
                                 <input type="checkbox" name="terms" required>
-                                <span>I agree to the <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a></span>
+                                <span data-i18n="contact.form.terms">I agree to the Privacy Policy and Terms of Service</span>
                             </label>
                         </div>
                         
                         <button type="submit" class="btn btn-primary btn-large">
-                            <span>Send Message</span>
+                            <span data-i18n="contact.form.submit">Send Message</span>
                             <i class="fas fa-paper-plane"></i>
                         </button>
                     </form>
@@ -143,8 +146,8 @@
                 <!-- Contact Info -->
                 <div class="contact-info-wrapper" data-aos="fade-left">
                     <div class="contact-info-card">
-                        <h3>Contact Information</h3>
-                        <p>Fill out the form and our team will get back to you within 24 hours</p>
+                        <h3 data-i18n="contact.info.title">Contact Information</h3>
+                        <p data-i18n="contact.info.desc">Fill out the form and our team will get back to you within 24 hours</p>
                         
                         <div class="contact-methods">
                             <div class="contact-method">
@@ -152,7 +155,7 @@
                                     <i class="fas fa-phone"></i>
                                 </div>
                                 <div class="method-info">
-                                    <h4>Phone</h4>
+                                    <h4 data-i18n="contact.info.phone">Phone</h4>
                                     <a href="tel:+1234567890">+1 (234) 567-890</a>
                                 </div>
                             </div>
@@ -162,7 +165,7 @@
                                     <i class="fas fa-envelope"></i>
                                 </div>
                                 <div class="method-info">
-                                    <h4>Email</h4>
+                                    <h4 data-i18n="contact.info.email">Email</h4>
                                     <a href="mailto:hello@aizoniq.com">hello@aizoniq.com</a>
                                 </div>
                             </div>
@@ -172,7 +175,7 @@
                                     <i class="fas fa-map-marker-alt"></i>
                                 </div>
                                 <div class="method-info">
-                                    <h4>Office</h4>
+                                    <h4 data-i18n="contact.info.office">Office</h4>
                                     <p>123 AI Street, Tech City<br>San Francisco, CA 94102</p>
                                 </div>
                             </div>
@@ -182,7 +185,7 @@
                                     <i class="fas fa-clock"></i>
                                 </div>
                                 <div class="method-info">
-                                    <h4>Business Hours</h4>
+                                    <h4 data-i18n="contact.info.hours">Business Hours</h4>
                                     <p>Monday - Friday: 9AM - 6PM PST<br>Weekend: By Appointment</p>
                                 </div>
                             </div>
@@ -249,69 +252,69 @@
     <section class="faq-section section-padding">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <span class="section-badge">FAQ</span>
-                <h2>Frequently Asked Questions</h2>
-                <p>Quick answers to common questions about our services</p>
+                <span class="section-badge" data-i18n="faq.badge">FAQ</span>
+                <h2 data-i18n="faq.title">Frequently Asked Questions</h2>
+                <p data-i18n="faq.description">Quick answers to common questions about our services</p>
             </div>
             
             <div class="faq-grid">
                 <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
                     <div class="faq-question">
-                        <h4>How long does it take to get started?</h4>
+                        <h4 data-i18n="faq.q1.title">How long does it take to get started?</h4>
                         <i class="fas fa-plus"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Most projects can begin within 48 hours after our initial consultation. We'll discuss your requirements, provide a proposal, and once approved, we start immediately.</p>
+                        <p data-i18n="faq.q1.answer">Most projects can begin within 48 hours after our initial consultation. We'll discuss your requirements, provide a proposal, and once approved, we start immediately.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
                     <div class="faq-question">
-                        <h4>What is your pricing structure?</h4>
+                        <h4 data-i18n="faq.q2.title">What is your pricing structure?</h4>
                         <i class="fas fa-plus"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>We offer flexible pricing based on your specific needs - monthly subscriptions, project-based pricing, or custom enterprise packages. Contact us for a detailed quote.</p>
+                        <p data-i18n="faq.q2.answer">We offer flexible pricing based on your specific needs - monthly subscriptions, project-based pricing, or custom enterprise packages. Contact us for a detailed quote.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
                     <div class="faq-question">
-                        <h4>Do you offer ongoing support?</h4>
+                        <h4 data-i18n="faq.q3.title">Do you offer ongoing support?</h4>
                         <i class="fas fa-plus"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Yes! All our packages include ongoing support, regular updates, and optimization. We're committed to your long-term success.</p>
+                        <p data-i18n="faq.q3.answer">Yes! All our packages include ongoing support, regular updates, and optimization. We're committed to your long-term success.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
                     <div class="faq-question">
-                        <h4>Can you integrate with existing systems?</h4>
+                        <h4 data-i18n="faq.q4.title">Can you integrate with existing systems?</h4>
                         <i class="fas fa-plus"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Absolutely! Our AI solutions are designed to integrate seamlessly with your existing tools, platforms, and workflows through APIs and custom integrations.</p>
+                        <p data-i18n="faq.q4.answer">Absolutely! Our AI solutions are designed to integrate seamlessly with your existing tools, platforms, and workflows through APIs and custom integrations.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
                     <div class="faq-question">
-                        <h4>Is my data secure?</h4>
+                        <h4 data-i18n="faq.q5.title">Is my data secure?</h4>
                         <i class="fas fa-plus"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Security is our top priority. We use enterprise-grade encryption, comply with GDPR and SOC 2 standards, and never share your data with third parties.</p>
+                        <p data-i18n="faq.q5.answer">Security is our top priority. We use enterprise-grade encryption, comply with GDPR and SOC 2 standards, and never share your data with third parties.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
                     <div class="faq-question">
-                        <h4>What if I'm not satisfied?</h4>
+                        <h4 data-i18n="faq.q6.title">What if I'm not satisfied?</h4>
                         <i class="fas fa-plus"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>We offer a 30-day money-back guarantee. If you're not completely satisfied with our services, we'll refund your investment, no questions asked.</p>
+                        <p data-i18n="faq.q6.answer">We offer a 30-day money-back guarantee. If you're not completely satisfied with our services, we'll refund your investment, no questions asked.</p>
                     </div>
                 </div>
             </div>
@@ -382,6 +385,8 @@
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/init.js"></script>
     <script src="js/main.js"></script>
     <script src="js/contact.js"></script>
     <script src="js/chatbot.js"></script>

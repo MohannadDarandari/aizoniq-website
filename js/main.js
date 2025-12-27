@@ -5,6 +5,12 @@
 // INITIALIZATION
 // ============================================
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize i18n first
+    if (typeof i18n !== 'undefined') {
+        i18n.applyLanguage();
+    }
+    
+    // Then initialize other components
     initAOS();
     initNavigation();
     initCursor();
