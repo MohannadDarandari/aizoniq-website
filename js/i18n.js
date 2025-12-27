@@ -1290,3 +1290,195 @@ class I18n {
 
 // Initialize and export
 const i18n = new I18n();
+// Add FAQ translations
+i18n.translations.en.nav.faq = 'FAQ';
+i18n.translations.ar.nav.faq = 'الأسئلة الشائعة';
+
+i18n.translations.en['faq.page.title'] = 'FAQ - aizoniq';
+i18n.translations.ar['faq.page.title'] = 'الأسئلة الشائعة - أيزونيك';
+
+i18n.translations.en['faq.hero.title'] = 'Frequently Asked Questions';
+i18n.translations.ar['faq.hero.title'] = 'الأسئلة الشائعة';
+
+i18n.translations.en['faq.hero.subtitle'] = 'Get answers to your questions about our AI services and solutions';
+i18n.translations.ar['faq.hero.subtitle'] = 'احصل على إجابات أسئلتك حول خدمات وحلول الذكاء الاصطناعي لدينا';
+
+i18n.translations.en['faq.search.placeholder'] = 'Search FAQ...';
+i18n.translations.ar['faq.search.placeholder'] = 'ابحث في الأسئلة...';
+
+i18n.translations.en['faq.search.btn'] = 'Search';
+i18n.translations.ar['faq.search.btn'] = 'بحث';
+
+// Categories
+i18n.translations.en['faq.category.general'] = 'General';
+i18n.translations.ar['faq.category.general'] = 'عام';
+
+i18n.translations.en['faq.category.services'] = 'Services';
+i18n.translations.ar['faq.category.services'] = 'الخدمات';
+
+i18n.translations.en['faq.category.pricing'] = 'Pricing';
+i18n.translations.ar['faq.category.pricing'] = 'الأسعار';
+
+i18n.translations.en['faq.category.technical'] = 'Technical';
+i18n.translations.ar['faq.category.technical'] = 'تقني';
+
+i18n.translations.en['faq.category.support'] = 'Support';
+i18n.translations.ar['faq.category.support'] = 'الدعم';
+
+// General Questions
+i18n.translations.en['faq.q.general.1'] = 'What is aizoniq?';
+i18n.translations.ar['faq.q.general.1'] = 'ما هو أيزونيك؟';
+
+i18n.translations.en['faq.a.general.1'] = 'aizoniq is a premier AI services agency offering cutting-edge artificial intelligence solutions including AI writing, image generation, chatbots, data analysis, and more.';
+i18n.translations.ar['faq.a.general.1'] = 'أيزونيك هي وكالة خدمات الذكاء الاصطناعي الرائدة التي تقدم حلول الذكاء الاصطناعي المتقدمة بما في ذلك الكتابة بالذكاء الاصطناعي وتوليد الصور والروبوتات الذكية وتحليل البيانات والمزيد.';
+
+i18n.translations.en['faq.q.general.2'] = 'Who can benefit from aizoniq services?';
+i18n.translations.ar['faq.q.general.2'] = 'من يمكنه الاستفادة من خدمات أيزونيك؟';
+
+i18n.translations.en['faq.a.general.2'] = 'Our services are ideal for businesses of all sizes, from startups to enterprises, looking to leverage AI technology to improve efficiency, reduce costs, and enhance customer experiences.';
+i18n.translations.ar['faq.a.general.2'] = 'خدماتنا مثالية للشركات من جميع الأحجام، من الشركات الناشئة إلى المؤسسات الكبرى، التي تسعى للاستفادة من تكنولوجيا الذكاء الاصطناعي.';
+
+i18n.translations.en['faq.q.general.3'] = 'What makes aizoniq different?';
+i18n.translations.ar['faq.q.general.3'] = 'ما الذي يميز أيزونيك؟';
+
+i18n.translations.en['faq.a.general.3'] = 'We combine cutting-edge AI technology with professional expertise to deliver customized solutions. Our team has deep experience across multiple industries and AI domains.';
+i18n.translations.ar['faq.a.general.3'] = 'نجمع بين تكنولوجيا الذكاء الاصطناعي المتقدمة والخبرة المهنية لتقديم حلول مخصصة. فريقنا لديه خبرة عميقة عبر صناعات ومجالات الذكاء الاصطناعي المتعددة.';
+
+i18n.translations.en['faq.q.general.4'] = 'Do you offer a free trial?';
+i18n.translations.ar['faq.q.general.4'] = 'هل تقدمون نسخة تجريبية مجانية؟';
+
+i18n.translations.en['faq.a.general.4'] = 'Yes! We offer a 14-day free trial of our Starter plan with full access to core features. No credit card required.';
+i18n.translations.ar['faq.a.general.4'] = 'نعم! نقدم نسخة تجريبية مجانية لمدة 14 يوماً من خطة البداية مع الوصول الكامل إلى الميزات الأساسية. لا توجد حاجة لبطاقة ائتمان.';
+
+i18n.translations.en['faq.q.general.5'] = 'How can I get started?';
+i18n.translations.ar['faq.q.general.5'] = 'كيف يمكنني البدء؟';
+
+i18n.translations.en['faq.a.general.5'] = 'Simply sign up on our website, choose your plan, and start creating. Our onboarding team will guide you through the setup process.';
+i18n.translations.ar['faq.a.general.5'] = 'ما عليك سوى التسجيل على موقعنا واختيار خطتك والبدء بالإنشاء. سيرشدك فريق التكامل الخاص بنا خلال عملية الإعداد.';
+
+// Services Questions
+i18n.translations.en['faq.q.services.1'] = 'What services do you offer?';
+i18n.translations.ar['faq.q.services.1'] = 'ما الخدمات التي تقدمونها؟';
+
+i18n.translations.en['faq.a.services.1'] = 'We offer AI Writing, Image Generation, Chatbots, Data Analysis, Automation, Business Intelligence, Deep Learning, and Machine Learning services.';
+i18n.translations.ar['faq.a.services.1'] = 'نقدم خدمات الكتابة بالذكاء الاصطناعي وتوليد الصور والروبوتات الذكية وتحليل البيانات والأتمتة والذكاء التجاري والتعلم العميق والتعلم الآلي.';
+
+i18n.translations.en['faq.q.services.2'] = 'Can you customize solutions for my business?';
+i18n.translations.ar['faq.q.services.2'] = 'هل يمكنكم تخصيص الحلول لعملي؟';
+
+i18n.translations.en['faq.a.services.2'] = 'Absolutely! All our services can be customized to meet your specific business requirements and industry needs.';
+i18n.translations.ar['faq.a.services.2'] = 'بالتأكيد! جميع خدماتنا يمكن تخصيصها لتلبية احتياجات عملك المحددة واحتياجات الصناعة.';
+
+i18n.translations.en['faq.q.services.3'] = 'How long does implementation take?';
+i18n.translations.ar['faq.q.services.3'] = 'كم من الوقت يستغرق التنفيذ؟';
+
+i18n.translations.en['faq.a.services.3'] = 'Timeline varies based on project complexity. Typically, basic implementations take 2-4 weeks, while complex solutions may take 2-3 months.';
+i18n.translations.ar['faq.a.services.3'] = 'يختلف الوقت بناءً على تعقيد المشروع. عادةً ما تستغرق التنفيذات الأساسية 2-4 أسابيع، بينما قد تستغرق الحلول المعقدة 2-3 أشهر.';
+
+i18n.translations.en['faq.q.services.4'] = 'What level of support do you provide?';
+i18n.translations.ar['faq.q.services.4'] = 'ما مستوى الدعم الذي تقدمونه؟';
+
+i18n.translations.en['faq.a.services.4'] = 'We provide 24/7 customer support, regular check-ins, training for your team, and ongoing optimization of your AI solutions.';
+i18n.translations.ar['faq.a.services.4'] = 'نقدم دعم العملاء 24/7 والفحوصات المنتظمة والتدريب لفريقك والتحسين المستمر لحلول الذكاء الاصطناعي الخاصة بك.';
+
+// Pricing Questions
+i18n.translations.en['faq.q.pricing.1'] = 'What are the pricing plans?';
+i18n.translations.ar['faq.q.pricing.1'] = 'ما خطط التسعير؟';
+
+i18n.translations.en['faq.a.pricing.1'] = 'We offer three main plans: Starter ($49/month), Professional ($149/month), and Enterprise (custom pricing). All plans are billed annually with a 20% discount.';
+i18n.translations.ar['faq.a.pricing.1'] = 'نقدم ثلاث خطط رئيسية: البداية (49 دولار/شهر)، المهنية (149 دولار/شهر)، والمؤسسة (تسعير مخصص). يتم فواتير جميع الخطط سنوياً بخصم 20%.';
+
+i18n.translations.en['faq.q.pricing.2'] = 'Can I upgrade or downgrade my plan?';
+i18n.translations.ar['faq.q.pricing.2'] = 'هل يمكنني ترقية أو خفض خطتي؟';
+
+i18n.translations.en['faq.a.pricing.2'] = 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we\'ll prorate any differences.';
+i18n.translations.ar['faq.a.pricing.2'] = 'نعم، يمكنك ترقية أو خفض خطتك في أي وقت. تسري التغييرات فوراً، وسنقوم بتناسب أي فروقات.';
+
+i18n.translations.en['faq.q.pricing.3'] = 'Do you offer discounts for annual billing?';
+i18n.translations.ar['faq.q.pricing.3'] = 'هل تقدمون خصومات للفوترة السنوية؟';
+
+i18n.translations.en['faq.a.pricing.3'] = 'Yes! All annual subscriptions receive a 20% discount compared to monthly billing. You save more when you commit long-term.';
+i18n.translations.ar['faq.a.pricing.3'] = 'نعم! جميع الاشتراكات السنوية تحصل على خصم 20% مقارنة بالفوترة الشهرية. توفر أكثر عندما تلتزم على المدى الطويل.';
+
+i18n.translations.en['faq.q.pricing.4'] = 'What payment methods do you accept?';
+i18n.translations.ar['faq.q.pricing.4'] = 'ما طرق الدفع التي تقبلونها؟';
+
+i18n.translations.en['faq.a.pricing.4'] = 'We accept all major credit cards (Visa, Mastercard, American Express), bank transfers, and digital payment methods like PayPal.';
+i18n.translations.ar['faq.a.pricing.4'] = 'نقبل جميع بطاقات الائتمان الرئيسية والتحويلات البنكية وطرق الدفع الرقمية مثل PayPal.';
+
+i18n.translations.en['faq.q.pricing.5'] = 'Can I cancel my subscription?';
+i18n.translations.ar['faq.q.pricing.5'] = 'هل يمكنني إلغاء اشتراكي؟';
+
+i18n.translations.en['faq.a.pricing.5'] = 'Yes, you can cancel anytime without penalties. Your access continues until the end of your billing period. No hidden charges.';
+i18n.translations.ar['faq.a.pricing.5'] = 'نعم، يمكنك الإلغاء في أي وقت بدون عقوبات. يستمر وصولك حتى نهاية فترة الفوترة الخاصة بك. بدون رسوم مخفية.';
+
+// Technical Questions
+i18n.translations.en['faq.q.technical.1'] = 'How secure is my data?';
+i18n.translations.ar['faq.q.technical.1'] = 'ما مدى أمان بياناتي؟';
+
+i18n.translations.en['faq.a.technical.1'] = 'We use enterprise-grade encryption, comply with GDPR and CCPA, and conduct regular security audits. Your data is protected with multi-layer security.';
+i18n.translations.ar['faq.a.technical.1'] = 'نستخدم تشفير بمستوى المؤسسة والامتثال لـ GDPR و CCPA ونجري عمليات تدقيق أمان منتظمة. بياناتك محمية بأمان متعدد الطبقات.';
+
+i18n.translations.en['faq.q.technical.2'] = 'Can I integrate aizoniq with my existing tools?';
+i18n.translations.ar['faq.q.technical.2'] = 'هل يمكنني دمج أيزونيك مع أدواتي الحالية؟';
+
+i18n.translations.en['faq.a.technical.2'] = 'Yes! We offer API integrations with Zapier, Make, Integromat, and many other popular tools. Custom integrations are also available.';
+i18n.translations.ar['faq.a.technical.2'] = 'نعم! نقدم تكاملات API مع Zapier و Make و Integromat والعديد من الأدوات الأخرى الشهيرة. التكاملات المخصصة متاحة أيضاً.';
+
+i18n.translations.en['faq.q.technical.3'] = 'What is your uptime guarantee?';
+i18n.translations.ar['faq.q.technical.3'] = 'ما ضمان وقت التشغيل الخاص بك؟';
+
+i18n.translations.en['faq.a.technical.3'] = 'We guarantee 99.9% uptime SLA with multiple redundancies. Our infrastructure is built for reliability and performance.';
+i18n.translations.ar['faq.a.technical.3'] = 'نضمن اتفاقية مستوى الخدمة 99.9% مع تكرارات متعددة. تم بناء البنية التحتية الخاصة بنا للموثوقية والأداء.';
+
+i18n.translations.en['faq.q.technical.4'] = 'Are there usage limits?';
+i18n.translations.ar['faq.q.technical.4'] = 'هل هناك حدود للاستخدام؟';
+
+i18n.translations.en['faq.a.technical.4'] = 'Each plan includes usage limits that scale with your subscription level. Enterprise plans have custom limits based on your needs.';
+i18n.translations.ar['faq.a.technical.4'] = 'تتضمن كل خطة حدود استخدام تتسع مع مستوى اشتراكك. خطط المؤسسة لها حدود مخصصة بناءً على احتياجاتك.';
+
+i18n.translations.en['faq.q.technical.5'] = 'Do you provide API access?';
+i18n.translations.ar['faq.q.technical.5'] = 'هل تقدمون وصول API؟';
+
+i18n.translations.en['faq.a.technical.5'] = 'Yes, Professional and Enterprise plans include full API access with comprehensive documentation and SDKs for popular languages.';
+i18n.translations.ar['faq.a.technical.5'] = 'نعم، تتضمن خطط المهنية والمؤسسة وصول API كامل مع وثائق شاملة و SDK للغات الشهيرة.';
+
+// Support Questions
+i18n.translations.en['faq.q.support.1'] = 'What support channels are available?';
+i18n.translations.ar['faq.q.support.1'] = 'ما قنوات الدعم المتاحة؟';
+
+i18n.translations.en['faq.a.support.1'] = 'We offer support via email, live chat, phone, and an extensive knowledge base. Enterprise customers get a dedicated account manager.';
+i18n.translations.ar['faq.a.support.1'] = 'نقدم الدعم عبر البريد الإلكتروني والدردشة المباشرة والهاتف وقاعدة معارف شاملة. يحصل عملاء المؤسسة على مدير حسابات مخصص.';
+
+i18n.translations.en['faq.q.support.2'] = 'What is your average response time?';
+i18n.translations.ar['faq.q.support.2'] = 'ما متوسط وقت الاستجابة الخاص بك؟';
+
+i18n.translations.en['faq.a.support.2'] = 'We respond to support requests within 1-2 hours during business hours and within 4 hours outside business hours.';
+i18n.translations.ar['faq.a.support.2'] = 'نرد على طلبات الدعم في غضون 1-2 ساعة خلال ساعات العمل وفي غضون 4 ساعات خارج ساعات العمل.';
+
+i18n.translations.en['faq.q.support.3'] = 'Do you offer training?';
+i18n.translations.ar['faq.q.support.3'] = 'هل تقدمون تدريباً؟';
+
+i18n.translations.en['faq.a.support.3'] = 'Yes! We offer onboarding training, webinars, video tutorials, and detailed documentation to help you get the most from aizoniq.';
+i18n.translations.ar['faq.a.support.3'] = 'نعم! نقدم تدريب التكامل والويبينارات وفيديوهات تعليمية وتوثيق مفصل لمساعدتك على الاستفادة القصوى من أيزونيك.';
+
+i18n.translations.en['faq.q.support.4'] = 'Is there a knowledge base?';
+i18n.translations.ar['faq.q.support.4'] = 'هل هناك قاعدة معارف؟';
+
+i18n.translations.en['faq.a.support.4'] = 'Yes, our comprehensive knowledge base includes guides, best practices, troubleshooting articles, and video tutorials for all features.';
+i18n.translations.ar['faq.a.support.4'] = 'نعم، تتضمن قاعدة معارفنا الشاملة أدلة وأفضل الممارسات والمقالات استكشاف الأخطاء والفيديوهات التعليمية لجميع الميزات.';
+
+i18n.translations.en['faq.q.support.5'] = 'What is your customer satisfaction rate?';
+i18n.translations.ar['faq.q.support.5'] = 'ما معدل رضا العملاء الخاص بك؟';
+
+i18n.translations.en['faq.a.support.5'] = 'We maintain a 98% customer satisfaction rate with continuous improvements based on customer feedback.';
+i18n.translations.ar['faq.a.support.5'] = 'نحافظ على معدل رضا العملاء 98% مع تحسينات مستمرة بناءً على ملاحظات العملاء.';
+
+i18n.translations.en['faq.noResults'] = 'No FAQ items found matching your search. Please try different keywords.';
+i18n.translations.ar['faq.noResults'] = 'لم يتم العثور على أسئلة متطابقة مع بحثك. يرجى محاولة كلمات مفتاحية مختلفة.';
+
+i18n.translations.en['faq.cta.title'] = 'Still have questions?';
+i18n.translations.ar['faq.cta.title'] = 'هل لديك أسئلة أخرى؟';
+
+i18n.translations.en['faq.cta.subtitle'] = 'Get in touch with our team for personalized support and consultation.';
+i18n.translations.ar['faq.cta.subtitle'] = 'تواصل مع فريقنا للحصول على دعم واستشارة مخصصة.';
