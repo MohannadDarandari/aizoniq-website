@@ -19,6 +19,7 @@ class AIZONIQChatbot {
 
     createWidget() {
         const html = `
+            <div class="chatbot-overlay" id="chatbot-overlay"></div>
             <button class="chatbot-toggle" id="chatbot-btn">
                 <i class="fas fa-robot"></i>
                 <span class="chatbot-badge">AI</span>
@@ -63,6 +64,7 @@ class AIZONIQChatbot {
     attachListeners() {
         document.getElementById('chatbot-btn')?.addEventListener('click', () => this.toggle());
         document.getElementById('chatbot-close')?.addEventListener('click', () => this.toggle());
+        document.getElementById('chatbot-overlay')?.addEventListener('click', () => this.toggle());
         document.getElementById('chatbot-send')?.addEventListener('click', () => this.send());
         document.getElementById('chatbot-input')?.addEventListener('keypress', (e) => {
             if (e.key === 'Enter') this.send();
@@ -72,8 +74,10 @@ class AIZONIQChatbot {
     toggle() {
         const box = document.getElementById('chatbot-box');
         const btn = document.getElementById('chatbot-btn');
+        const overlay = document.getElementById('chatbot-overlay');
         box?.classList.toggle('active');
         btn?.classList.toggle('active');
+        overlay?.classList.toggle('active');
     }
 
     send() {
