@@ -19,19 +19,37 @@ class AIZONIQChatbot {
 
     createWidget() {
         const html = `
-            <button class="chatbot-btn" id="chatbot-btn">
-                <i class="fas fa-comments"></i>
-                <span class="chatbot-badge">1</span>
+            <button class="chatbot-toggle" id="chatbot-btn">
+                <i class="fas fa-robot"></i>
+                <span class="chatbot-badge">AI</span>
             </button>
-            <div class="chatbot-box" id="chatbot-box">
+            <div class="chatbot-container" id="chatbot-box">
                 <div class="chatbot-header">
-                    <h3>AIZONIQ</h3>
+                    <div class="chatbot-header-content">
+                        <h3>🤖 AIZONIQ Assistant</h3>
+                        <div class="chat-status">
+                            <span class="status-dot"></span>
+                            <span>Online Now</span>
+                        </div>
+                    </div>
                     <button class="chatbot-close" id="chatbot-close">×</button>
                 </div>
-                <div class="chatbot-msgs" id="chatbot-msgs"></div>
-                <div class="chatbot-input">
-                    <input type="text" id="chatbot-input" placeholder="Type...">
-                    <button id="chatbot-send"><i class="fas fa-paper-plane"></i></button>
+                <div class="chatbot-messages" id="chatbot-msgs">
+                    <div class="chat-message bot">
+                        <div class="message-bubble">
+                            ${this.currentLanguage === 'ar' ? 
+                                '👋 أهلاً! أنا مساعد AIZONIQ الذكي. كيف أساعدك اليوم؟' : 
+                                '👋 Hello! I\'m AIZONIQ AI Assistant. How can I help you today?'
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="chatbot-input-area">
+                    <input type="text" id="chatbot-input" 
+                           placeholder="${this.currentLanguage === 'ar' ? 'اكتب رسالتك...' : 'Type your message...'}">
+                    <button id="chatbot-send" class="chatbot-send">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
                 </div>
             </div>
         `;
@@ -52,7 +70,10 @@ class AIZONIQChatbot {
     }
 
     toggle() {
-        document.getElementById('chatbot-box')?.classList.toggle('open');
+        const box = document.getElementById('chatbot-box');
+        const btn = document.getElementById('chatbot-btn');
+        box?.classList.toggle('active');
+        btn?.classList.toggle('active');
     }
 
     send() {
@@ -71,10 +92,10 @@ class AIZONIQChatbot {
     addMsg(text, type) {
         const box = document.getElementById('chatbot-msgs');
         const div = document.createElement('div');
-        div.className = `msg ${type}`;
-        div.innerHTML = `<span>${text}</span>`;
+        div.className = `chat-message ${type}`;
+        div.innerHTML = `<div class="message-bubble">${text}</div>`;
         box?.appendChild(div);
-        box?.scrollTo(0, box.scrollHeight);
+        box?.scrollTo({ top: box.scrollHeight, behavior: 'smooth' });
         this.messages.push({ text, type, time: Date.now() });
         localStorage.setItem('cb_msgs', JSON.stringify(this.messages.slice(-20)));
     }
@@ -82,33 +103,45 @@ class AIZONIQChatbot {
     reply(text) {
         const t = text.toLowerCase();
         const ar = {
-            'مرحبا|سلام': 'مرحباً! كيف أساعدك؟',
-            'خدمات|ايش': '🎯 لدينا: كتابة، صور، شات، تحليل، فيديو، أتمتة، Deep Learning, ML\nأيها تختار؟',
-            'أتمتة|automation': '⚙️ n8n, Make, Power Automate\nتريد عرض؟',
-            'لوحات|dashboard': '📊 Power BI, Tableau, مخصص\nجدول عرض؟',
-            'deep|ديب': '🧠 شبكات عصبية متقدمة\nهل لديك بيانات؟',
-            'machine|مشين': '🤖 تصنيف، تنبؤ، تحليل\nكم البيانات؟'
+            'مرحبا|سلام|هلا': '🎉 مرحباً بك! أنا هنا لمساعدتك في كل ما يتعلق بخدمات الذكاء الاصطناعي. ماذا تحب أن تعرف؟',
+            'خدمات|ايش|services': '🎯 نقدم خدمات شاملة:\n\n✍️ كتابة محتوى بالذكاء الاصطناعي\n🎨 توليد الصور\n💬 روبوتات المحادثة\n📊 تحليل البيانات\n🎬 إنشاء الفيديو\n⚙️ الأتمتة\n🧠 Deep Learning\n🤖 Machine Learning\n\nأي خدمة تهمك؟',
+            'أتمتة|automation': '⚙️ خدمات الأتمتة المتقدمة:\n• n8n, Make, Zapier, Power Automate\n• ربط التطبيقات والأنظمة\n• توفير 10x من الوقت\n\nهل تريد عرض توضيحي؟',
+            'لوحات|dashboard|تحليل': '📊 لوحات تحكم تفاعلية:\n• Power BI, Tableau, Looker\n• تحليلات في الوقت الفعلي\n• مؤشرات أداء مخصصة\n\nهل تريد جدولة عرض؟',
+            'deep|ديب|تعلم عميق': '🧠 Deep Learning المتقدم:\n• شبكات عصبية متطورة\n• Computer Vision\n• NLP Models\n• تدريب مخصص\n\nهل لديك بيانات للعمل عليها؟',
+            'machine|مشين|تعلم آلي': '🤖 Machine Learning الاحترافي:\n• نماذج التنبؤ\n• التصنيف والتجميع\n• كشف الشذوذ\n• أنظمة التوصية\n\nما حجم بياناتك؟',
+            'سعر|price|pricing': '💰 خطط مرنة:\n• Starter: $299\n• Professional: $799\n• Enterprise: مخصص\n\nتواصل معنا للحصول على عرض خاص!',
+            'contact|تواصل|اتصال': '📞 تواصل معنا:\n• البريد: info@aizoniq.com\n• الموقع: صفحة الاتصال\n\nسنرد خلال 24 ساعة!',
         };
         const en = {
-            'hello|hi': 'Hello! How can I help?',
-            'services': '🎯 We offer: Writing, Images, Chatbots, Analytics, Video, Automation, Deep Learning, ML\nWhich interests you?',
-            'automation': '⚙️ n8n, Make, Power Automate\nWant a demo?',
-            'dashboard': '📊 Power BI, Tableau, Custom\nSchedule a call?',
-            'deep learning': '🧠 Advanced neural networks\nDo you have data?',
-            'machine learning': '🤖 Classification, Prediction, Analysis\nHow much data?'
+            'hello|hi|hey': '🎉 Welcome! I\'m here to help you with AI services. What would you like to know?',
+            'services|what': '🎯 Our comprehensive services:\n\n✍️ AI Content Writing\n🎨 Image Generation\n💬 Chatbots\n📊 Data Analytics\n🎬 Video Creation\n⚙️ Automation\n🧠 Deep Learning\n🤖 Machine Learning\n\nWhich interests you?',
+            'automation': '⚙️ Advanced Automation:\n• n8n, Make, Zapier, Power Automate\n• Connect apps & systems\n• Save 10x time\n\nWant a demo?',
+            'dashboard|analytics': '📊 Interactive Dashboards:\n• Power BI, Tableau, Looker\n• Real-time analytics\n• Custom KPIs\n\nSchedule a demo call?',
+            'deep learning': '🧠 Advanced Deep Learning:\n• Sophisticated neural networks\n• Computer Vision\n• NLP Models\n• Custom training\n\nDo you have data to work with?',
+            'machine learning': '🤖 Professional ML:\n• Predictive models\n• Classification & clustering\n• Anomaly detection\n• Recommendation systems\n\nHow much data do you have?',
+            'price|pricing|cost': '💰 Flexible Plans:\n• Starter: $299\n• Professional: $799\n• Enterprise: Custom\n\nContact us for special offer!',
+            'contact': '📞 Get in touch:\n• Email: info@aizoniq.com\n• Website: Contact page\n\nWe reply within 24 hours!',
         };
         
         const resp = this.currentLanguage === 'ar' ? ar : en;
         for (const [k, v] of Object.entries(resp)) {
             if (k.split('|').some(p => t.includes(p))) return v;
         }
-        return this.currentLanguage === 'ar' ? '👍 سؤال ممتاز! تحدث مع الفريق؟' : '👍 Great question! Talk to our team?';
+        return this.currentLanguage === 'ar' ? 
+            '💡 سؤال رائع! لمساعدة أفضل، تواصل مع فريقنا مباشرة. نحن جاهزون! 🚀' : 
+            '💡 Great question! For better assistance, contact our team directly. We\'re ready! 🚀';
     }
 
     onLanguageChange() {
         this.currentLanguage = typeof i18n !== 'undefined' ? i18n.currentLanguage : 'ar';
         const inp = document.getElementById('chatbot-input');
-        if (inp) inp.placeholder = this.currentLanguage === 'ar' ? 'اكتب...' : 'Type...';
+        if (inp) inp.placeholder = this.currentLanguage === 'ar' ? 'اكتب رسالتك...' : 'Type your message...';
+        
+        // Update status text
+        const statusText = document.querySelector('.chat-status span:last-child');
+        if (statusText) {
+            statusText.textContent = this.currentLanguage === 'ar' ? 'متصل الآن' : 'Online Now';
+        }
     }
 
     loadMessages() {
