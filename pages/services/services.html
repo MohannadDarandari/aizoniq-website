@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore AIZONIQ's comprehensive AI services including Content Writing, Image Generation, Chatbots, Data Analytics, Video Creation, and Custom AI Solutions.">
+    <title>AI Services - AIZONIQ | Comprehensive AI Solutions</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../shared/css/style.css">
+    <link rel="stylesheet" href="../../shared/css/animated.css">
+    <link rel="stylesheet" href="../../shared/css/svg-icons.css">
+    <link rel="stylesheet" href="../../shared/css/services.css">
+    <link rel="stylesheet" href="../../shared/css/chatbot.css">
+</head>
+<body>
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-ai">AI</span><span class="logo-zoniq">ZONIQ</span>
+                    </a>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li><a href="../home/index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+                    <li><a href="services.html" class="nav-link active" data-i18n="nav.services">Services</a></li>
+                    <li><a href="../portfolio/portfolio.html" class="nav-link" data-i18n="nav.portfolio">Portfolio</a></li>
+                    <li><a href="../about/about.html" class="nav-link" data-i18n="nav.about">About</a></li>
+                    <li><a href="../contact/contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+                </ul>
+                
+                <div class="nav-buttons">
+                    <button id="language-toggle" class="btn btn-secondary">AR</button>
+                </div>
+                
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+        </div>
+        <div class="container">
+            <div class="page-header-content" data-aos="fade-up">
+                <span class="page-badge" data-i18n="services.badge">Our Services</span>
+                <h1 data-i18n="services.title">Comprehensive AI Solutions</h1>
+                <p data-i18n="services.description">Discover how our cutting-edge AI services can transform your business operations and drive unprecedented growth</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Detail: AI Content Writing -->
+    <section id="writing" class="service-detail section-padding">
+        <div class="container">
+            <div class="service-detail-grid">
+                <div class="service-detail-content" data-aos="fade-right">
+                    <div class="service-badge">
+                        <i class="fas fa-pen-fancy"></i>
+                        <span>Content Creation</span>
+                    </div>
+                    <h2 data-i18n="service.writing">AI Content Writing</h2>
+                    <p class="lead" data-i18n="service.writing.lead">Generate high-quality, engaging content in seconds with our advanced AI writing tools powered by GPT-4 and custom language models.</p>
+                    
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4 data-i18n="service.writing.feature1">Blog Posts & Articles</h4>
+                                <p data-i18n="service.writing.feature1.desc">SEO-optimized long-form content that ranks and engages</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4 data-i18n="service.writing.feature2">Social Media Content</h4>
+                                <p data-i18n="service.writing.feature2.desc">Viral-worthy posts tailored to each platform</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4 data-i18n="service.writing.feature3">Product Descriptions</h4>
+                                <p data-i18n="service.writing.feature3.desc">Compelling copy that converts browsers into buyers</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4 data-i18n="service.writing.feature4">Email Campaigns</h4>
+                                <p data-i18n="service.writing.feature4.desc">Personalized email sequences that drive engagement</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-pricing">
+                        <div class="price-tag">Starting at <span>$299</span>/month</div>
+                        <a href="../contact/contact.html" class="btn btn-primary btn-large">Get Started</a>
+                    </div>
+                </div>
+                
+                <div class="service-detail-visual" data-aos="fade-left">
+                    <div class="visual-card">
+                        <div class="code-preview">
+                            <div class="code-header">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <div class="code-content">
+                                <p><span class="comment">// AI-Powered Content Generation</span></p>
+                                <p><span class="keyword">const</span> content = <span class="function">generateContent</span>({</p>
+                                <p>&nbsp;&nbsp;topic: <span class="string">"AI Technology"</span>,</p>
+                                <p>&nbsp;&nbsp;tone: <span class="string">"professional"</span>,</p>
+                                <p>&nbsp;&nbsp;length: <span class="number">1500</span>,</p>
+                                <p>&nbsp;&nbsp;seo: <span class="boolean">true</span></p>
+                                <p>});</p>
+                                <p><br></p>
+                                <p><span class="comment">// Result: High-quality article</span></p>
+                                <p><span class="comment">// Generated in 15 seconds</span></p>
+                            </div>
+                        </div>
+                        <div class="stats-mini">
+                            <div class="stat-mini-item">
+                                <i class="fas fa-bolt"></i>
+                                <div>
+                                    <h5 data-i18n="service.writing.stat1">10x Faster</h5>
+                                    <p data-i18n="service.writing.stat1.desc">Than manual writing</p>
+                                </div>
+                            </div>
+                            <div class="stat-mini-item">
+                                <i class="fas fa-chart-line"></i>
+                                <div>
+                                    <h5 data-i18n="service.writing.stat2">95% Quality</h5>
+                                    <p data-i18n="service.writing.stat2.desc">Client satisfaction</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Detail: AI Image Generation -->
+    <section id="image" class="service-detail section-padding alternate">
+        <div class="container">
+            <div class="service-detail-grid reverse">
+                <div class="service-detail-visual" data-aos="fade-right">
+                    <div class="visual-card">
+                        <div class="image-gallery">
+                            <div class="gallery-item">
+                                <div class="placeholder-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                    <i class="fas fa-image"></i>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="placeholder-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                                    <i class="fas fa-palette"></i>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="placeholder-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                                    <i class="fas fa-wand-magic-sparkles"></i>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="placeholder-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                                    <i class="fas fa-sparkles"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="generation-prompt">
+                            <p>"A futuristic cityscape at sunset with flying cars"</p>
+                            <button class="btn btn-primary btn-sm"><i class="fas fa-wand-magic"></i> Generate</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-detail-content" data-aos="fade-left">
+                    <div class="service-badge">
+                        <i class="fas fa-image"></i>
+                        <span>Visual AI</span>
+                    </div>
+                    <h2 data-i18n="service.image">AI Image Generation</h2>
+                    <p class="lead" data-i18n="service.image.lead">Create stunning, unique visuals from text descriptions using state-of-the-art AI models like DALL-E, Midjourney, and Stable Diffusion.</p>
+                    
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Marketing Visuals</h4>
+                                <p>Eye-catching graphics for ads and social media</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Product Mockups</h4>
+                                <p>Realistic product visualizations before production</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Brand Assets</h4>
+                                <p>Unique logos, icons, and brand illustrations</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Concept Art</h4>
+                                <p>Rapid ideation and creative exploration</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-pricing">
+                        <div class="price-tag">Starting at <span>$399</span>/month</div>
+                        <a href="../contact/contact.html" class="btn btn-primary btn-large">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Detail: AI Chatbots -->
+    <section id="chatbot" class="service-detail section-padding">
+        <div class="container">
+            <div class="service-detail-grid">
+                <div class="service-detail-content" data-aos="fade-right">
+                    <div class="service-badge">
+                        <i class="fas fa-robot"></i>
+                        <span>Conversational AI</span>
+                    </div>
+                    <h2>AI Chatbots & Virtual Assistants</h2>
+                    <p class="lead">Deploy intelligent conversational AI that understands context, learns from interactions, and provides 24/7 customer support.</p>
+                    
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Customer Support Bots</h4>
+                                <p>Handle FAQs and support tickets automatically</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Sales Assistants</h4>
+                                <p>Qualify leads and guide customers through sales</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Multi-Platform Integration</h4>
+                                <p>Website, WhatsApp, Telegram, Slack, and more</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Natural Language Understanding</h4>
+                                <p>Context-aware responses in multiple languages</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-pricing">
+                        <div class="price-tag">Starting at <span>$599</span>/month</div>
+                        <a href="../contact/contact.html" class="btn btn-primary btn-large">Get Started</a>
+                    </div>
+                </div>
+                
+                <div class="service-detail-visual" data-aos="fade-left">
+                    <div class="visual-card">
+                        <div class="chat-interface">
+                            <div class="chat-header">
+                                <div class="chat-avatar">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div>
+                                    <h4>AI Assistant</h4>
+                                    <span class="online-status"><i class="fas fa-circle"></i> Online</span>
+                                </div>
+                            </div>
+                            <div class="chat-messages">
+                                <div class="message bot-message">
+                                    <p>Hello! How can I help you today? 👋</p>
+                                </div>
+                                <div class="message user-message">
+                                    <p>I need help with my order</p>
+                                </div>
+                                <div class="message bot-message">
+                                    <p>I'd be happy to help! Please provide your order number and I'll look it up for you.</p>
+                                </div>
+                                <div class="typing-indicator">
+                                    <span></span><span></span><span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stats-mini">
+                            <div class="stat-mini-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <h5>24/7 Support</h5>
+                                    <p>Always available</p>
+                                </div>
+                            </div>
+                            <div class="stat-mini-item">
+                                <i class="fas fa-percentage"></i>
+                                <div>
+                                    <h5>80% Automation</h5>
+                                    <p>Ticket reduction</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Detail: Data Analytics -->
+    <section id="analytics" class="service-detail section-padding alternate">
+        <div class="container">
+            <div class="service-detail-grid reverse">
+                <div class="service-detail-visual" data-aos="fade-right">
+                    <div class="visual-card">
+                        <div class="analytics-dashboard">
+                            <div class="dashboard-header">
+                                <h4><i class="fas fa-chart-pie"></i> Analytics Dashboard</h4>
+                            </div>
+                            <div class="dashboard-stats">
+                                <div class="dash-stat">
+                                    <span class="stat-value">45%</span>
+                                    <span class="stat-label">ROI Increase</span>
+                                    <div class="stat-trend up">
+                                        <i class="fas fa-arrow-up"></i> 12%
+                                    </div>
+                                </div>
+                                <div class="dash-stat">
+                                    <span class="stat-value">10K</span>
+                                    <span class="stat-label">Data Points</span>
+                                    <div class="stat-trend up">
+                                        <i class="fas fa-arrow-up"></i> 8%
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dashboard-chart">
+                                <div class="chart-bars">
+                                    <div class="bar" style="height: 40%"></div>
+                                    <div class="bar" style="height: 65%"></div>
+                                    <div class="bar" style="height: 80%"></div>
+                                    <div class="bar" style="height: 55%"></div>
+                                    <div class="bar" style="height: 90%"></div>
+                                    <div class="bar" style="height: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-detail-content" data-aos="fade-left">
+                    <div class="service-badge">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Data Intelligence</span>
+                    </div>
+                    <h2>AI Data Analytics</h2>
+                    <p class="lead">Transform raw data into actionable insights with AI-powered analytics, predictive modeling, and intelligent visualization.</p>
+                    
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Predictive Analytics</h4>
+                                <p>Forecast trends and make data-driven decisions</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Customer Insights</h4>
+                                <p>Deep understanding of customer behavior</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Automated Reporting</h4>
+                                <p>Real-time dashboards and scheduled reports</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Anomaly Detection</h4>
+                                <p>Identify issues before they become problems</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-pricing">
+                        <div class="price-tag">Starting at <span>$799</span>/month</div>
+                        <a href="../contact/contact.html" class="btn btn-primary btn-large">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Detail: Video Creation -->
+    <section id="video" class="service-detail section-padding">
+        <div class="container">
+            <div class="service-detail-grid">
+                <div class="service-detail-content" data-aos="fade-right">
+                    <div class="service-badge">
+                        <i class="fas fa-video"></i>
+                        <span>Video AI</span>
+                    </div>
+                    <h2>AI Video Creation</h2>
+                    <p class="lead">Produce professional video content with AI-assisted editing, automatic subtitles, voice synthesis, and special effects.</p>
+                    
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Auto Video Editing</h4>
+                                <p>AI-powered cuts, transitions, and effects</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Text-to-Video</h4>
+                                <p>Transform scripts into engaging videos</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>AI Voice Overs</h4>
+                                <p>Natural-sounding narration in any language</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Auto Subtitles</h4>
+                                <p>Accurate captions in multiple languages</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-pricing">
+                        <div class="price-tag">Starting at <span>$699</span>/month</div>
+                        <a href="../contact/contact.html" class="btn btn-primary btn-large">Get Started</a>
+                    </div>
+                </div>
+                
+                <div class="service-detail-visual" data-aos="fade-left">
+                    <div class="visual-card">
+                        <div class="video-preview">
+                            <div class="video-player">
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <div class="video-overlay">
+                                    <span>AI-Generated Video</span>
+                                </div>
+                            </div>
+                            <div class="video-timeline">
+                                <div class="timeline-progress" style="width: 35%"></div>
+                            </div>
+                            <div class="video-controls">
+                                <button><i class="fas fa-play"></i></button>
+                                <span class="time">0:45 / 2:10</span>
+                                <button><i class="fas fa-volume-up"></i></button>
+                                <button><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                        <div class="stats-mini">
+                            <div class="stat-mini-item">
+                                <i class="fas fa-rocket"></i>
+                                <div>
+                                    <h5>5x Faster</h5>
+                                    <p>Production time</p>
+                                </div>
+                            </div>
+                            <div class="stat-mini-item">
+                                <i class="fas fa-dollar-sign"></i>
+                                <div>
+                                    <h5>70% Savings</h5>
+                                    <p>Production costs</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Detail: Custom AI -->
+    <section id="custom" class="service-detail section-padding alternate">
+        <div class="container">
+            <div class="service-detail-grid reverse">
+                <div class="service-detail-visual" data-aos="fade-right">
+                    <div class="visual-card">
+                        <div class="custom-ai-visual">
+                            <div class="ai-nodes">
+                                <div class="node node-1">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <div class="node node-2">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <div class="node node-3">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <div class="node node-4">
+                                    <i class="fas fa-chart-network"></i>
+                                </div>
+                                <svg class="connections">
+                                    <line x1="50%" y1="30%" x2="20%" y2="70%"></line>
+                                    <line x1="50%" y1="30%" x2="80%" y2="70%"></line>
+                                    <line x1="20%" y1="70%" x2="80%" y2="70%"></line>
+                                </svg>
+                            </div>
+                            <div class="integration-badges">
+                                <span class="badge">Machine Learning</span>
+                                <span class="badge">NLP</span>
+                                <span class="badge">Computer Vision</span>
+                                <span class="badge">Deep Learning</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-detail-content" data-aos="fade-left">
+                    <div class="service-badge">
+                        <i class="fas fa-microchip"></i>
+                        <span>Bespoke AI</span>
+                    </div>
+                    <h2>Custom AI Solutions</h2>
+                    <p class="lead">Tailored AI models, integrations, and systems designed specifically for your unique business challenges and requirements.</p>
+                    
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Custom Model Training</h4>
+                                <p>AI models trained on your specific data</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>API Integration</h4>
+                                <p>Seamless integration with existing systems</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Workflow Automation</h4>
+                                <p>End-to-end process automation with AI</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Ongoing Support</h4>
+                                <p>Continuous optimization and updates</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-pricing">
+                        <div class="price-tag">Custom pricing based on requirements</div>
+                        <a href="../contact/contact.html" class="btn btn-primary btn-large">Request Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section section-padding">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <span class="section-badge">Transparent Pricing</span>
+                <h2>Choose Your Perfect Plan</h2>
+                <p>Flexible pricing options that grow with your business</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pricing-header">
+                        <h3>Starter</h3>
+                        <div class="price">
+                            <span class="amount">$299</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 50,000 AI-generated words</li>
+                        <li><i class="fas fa-check"></i> 100 AI images</li>
+                        <li><i class="fas fa-check"></i> Basic chatbot (1,000 messages)</li>
+                        <li><i class="fas fa-check"></i> Email support</li>
+                        <li><i class="fas fa-check"></i> 5 projects</li>
+                    </ul>
+                    <a href="../contact/contact.html" class="btn btn-secondary btn-block">Get Started</a>
+                </div>
+                
+                <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="200">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Professional</h3>
+                        <div class="price">
+                            <span class="amount">$799</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 200,000 AI-generated words</li>
+                        <li><i class="fas fa-check"></i> 500 AI images</li>
+                        <li><i class="fas fa-check"></i> Advanced chatbot (10,000 messages)</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                        <li><i class="fas fa-check"></i> 20 projects</li>
+                        <li><i class="fas fa-check"></i> API access</li>
+                        <li><i class="fas fa-check"></i> Custom integrations</li>
+                    </ul>
+                    <a href="../contact/contact.html" class="btn btn-primary btn-block">Get Started</a>
+                </div>
+                
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="pricing-header">
+                        <h3>Enterprise</h3>
+                        <div class="price">
+                            <span class="amount">Custom</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Unlimited AI content</li>
+                        <li><i class="fas fa-check"></i> Unlimited AI images</li>
+                        <li><i class="fas fa-check"></i> Enterprise chatbot</li>
+                        <li><i class="fas fa-check"></i> 24/7 dedicated support</li>
+                        <li><i class="fas fa-check"></i> Unlimited projects</li>
+                        <li><i class="fas fa-check"></i> Full API access</li>
+                        <li><i class="fas fa-check"></i> Custom AI models</li>
+                        <li><i class="fas fa-check"></i> On-premise deployment</li>
+                    </ul>
+                    <a href="../contact/contact.html" class="btn btn-secondary btn-block">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section section-padding">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <span class="section-badge">FAQ</span>
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about our AI services</p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-question">
+                        <h3>What AI models do you use?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We use state-of-the-art AI models including GPT-4, DALL-E 3, Stable Diffusion, and custom-trained models optimized for specific industries. Our platform automatically selects the best model for your needs.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="150">
+                    <div class="faq-question">
+                        <h3>How quickly can I get started?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can start using our services immediately after signing up. Our onboarding process takes less than 5 minutes, and you'll have access to all features in your plan right away.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-question">
+                        <h3>Can I upgrade or downgrade my plan?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! You can change your plan at any time. Upgrades take effect immediately, and downgrades will apply at the start of your next billing cycle.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="250">
+                    <div class="faq-question">
+                        <h3>Do you offer custom AI solutions?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! Our Enterprise plan includes custom AI model development, tailored integrations, and dedicated support for unique business requirements.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="faq-question">
+                        <h3>What kind of support do you provide?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Support varies by plan: Starter includes email support, Professional gets priority support with faster response times, and Enterprise receives 24/7 dedicated support with a personal account manager.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="350">
+                    <div class="faq-question">
+                        <h3>Is my data secure?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, security is our top priority. We use enterprise-grade encryption, comply with GDPR and SOC 2 standards, and never use your data to train AI models without explicit permission.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section section-padding">
+        <div class="container">
+            <div class="cta-content" data-aos="zoom-in">
+                <div class="cta-background">
+                    <div class="gradient-orb orb-4"></div>
+                    <div class="gradient-orb orb-5"></div>
+                </div>
+                
+                <h2 class="cta-title">Ready to Get Started?</h2>
+                <p class="cta-description">
+                    Let's discuss how our AI solutions can transform your business
+                </p>
+                
+                <div class="cta-buttons">
+                    <a href="../contact/contact.html" class="btn btn-primary btn-large">
+                        <span>Schedule Free Consultation</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <span class="logo-ai">AI</span><span class="logo-zoniq">ZONIQ</span>
+                    </div>
+                    <p class="footer-description">
+                        Empowering businesses with cutting-edge artificial intelligence solutions.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#writing">AI Content Writing</a></li>
+                        <li><a href="services.html#image">Image Generation</a></li>
+                        <li><a href="services.html#chatbot">AI Chatbots</a></li>
+                        <li><a href="services.html#analytics">Data Analytics</a></li>
+                        <li><a href="services.html#video">Video Creation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="../about/about.html">About Us</a></li>
+                        <li><a href="../portfolio/portfolio.html">Portfolio</a></li>
+                        <li><a href="../contact/contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get the latest AI insights</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 AIZONIQ. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../../shared/js/i18n.js"></script>
+    <script src="../../shared/js/init.js"></script>
+    <script src="../../shared/js/main.js"></script>
+    <script>
+        // FAQ Toggle Functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
