@@ -1,308 +1,129 @@
-// ============================================
-// AIZONIQ - AI Chatbot Widget
-// ============================================
+/**
+ * AIZONIQ Professional Chatbot - 2024
+ * Advanced AI Assistant with Bilingual Support
+ */
 
 class AIZONIQChatbot {
     constructor() {
         this.messages = [];
-        this.isOpen = false;
-        this.isTyping = false;
+        this.currentLanguage = localStorage.getItem('aizoniq_language') || 'ar';
         this.init();
     }
 
     init() {
         this.createWidget();
-        this.attachEventListeners();
-        this.showWelcomeMessage();
+        this.attachListeners();
+        this.loadMessages();
+        window.addEventListener('languageChanged', () => this.onLanguageChange());
     }
 
     createWidget() {
-        const widget = document.createElement('div');
-        widget.className = 'chatbot-widget';
-        widget.innerHTML = `
-            <button class="chatbot-toggle" id="chatbotToggle" title="AI Assistant">
+        const html = `
+            <button class="chatbot-btn" id="chatbot-btn">
                 <i class="fas fa-comments"></i>
                 <span class="chatbot-badge">1</span>
             </button>
-
-            <div class="chatbot-container" id="chatbotContainer">
+            <div class="chatbot-box" id="chatbot-box">
                 <div class="chatbot-header">
-                    <div>
-                        <h3>AIZONIQ Assistant</h3>
-                        <div class="chat-status">
-                            <span class="status-dot"></span>
-                            <span>Online</span>
-                        </div>
-                    </div>
-                    <button class="chatbot-close" id="chatbotClose">×</button>
+                    <h3>AIZONIQ</h3>
+                    <button class="chatbot-close" id="chatbot-close">×</button>
                 </div>
-
-                <div class="chatbot-messages" id="chatbotMessages"></div>
-
-                <div class="quick-replies" id="quickReplies"></div>
-
-                <div class="chatbot-input-area">
-                    <input 
-                        type="text" 
-                        class="chatbot-input" 
-                        id="chatbotInput" 
-                        placeholder="Type your message..."
-                        autocomplete="off"
-                    >
-                    <button class="chatbot-send" id="chatbotSend">
-                        <i class="fas fa-paper-plane"></i>
-                    </button>
+                <div class="chatbot-msgs" id="chatbot-msgs"></div>
+                <div class="chatbot-input">
+                    <input type="text" id="chatbot-input" placeholder="Type...">
+                    <button id="chatbot-send"><i class="fas fa-paper-plane"></i></button>
                 </div>
             </div>
         `;
-
-        document.body.appendChild(widget);
-
-        // Add stylesheet
-        if (!document.querySelector('link[href*="chatbot.css"]')) {
-            const link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = 'css/chatbot.css';
-            document.head.appendChild(link);
-        }
+        
+        const div = document.createElement('div');
+        div.className = 'chatbot-widget';
+        div.innerHTML = html;
+        document.body.appendChild(div);
     }
 
-    attachEventListeners() {
-        const toggle = document.getElementById('chatbotToggle');
-        const close = document.getElementById('chatbotClose');
-        const send = document.getElementById('chatbotSend');
-        const input = document.getElementById('chatbotInput');
-
-        toggle.addEventListener('click', () => this.toggleChat());
-        close.addEventListener('click', () => this.closeChat());
-        send.addEventListener('click', () => this.sendMessage());
-        input.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') this.sendMessage();
+    attachListeners() {
+        document.getElementById('chatbot-btn')?.addEventListener('click', () => this.toggle());
+        document.getElementById('chatbot-close')?.addEventListener('click', () => this.toggle());
+        document.getElementById('chatbot-send')?.addEventListener('click', () => this.send());
+        document.getElementById('chatbot-input')?.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') this.send();
         });
     }
 
-    toggleChat() {
-        this.isOpen ? this.closeChat() : this.openChat();
+    toggle() {
+        document.getElementById('chatbot-box')?.classList.toggle('open');
     }
 
-    openChat() {
-        this.isOpen = true;
-        document.getElementById('chatbotContainer').classList.add('active');
-        document.getElementById('chatbotToggle').classList.add('active');
-        document.getElementById('chatbotInput').focus();
-        this.removeBadge();
-    }
-
-    closeChat() {
-        this.isOpen = false;
-        document.getElementById('chatbotContainer').classList.remove('active');
-        document.getElementById('chatbotToggle').classList.remove('active');
-    }
-
-    removeBadge() {
-        const badge = document.querySelector('.chatbot-badge');
-        if (badge) badge.style.display = 'none';
-    }
-
-    sendMessage() {
-        const input = document.getElementById('chatbotInput');
-        const message = input.value.trim();
-
-        if (!message) return;
-
-        // Add user message
-        this.addMessage(message, 'user');
+    send() {
+        const input = document.getElementById('chatbot-input');
+        const msg = input?.value.trim();
+        if (!msg) return;
+        
+        this.addMsg(msg, 'user');
         input.value = '';
-
-        // Show typing indicator
-        this.showTypingIndicator();
-
-        // Get bot response
+        
         setTimeout(() => {
-            this.removeTypingIndicator();
-            const response = this.getBotResponse(message);
-            this.addMessage(response, 'bot');
-            this.updateQuickReplies();
-        }, 800 + Math.random() * 400);
+            this.addMsg(this.reply(msg), 'bot');
+        }, 600);
     }
 
-    addMessage(text, sender) {
-        const messagesDiv = document.getElementById('chatbotMessages');
-        const messageElement = document.createElement('div');
-        messageElement.className = `chat-message ${sender}`;
-        messageElement.innerHTML = `<div class="message-bubble">${this.escapeHtml(text)}</div>`;
-        messagesDiv.appendChild(messageElement);
-
-        // Auto-scroll to bottom
-        messagesDiv.scrollTop = messagesDiv.scrollHeight;
-
-        this.messages.push({ text, sender, time: new Date() });
+    addMsg(text, type) {
+        const box = document.getElementById('chatbot-msgs');
+        const div = document.createElement('div');
+        div.className = `msg ${type}`;
+        div.innerHTML = `<span>${text}</span>`;
+        box?.appendChild(div);
+        box?.scrollTo(0, box.scrollHeight);
+        this.messages.push({ text, type, time: Date.now() });
+        localStorage.setItem('cb_msgs', JSON.stringify(this.messages.slice(-20)));
     }
 
-    showTypingIndicator() {
-        const messagesDiv = document.getElementById('chatbotMessages');
-        const typingDiv = document.createElement('div');
-        typingDiv.className = 'chat-message bot';
-        typingDiv.id = 'typingIndicator';
-        typingDiv.innerHTML = `
-            <div class="message-bubble">
-                <div class="message-typing">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        `;
-        messagesDiv.appendChild(typingDiv);
-        messagesDiv.scrollTop = messagesDiv.scrollHeight;
-    }
-
-    removeTypingIndicator() {
-        const indicator = document.getElementById('typingIndicator');
-        if (indicator) indicator.remove();
-    }
-
-    getBotResponse(userMessage) {
-        const message = userMessage.toLowerCase();
-
-        // Services inquiries
-        if (message.includes('pricing') || message.includes('cost') || message.includes('price')) {
-            return 'Our services start at $199/month and scale based on your needs. Would you like to know more about a specific service?';
-        }
-
-        if (message.includes('content') || message.includes('writing') || message.includes('blog')) {
-            return 'Our AI Content Writing service can generate 10x more content while maintaining quality. Perfect for blogs, social media, and product descriptions. Interested?';
-        }
-
-        if (message.includes('chatbot') || message.includes('chat') || message.includes('assistant')) {
-            return 'Our AI Chatbots handle customer support 24/7, reducing support costs by up to 65%. They support multiple languages and platforms. Want to learn more?';
-        }
-
-        if (message.includes('image') || message.includes('design') || message.includes('visual')) {
-            return 'Our Image Generation service creates stunning visuals from text descriptions. Great for marketing, ads, and product mockups. Shall we discuss your project?';
-        }
-
-        if (message.includes('video') || message.includes('edit') || message.includes('production')) {
-            return 'Our AI Video Creation service automates editing and effects. You can produce 100+ videos monthly. Interested in scaling your video production?';
-        }
-
-        if (message.includes('analytics') || message.includes('data') || message.includes('insights')) {
-            return 'Our Data Analytics AI transforms raw data into actionable insights with 96% accuracy. Perfect for business intelligence and predictive modeling.';
-        }
-
-        // Portfolio and case studies
-        if (message.includes('portfolio') || message.includes('case') || message.includes('example') || message.includes('project')) {
-            return 'We\'ve helped 250+ companies achieve amazing results. Check out our portfolio page to see real case studies and measurable results!';
-        }
-
-        // Contact and meetings
-        if (message.includes('consultation') || message.includes('demo') || message.includes('meeting') || message.includes('call')) {
-            return 'I\'d love to help! Click "Get Started" to schedule a free consultation with our team. We\'ll discuss your specific needs.';
-        }
-
-        if (message.includes('contact') || message.includes('email') || message.includes('phone')) {
-            return 'You can reach us at info@aizoniq.com or use the contact form on our website. We respond within 24 hours!';
-        }
-
-        // About
-        if (message.includes('about') || message.includes('company') || message.includes('team') || message.includes('who are')) {
-            return 'AIZONIQ is a premier AI services agency founded in 2023. We help businesses automate operations and unlock new revenue streams. Learn more on our About page!';
-        }
-
-        // General greetings
-        if (message.includes('hello') || message.includes('hi') || message.includes('hey') || message.includes('greet')) {
-            return 'Hello! 👋 I\'m your AI Assistant. How can I help you today? Feel free to ask about our services, pricing, or schedule a consultation!';
-        }
-
-        if (message.includes('thank') || message.includes('thanks') || message.includes('appreciate')) {
-            return 'You\'re welcome! Is there anything else I can help you with?';
-        }
-
-        if (message.includes('bye') || message.includes('goodbye') || message.includes('see you')) {
-            return 'Goodbye! Feel free to reach out anytime. We\'re here to help! 👋';
-        }
-
-        // Questions about capability
-        if (message.includes('what') || message.includes('how') || message.includes('can you')) {
-            return 'I can help you with:\n• Information about our AI services\n• Pricing details\n• Portfolio and case studies\n• Booking consultations\n• General inquiries\n\nWhat would you like to know?';
-        }
-
-        // Default response
-        const defaultResponses = [
-            'That\'s a great question! Could you tell me more about what you\'re looking for?',
-            'I\'d be happy to help! Are you interested in learning about a specific service?',
-            'Interesting! Would you like me to connect you with our team for more details?',
-            'I can help with that! Do you want to schedule a consultation with our experts?'
-        ];
-
-        return defaultResponses[Math.floor(Math.random() * defaultResponses.length)];
-    }
-
-    showWelcomeMessage() {
-        setTimeout(() => {
-            this.addMessage('👋 Hi! I\'m your AI Assistant. How can I help you today?', 'bot');
-            this.updateQuickReplies();
-        }, 500);
-    }
-
-    updateQuickReplies() {
-        const container = document.getElementById('quickReplies');
-        const replies = [
-            'Tell me about services',
-            'View pricing',
-            'See portfolio',
-            'Schedule consultation'
-        ];
-
-        container.innerHTML = replies.map(reply => `
-            <button class="quick-reply-btn" onclick="chatbot.handleQuickReply('${reply}')">
-                ${reply}
-            </button>
-        `).join('');
-    }
-
-    handleQuickReply(text) {
-        document.getElementById('chatbotInput').value = text;
-        this.sendMessage();
-    }
-
-    escapeHtml(text) {
-        const map = {
-            '&': '&amp;',
-            '<': '&lt;',
-            '>': '&gt;',
-            '"': '&quot;',
-            "'": '&#039;'
+    reply(text) {
+        const t = text.toLowerCase();
+        const ar = {
+            'مرحبا|سلام': 'مرحباً! كيف أساعدك؟',
+            'خدمات|ايش': '🎯 لدينا: كتابة، صور، شات، تحليل، فيديو، أتمتة، Deep Learning, ML\nأيها تختار؟',
+            'أتمتة|automation': '⚙️ n8n, Make, Power Automate\nتريد عرض؟',
+            'لوحات|dashboard': '📊 Power BI, Tableau, مخصص\nجدول عرض؟',
+            'deep|ديب': '🧠 شبكات عصبية متقدمة\nهل لديك بيانات؟',
+            'machine|مشين': '🤖 تصنيف، تنبؤ، تحليل\nكم البيانات؟'
         };
-        return text.replace(/[&<>"']/g, m => map[m]);
+        const en = {
+            'hello|hi': 'Hello! How can I help?',
+            'services': '🎯 We offer: Writing, Images, Chatbots, Analytics, Video, Automation, Deep Learning, ML\nWhich interests you?',
+            'automation': '⚙️ n8n, Make, Power Automate\nWant a demo?',
+            'dashboard': '📊 Power BI, Tableau, Custom\nSchedule a call?',
+            'deep learning': '🧠 Advanced neural networks\nDo you have data?',
+            'machine learning': '🤖 Classification, Prediction, Analysis\nHow much data?'
+        };
+        
+        const resp = this.currentLanguage === 'ar' ? ar : en;
+        for (const [k, v] of Object.entries(resp)) {
+            if (k.split('|').some(p => t.includes(p))) return v;
+        }
+        return this.currentLanguage === 'ar' ? '👍 سؤال ممتاز! تحدث مع الفريق؟' : '👍 Great question! Talk to our team?';
     }
 
-    // Send chat data to backend
-    async sendToBackend() {
-        if (this.messages.length === 0) return;
+    onLanguageChange() {
+        this.currentLanguage = typeof i18n !== 'undefined' ? i18n.currentLanguage : 'ar';
+        const inp = document.getElementById('chatbot-input');
+        if (inp) inp.placeholder = this.currentLanguage === 'ar' ? 'اكتب...' : 'Type...';
+    }
 
+    loadMessages() {
         try {
-            await fetch('http://localhost:5000/api/chatbot-conversation', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    messages: this.messages,
-                    timestamp: new Date()
-                })
-            });
-        } catch (error) {
-            console.log('Chat data saved locally');
+            const saved = localStorage.getItem('cb_msgs');
+            if (saved) this.messages = JSON.parse(saved);
+        } catch (e) {
+            console.log('No saved messages');
         }
     }
 }
 
-// Initialize chatbot when page loads
-let chatbot;
-document.addEventListener('DOMContentLoaded', () => {
-    chatbot = new AIZONIQChatbot();
-});
-
-// Save conversations when page unloads
-window.addEventListener('beforeunload', () => {
-    if (chatbot) chatbot.sendToBackend();
-});
+// Init when ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => new AIZONIQChatbot());
+} else {
+    new AIZONIQChatbot();
+}

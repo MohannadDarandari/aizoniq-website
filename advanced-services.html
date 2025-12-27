@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AIZONIQ - Advanced AI Services including Automation, BI, Deep Learning, Machine Learning">
+    <meta name="keywords" content="AI, automation, deep learning, machine learning, power bi, tableau, n8n, make">
+    <title>Advanced Services - AIZONIQ</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Animate on Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animated.css">
+    <link rel="stylesheet" href="css/svg-icons.css">
+    <link rel="stylesheet" href="css/chatbot-modern.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-ai">AI</span><span class="logo-zoniq">ZONIQ</span>
+                    </a>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+                    <li><a href="services.html" class="nav-link" data-i18n="nav.services">Services</a></li>
+                    <li><a href="portfolio.html" class="nav-link" data-i18n="nav.portfolio">Portfolio</a></li>
+                    <li><a href="about.html" class="nav-link" data-i18n="nav.about">About</a></li>
+                    <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <button id="language-toggle" class="language-toggle">EN</button>
+                    <a href="#contact" class="btn btn-primary" data-i18n="nav.getStarted">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Advanced Services Section -->
+    <section class="services-advanced">
+        <div class="container">
+            <!-- Automation Services -->
+            <div class="advanced-services-group" data-aos="fade-up">
+                <h2>⚙️ Automation Services</h2>
+                <div class="services-grid-3">
+                    <!-- n8n -->
+                    <div class="service-card advanced-service" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-icon">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <h3 data-i18n="service.n8n">n8n Workflow Automation</h3>
+                        <p data-i18n="service.n8n.desc">Advanced workflow automation without code</p>
+                        <ul class="features-list">
+                            <li><i class="fas fa-check"></i> Visual Workflow Builder</li>
+                            <li><i class="fas fa-check"></i> 200+ App Integrations</li>
+                            <li><i class="fas fa-check"></i> Error Handling & Retries</li>
+                            <li><i class="fas fa-check"></i> Scheduled Workflows</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-secondary" data-i18n="service.learnMore">Learn More</a>
+                    </div>
+
+                    <!-- Make -->
+                    <div class="service-card advanced-service" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-icon">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <h3 data-i18n="service.make">Make Integration</h3>
+                        <p data-i18n="service.make.desc">Connect and automate all your applications</p>
+                        <ul class="features-list">
+                            <li><i class="fas fa-check"></i> Instant Integrations</li>
+                            <li><i class="fas fa-check"></i> 1000+ Pre-built Templates</li>
+                            <li><i class="fas fa-check"></i> No Coding Required</li>
+                            <li><i class="fas fa-check"></i> Real-time Data Sync</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-secondary" data-i18n="service.learnMore">Learn More</a>
+                    </div>
+
+                    <!-- Power Automate -->
+                    <div class="service-card advanced-service" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3 data-i18n="service.powerautomate">Power Automate</h3>
+                        <p data-i18n="service.powerautomate.desc">Integrated automation with Microsoft</p>
+                        <ul class="features-list">
+                            <li><i class="fas fa-check"></i> Cloud Flows & Desktop Flows</li>
+                            <li><i class="fas fa-check"></i> Microsoft 365 Integration</li>
+                            <li><i class="fas fa-check"></i> AI Builder Integration</li>
+                            <li><i class="fas fa-check"></i> Approval Workflows</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-secondary" data-i18n="service.learnMore">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BI & Dashboard Services -->
+            <div class="advanced-services-group" data-aos="fade-up">
+                <h2>📊 Business Intelligence & Dashboards</h2>
+                <div class="services-grid-3">
+                    <!-- Power BI -->
+                    <div class="service-card advanced-service" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 data-i18n="service.powerbi">Power BI Dashboards</h3>
+                        <p data-i18n="service.powerbi.desc">Powerful data visualization and reports</p>
+                        <ul class="features-list">
+                            <li><i class="fas fa-check"></i> Interactive Visualizations</li>
+                            <li><i class="fas fa-check"></i> Real-time Data Updates</li>
+                            <li><i class="fas fa-check"></i> AI Analytics & Insights</li>
+                            <li><i class="fas fa-check"></i> Mobile-Friendly Reports</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-secondary" data-i18n="service.learnMore">Learn More</a>
+                    </div>
+
+                    <!-- Tableau -->
+                    <div class="service-card advanced-service" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3 data-i18n="service.tableau">Tableau Analytics</h3>
+                        <p data-i18n="service.tableau.desc">Advanced analytics for deep insights</p>
+                        <ul class="features-list">
+                            <li><i class="fas fa-check"></i> Drag-and-Drop Dashboards</li>
+                            <li><i class="fas fa-check"></i> Advanced Analytics</li>
+                            <li><i class="fas fa-check"></i> Data Storytelling</li>
+                            <li><i class="fas fa-check"></i> Predictive Analytics</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-secondary" data-i18n="service.learnMore">Learn More</a>
+                    </div>
+
+                    <!-- Custom Dashboards -->
+                    <div class="service-card advanced-service" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service-icon">
+                            <i class="fas fa-gauge"></i>
+                        </div>
+                        <h3 data-i18n="service.dashboard">Custom Dashboards</h3>
+                        <p data-i18n="service.dashboard.desc">Tailored dashboards for your needs</p>
+                        <ul class="features-list">
+                            <li><i class="fas fa-check"></i> Custom Design</li>
+                            <li><i class="fas fa-check"></i> Real-time Metrics</li>
+                            <li><i class="fas fa-check"></i> API Integration</li>
+                            <li><i class="fas fa-check"></i> Performance Optimization</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-secondary" data-i18n="service.learnMore">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deep Learning Services -->
+            <div class="advanced-services-group" data-aos="fade-up">
+                <h2>🧠 Deep Learning & Neural Networks</h2>
+                <div class="services-grid-2">
+                    <div class="service-card advanced-service large" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 data-i18n="service.deeplearning">Advanced Deep Learning</h3>
+                        <p data-i18n="service.deeplearning.desc">Advanced neural networks for complex processing</p>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <strong data-i18n="service.dlfeature1">CNN</strong>
+                                <p data-i18n="service.dlfeature1.desc">Image and pattern processing</p>
+                            </div>
+                            <div class="feature-item">
+                                <strong data-i18n="service.dlfeature2">RNN</strong>
+                                <p data-i18n="service.dlfeature2.desc">Time series and predictions</p>
+                            </div>
+                            <div class="feature-item">
+                                <strong data-i18n="service.dlfeature3">NLP</strong>
+                                <p data-i18n="service.dlfeature3.desc">Natural language understanding</p>
+                            </div>
+                            <div class="feature-item">
+                                <strong data-i18n="service.dlfeature4">Optimization</strong>
+                                <p data-i18n="service.dlfeature4.desc">Model training and tuning</p>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn btn-secondary" data-i18n="service.learnMore">Get Started</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Machine Learning Services -->
+            <div class="advanced-services-group" data-aos="fade-up">
+                <h2>🤖 Machine Learning Solutions</h2>
+                <div class="services-grid-2">
+                    <div class="service-card advanced-service large" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3 data-i18n="service.machinelearning">Smart Machine Learning</h3>
+                        <p data-i18n="service.machinelearning.desc">Advanced algorithms for analysis and prediction</p>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <strong data-i18n="service.mlfeature1">Classification</strong>
+                                <p data-i18n="service.mlfeature1.desc">High-accuracy categorization</p>
+                            </div>
+                            <div class="feature-item">
+                                <strong data-i18n="service.mlfeature2">Prediction</strong>
+                                <p data-i18n="service.mlfeature2.desc">Forecast trends and changes</p>
+                            </div>
+                            <div class="feature-item">
+                                <strong data-i18n="service.mlfeature3">Clustering</strong>
+                                <p data-i18n="service.mlfeature3.desc">Discover patterns in data</p>
+                            </div>
+                            <div class="feature-item">
+                                <strong data-i18n="service.mlfeature4">Optimization</strong>
+                                <p data-i18n="service.mlfeature4.desc">Continuous improvement</p>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn btn-secondary" data-i18n="service.learnMore">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact" data-aos="fade-up">
+        <div class="container">
+            <h2 data-i18n="cta.ready">Ready to Transform Your Business?</h2>
+            <p data-i18n="cta.join">Join hundreds of companies using AIZONIQ</p>
+            <a href="contact.html" class="btn btn-lg" data-i18n="cta.start">Start Your Journey</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 data-i18n="footer.company">Company</h4>
+                    <ul>
+                        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                        <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="footer.services">Services</h4>
+                    <ul>
+                        <li><a href="#" data-i18n="service.writing">Content Writing</a></li>
+                        <li><a href="#" data-i18n="service.image">Image Generation</a></li>
+                        <li><a href="#" data-i18n="service.chatbot">Chatbots</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AIZONIQ. <span data-i18n="footer.rights">All rights reserved</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot -->
+    <div id="chatbot-widget"></div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

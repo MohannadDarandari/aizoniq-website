@@ -321,7 +321,47 @@ const translations = {
     'about.team.member2.bio': '15 سنة في الذكاء الاصطناعي. قاد الذكاء الاصطناعي في Meta سابقاً.',
     'about.team.member3': 'إيما ويليامز',
     'about.team.member3.role': 'رئيسة استراتيجية الذكاء الاصطناعي',
-    'about.team.member3.bio': 'استشارية ذكاء اصطناعي متخصصة في تحول الأعمال.'
+    'about.team.member3.bio': 'استشارية ذكاء اصطناعي متخصصة في تحول الأعمال.',
+
+    // NEW SERVICES - Automation Platforms (Arabic)
+    'service.n8n': 'أتمتة سير العمل بـ n8n',
+    'service.n8n.desc': 'أتمتة متقدمة لسير العمل بدون كود مع تكامل آمن للتطبيقات',
+    'service.make': 'تكامل التطبيقات بـ Make',
+    'service.make.desc': 'ربط وأتمتة جميع تطبيقاتك في منصة واحدة قوية',
+    'service.powerautomate': 'أتمتة Microsoft Power Automate',
+    'service.powerautomate.desc': 'حلول أتمتة متكاملة مع نظام Microsoft الإنتاجي',
+
+    // BI & Dashboard Services (Arabic)
+    'service.powerbi': 'لوحات Power BI المتقدمة',
+    'service.powerbi.desc': 'تصور بيانات قوي وتقارير تفاعلية من مايكروسوفت',
+    'service.tableau': 'تحليلات Tableau الذكية',
+    'service.tableau.desc': 'منصة تحليل بيانات متقدمة لرؤى العمل العميقة',
+    'service.dashboard': 'لوحات تحكم مخصصة',
+    'service.dashboard.desc': 'لوحات بيانات حسب احتياجات عملك مع تحديثات فورية',
+
+    // Deep Learning (Arabic)
+    'service.deeplearning': 'التعلم العميق Advanced',
+    'service.deeplearning.desc': 'شبكات عصبية متقدمة لمعالجة الصور والأنماط المعقدة',
+    'service.dlfeature1': 'الشبكات العصبية التلافيفية',
+    'service.dlfeature1.desc': 'معالجة متقدمة للصور والفيديو والتعرف على الأنماط',
+    'service.dlfeature2': 'الشبكات العصبية المتكررة',
+    'service.dlfeature2.desc': 'معالجة بيانات السلاسل الزمنية والتنبؤات المتقدمة',
+    'service.dlfeature3': 'معالجة اللغة الطبيعية',
+    'service.dlfeature3.desc': 'فهم ومعالجة النصوص بذكاء واستخلاص المعنى',
+    'service.dlfeature4': 'نماذج محسّنة',
+    'service.dlfeature4.desc': 'تحسين النماذج وتدريبها على بيانات محددة',
+
+    // Machine Learning (Arabic)
+    'service.machinelearning': 'تعلم الآلة الذكي',
+    'service.machinelearning.desc': 'خوارزميات متقدمة للتصنيف والتنبؤ والتحليل',
+    'service.mlfeature1': 'التصنيف المتقدم',
+    'service.mlfeature1.desc': 'تقسيم البيانات والتنبؤ بالفئات بدقة عالية',
+    'service.mlfeature2': 'التنبؤ والتوقعات',
+    'service.mlfeature2.desc': 'توقع الاتجاهات المستقبلية والتغييرات في الأسواق',
+    'service.mlfeature3': 'تحليل التجميع والفئات',
+    'service.mlfeature3.desc': 'اكتشاف الأنماط والعلاقات في البيانات الضخمة',
+    'service.mlfeature4': 'تحسين الخوارزميات',
+    'service.mlfeature4.desc': 'ضبط النماذج وتحسين دقتها باستمرار',
   },
   en: {
     // Navigation
@@ -639,7 +679,47 @@ const translations = {
     'about.team.member2.bio': '15 years in AI. Previously led AI at Meta.',
     'about.team.member3': 'Emma Williams',
     'about.team.member3.role': 'Head of AI Strategy',
-    'about.team.member3.bio': 'AI consultant with expertise in business transformation.'
+    'about.team.member3.bio': 'AI consultant with expertise in business transformation.',
+
+    // NEW SERVICES - Automation Platforms (English)
+    'service.n8n': 'n8n Workflow Automation',
+    'service.n8n.desc': 'Advanced workflow automation without code with secure app integration',
+    'service.make': 'App Integration with Make',
+    'service.make.desc': 'Connect and automate all your applications in one powerful platform',
+    'service.powerautomate': 'Microsoft Power Automate',
+    'service.powerautomate.desc': 'Integrated automation solutions with Microsoft productivity suite',
+
+    // BI & Dashboard Services (English)
+    'service.powerbi': 'Advanced Power BI Dashboards',
+    'service.powerbi.desc': 'Powerful data visualization and interactive reports by Microsoft',
+    'service.tableau': 'Smart Tableau Analytics',
+    'service.tableau.desc': 'Advanced analytics platform for deep business insights',
+    'service.dashboard': 'Custom Dashboards',
+    'service.dashboard.desc': 'Tailored dashboards for your business with real-time updates',
+
+    // Deep Learning (English)
+    'service.deeplearning': 'Advanced Deep Learning',
+    'service.deeplearning.desc': 'Advanced neural networks for complex image and pattern processing',
+    'service.dlfeature1': 'Convolutional Neural Networks',
+    'service.dlfeature1.desc': 'Advanced image and video processing with pattern recognition',
+    'service.dlfeature2': 'Recurrent Neural Networks',
+    'service.dlfeature2.desc': 'Time series data and advanced predictive analytics',
+    'service.dlfeature3': 'Natural Language Processing',
+    'service.dlfeature3.desc': 'Intelligent text understanding and semantic extraction',
+    'service.dlfeature4': 'Model Optimization',
+    'service.dlfeature4.desc': 'Advanced model training on your specific data',
+
+    // Machine Learning (English)
+    'service.machinelearning': 'Smart Machine Learning',
+    'service.machinelearning.desc': 'Advanced algorithms for classification, prediction and analysis',
+    'service.mlfeature1': 'Advanced Classification',
+    'service.mlfeature1.desc': 'Data segmentation and high-accuracy category prediction',
+    'service.mlfeature2': 'Prediction & Forecasting',
+    'service.mlfeature2.desc': 'Predict future trends and market changes accurately',
+    'service.mlfeature3': 'Clustering & Analysis',
+    'service.mlfeature3.desc': 'Discover patterns and relationships in big data',
+    'service.mlfeature4': 'Algorithm Optimization',
+    'service.mlfeature4.desc': 'Fine-tune models and improve accuracy continuously',
   }
 };
 
