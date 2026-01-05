@@ -36,6 +36,38 @@
     --shadow-glow: 0 0 40px rgba(99, 102, 241, 0.3);
 }
 
+/* ========== RTL Support ========== */
+html[dir="rtl"] {
+    direction: rtl;
+}
+
+html[dir="rtl"] .nav-menu {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .footer-content {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .hero-content {
+    text-align: right;
+}
+
+html[dir="rtl"] .service-card,
+html[dir="rtl"] .feature-card,
+html[dir="rtl"] .value-card {
+    text-align: right;
+}
+
+html[dir="rtl"] .btn i {
+    margin-left: 0;
+    margin-right: 8px;
+}
+
+html[dir="rtl"] .service-link i {
+    transform: rotate(180deg);
+}
+
 /* ========== Reset & Base Styles ========== */
 * {
     margin: 0;
@@ -1176,4 +1208,119 @@ h3 {
     .stat-number {
         font-size: 2.5rem;
     }
+}
+
+/* ========== Enhanced Animations ========== */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(99, 102, 241, 0.3); }
+    50% { box-shadow: 0 0 40px rgba(99, 102, 241, 0.6); }
+}
+
+@keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.service-card:hover {
+    animation: pulse-glow 2s infinite;
+}
+
+.hero-visual {
+    animation: float 6s ease-in-out infinite;
+}
+
+.btn-primary {
+    background-size: 200% 200%;
+    animation: gradient-shift 4s ease infinite;
+}
+
+/* ========== Loading Animation ========== */
+.page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--dark-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.page-loader.loaded {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid var(--card-bg);
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ========== Improved Focus States for Accessibility ========== */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* ========== Skip to Content Link ========== */
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-color);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    z-index: 100000;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
+/* ========== Better Scrollbar ========== */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--darker-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+/* ========== Selection Color ========== */
+::selection {
+    background: var(--primary-color);
+    color: white;
 }
