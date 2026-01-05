@@ -235,17 +235,47 @@ const translations = {
     'footer.copyright': 'جميع الحقوق محفوظة © 2025 AIZONIQ',
     'footer.year': '2025',
 
-    // Buttons
-    'btn.viewCase': 'عرض دراسة الحالة',
-    'btn.learnMore': 'اعرف المزيد',
-    'btn.getStarted': 'ابدأ الآن',
-    'btn.viewWork': 'شاهد أعمالنا',
-    'btn.exploreServices': 'استكشف الخدمات',
-    'btn.contactUs': 'اتصل بنا',
-    'btn.sendMessage': 'أرسل الرسالة',
-    'btn.download': 'تحميل',
-    'btn.more': 'المزيد',
-    'btn.subscribe': 'اشترك',
+    // Chatbot Section
+    'chatbot.online': 'متصل',
+    'chatbot.greeting': 'مرحباً! كيف يمكنني مساعدتك اليوم؟',
+    'chatbot.userMessage': 'أحتاج إلى مساعدة في طلبي',
+    'chatbot.response': 'سأكون سعيداً بمساعدتك! يرجى تقديم رقم الطلب الخاص بك وسأبحث عنه لك',
+    'chatbot.automation': 'أتمتة 80%',
+    'chatbot.automationDesc': 'تقليل الحمل',
+    'chatbot.support24': 'دعم 24/7',
+    'chatbot.supportDesc': 'متاح دائماً',
+
+    // Pricing Table Features
+    'pricing.unlimitedContent': 'محتوى الذكاء الاصطناعي غير محدود',
+    'pricing.unlimitedImages': 'صور الذكاء الاصطناعي غير محدودة',
+    'pricing.enterpriseChatbot': 'روبوت دردشة المؤسسة',
+    'pricing.words50k': 'كلمات تم إنشاؤها بالذكاء الاصطناعي 50,000',
+    'pricing.words200k': 'كلمات تم إنشاؤها بالذكاء الاصطناعي 200,000',
+    'pricing.images100': 'صور الذكاء الاصطناعي 100',
+    'pricing.images500': 'صور الذكاء الاصطناعي 500',
+    'pricing.basicChatbot': 'روبوت دردشة أساسي (1,000 رسالة)',
+    'pricing.advancedChatbot': 'روبوت دردشة متقدم (10,000 رسالة)',
+    'pricing.emailSupport': 'دعم البريد الإلكتروني',
+    'pricing.prioritySupport': 'دعم ذو الأولوية',
+    'pricing.projects5': '5 مشاريع',
+    'pricing.projects20': '20 مشروع',
+    'pricing.unlimitedProjects': 'مشاريع غير محدودة',
+    'pricing.apiAccess': 'وصول API',
+    'pricing.fullApiAccess': 'وصول API كامل',
+    'pricing.customIntegrations': 'تكاملات مخصصة',
+    'pricing.customModels': 'نماذج ذكاء اصطناعي مخصصة',
+
+    // FAQ Section
+    'faq.badge': 'أسئلة شائعة',
+    'faq.title': 'أسئلة شائعة',
+    'faq.desc': 'إجابات سريعة على الأسئلة الشائعة حول خدماتنا',
+    'faq.q1': 'ما نماذج الذكاء الاصطناعي التي تستخدمونها؟',
+    'faq.q2': 'كم سرعة ابدء التشغيل؟',
+    'faq.q3': 'هل يمكنني الترقية أو الترقية المنخفضة للخطة الخاصة بي؟',
+    'faq.q4': 'هل تقدمون حلول ذكاء اصطناعي مخصصة؟',
+
+    // Button Labels
+    'btn.consultation': 'استشارة مجانية',
 
     // Testimonials Section
     'testimonials.badge': 'ماذا يقول عملاؤنا',
@@ -1141,17 +1171,47 @@ const translations = {
     'footer.copyright': 'All rights reserved © 2025 AIZONIQ',
     'footer.year': '2025',
 
-    // Buttons
-    'btn.viewCase': 'View Case Study',
-    'btn.learnMore': 'Learn More',
-    'btn.getStarted': 'Get Started',
-    'btn.viewWork': 'View Our Work',
-    'btn.exploreServices': 'Explore Services',
-    'btn.contactUs': 'Contact Us',
-    'btn.sendMessage': 'Send Message',
-    'btn.download': 'Download',
-    'btn.more': 'More',
-    'btn.subscribe': 'Subscribe',
+    // Chatbot Section
+    'chatbot.online': 'Online',
+    'chatbot.greeting': 'Hello! How can I help you today?',
+    'chatbot.userMessage': 'I need help with my order',
+    'chatbot.response': 'I\'d be happy to help! Please provide your order number and I\'ll look it up for you',
+    'chatbot.automation': '80% Automation',
+    'chatbot.automationDesc': 'Reduce workload',
+    'chatbot.support24': '24/7 Support',
+    'chatbot.supportDesc': 'Always available',
+
+    // Pricing Table Features
+    'pricing.unlimitedContent': 'Unlimited AI content',
+    'pricing.unlimitedImages': 'Unlimited AI images',
+    'pricing.enterpriseChatbot': 'Enterprise chatbot',
+    'pricing.words50k': 'AI-generated words 50,000',
+    'pricing.words200k': 'AI-generated words 200,000',
+    'pricing.images100': 'AI images 100',
+    'pricing.images500': 'AI images 500',
+    'pricing.basicChatbot': 'Basic chatbot (1,000 messages)',
+    'pricing.advancedChatbot': 'Advanced chatbot (10,000 messages)',
+    'pricing.emailSupport': 'Email support',
+    'pricing.prioritySupport': 'Priority support',
+    'pricing.projects5': 'projects 5',
+    'pricing.projects20': 'projects 20',
+    'pricing.unlimitedProjects': 'Unlimited projects',
+    'pricing.apiAccess': 'API access',
+    'pricing.fullApiAccess': 'Full API access',
+    'pricing.customIntegrations': 'Custom integrations',
+    'pricing.customModels': 'Custom AI models',
+
+    // FAQ Section
+    'faq.badge': 'FAQ',
+    'faq.title': 'Frequently Asked Questions',
+    'faq.desc': 'Quick answers to common questions about our services',
+    'faq.q1': 'What AI models do you use?',
+    'faq.q2': 'How quickly can I get started?',
+    'faq.q3': 'Can I upgrade or downgrade my plan?',
+    'faq.q4': 'Do you offer custom AI solutions?',
+
+    // Button Labels
+    'btn.consultation': 'Free Consultation',
 
     // Testimonials Section
     'testimonials.badge': 'What Our Clients Say',
