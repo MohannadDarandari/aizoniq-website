@@ -91,6 +91,11 @@ const translations = {
     // Additional
     'footer.description': 'تمكين الشركات بحلول الذكاء الاصطناعي المتقدمة. حول عملياتك، ارفع مستوى علامتك التجارية، وقد تكون رائداً في صناعتك.',
     'footer.services': 'الخدمات',
+    'footer.services.writing': 'كتابة المحتوى بالذكاء الاصطناعي',
+    'footer.services.image': 'توليد الصور',
+    'footer.services.chatbot': 'روبوتات الدردشة',
+    'footer.services.analytics': 'تحليل البيانات',
+    'footer.services.video': 'إنشاء الفيديو',
     'footer.company': 'الشركة',
     'footer.newsletter': 'النشرة البريدية',
     'footer.subscribe': 'اشترك للحصول على أحدث رؤى الذكاء الاصطناعي والتحديثات',
@@ -102,6 +107,33 @@ const translations = {
     'footer.privacy': 'سياسة الخصوصية',
     'footer.terms': 'شروط الخدمة',
     'footer.cookies': 'سياسة الكوكيز',
+
+    // Pricing Section
+    'pricing.period': '/شهر',
+    'pricing.custom': 'تسعير مخصص',
+    'pricing.popular': 'الأكثر شيوعاً',
+    'pricing.dedicatedSupport': 'دعم مخصص 24/7',
+    'pricing.onPremise': 'نشر محلي',
+    'pricing.starter.feature1': '50,000 كلمة بالذكاء الاصطناعي',
+    'pricing.starter.feature2': '100 صورة بالذكاء الاصطناعي',
+    'pricing.starter.feature3': 'روبوت دردشة أساسي (1,000 رسالة)',
+    'pricing.starter.feature4': 'دعم البريد الإلكتروني',
+    'pricing.starter.feature5': '5 مشاريع',
+    'pricing.pro.feature1': '200,000 كلمة بالذكاء الاصطناعي',
+    'pricing.pro.feature2': '500 صورة بالذكاء الاصطناعي',
+    'pricing.pro.feature3': 'روبوت دردشة متقدم (10,000 رسالة)',
+    'pricing.pro.feature4': 'دعم ذو أولوية',
+    'pricing.pro.feature5': '20 مشروع',
+    'pricing.pro.feature6': 'وصول API',
+    'pricing.pro.feature7': 'تكاملات مخصصة',
+    'pricing.enterprise.feature1': 'محتوى ذكاء اصطناعي غير محدود',
+    'pricing.enterprise.feature2': 'صور ذكاء اصطناعي غير محدودة',
+    'pricing.enterprise.feature3': 'روبوت دردشة للمؤسسات',
+    'pricing.enterprise.feature4': 'دعم مخصص 24/7',
+    'pricing.enterprise.feature5': 'مشاريع غير محدودة',
+    'pricing.enterprise.feature6': 'وصول API كامل',
+    'pricing.enterprise.feature7': 'نماذج ذكاء اصطناعي مخصصة',
+    'pricing.enterprise.feature8': 'نشر محلي',
 
     // Services Page - Additional Details
     'service.image.lead': 'إنشاء صور فريدة ومذهلة من أوصاف نصية باستخدام نماذج الذكاء الاصطناعي الحديثة.',
@@ -270,12 +302,21 @@ const translations = {
     'faq.title': 'أسئلة شائعة',
     'faq.desc': 'إجابات سريعة على الأسئلة الشائعة حول خدماتنا',
     'faq.q1': 'ما نماذج الذكاء الاصطناعي التي تستخدمونها؟',
+    'faq.a1': 'نستخدم أحدث نماذج الذكاء الاصطناعي بما في ذلك GPT-4 و DALL-E 3 و Stable Diffusion ونماذج مدربة خصيصاً لصناعات محددة. منصتنا تختار تلقائياً أفضل نموذج لاحتياجاتك.',
     'faq.q2': 'كم سرعة ابدء التشغيل؟',
+    'faq.a2': 'يمكنك البدء في استخدام خدماتنا فوراً بعد التسجيل. عملية التسجيل تستغرق أقل من 5 دقائق، وستحصل على وصول لجميع الميزات في خطتك على الفور.',
     'faq.q3': 'هل يمكنني الترقية أو الترقية المنخفضة للخطة الخاصة بي؟',
+    'faq.a3': 'نعم! يمكنك تغيير خطتك في أي وقت. الترقيات تسري فوراً، والتخفيضات ستطبق في بداية دورة الفوترة التالية.',
     'faq.q4': 'هل تقدمون حلول ذكاء اصطناعي مخصصة؟',
+    'faq.a4': 'بالتأكيد! خطة Enterprise تشمل تطوير نماذج ذكاء اصطناعي مخصصة، وتكاملات مفصلة، ودعم مخصص للمتطلبات الفريدة للأعمال.',
+    'faq.q5': 'ما نوع الدعم الذي تقدمونه؟',
+    'faq.a5': 'الدعم يختلف حسب الخطة: Starter يشمل دعم البريد الإلكتروني، Professional يحصل على دعم أولوية مع أوقات استجابة أسرع، و Enterprise يحصل على دعم مخصص 24/7 مع مدير حساب شخصي.',
+    'faq.q6': 'هل بياناتي آمنة؟',
+    'faq.a6': 'نعم، الأمان هو أولويتنا القصوى. نستخدم تشفير بمستوى المؤسسات، ونلتزم بمعايير GDPR و SOC 2، ولا نستخدم بياناتك أبداً لتدريب نماذج الذكاء الاصطناعي بدون إذن صريح.',
 
     // Button Labels
     'btn.consultation': 'استشارة مجانية',
+    'btn.contactSales': 'تواصل مع المبيعات',
 
     // Testimonials Section
     'testimonials.badge': 'ماذا يقول عملاؤنا',
@@ -440,6 +481,7 @@ const translations = {
     'stats.speed': 'أسرع 10 مرات',
     'stats.savings': 'توفير 60%',
     'stats.clients.count': '500+ عميل',
+    'stats.clientSatisfaction': 'رضا العملاء',
 
     // CTA Trust Section
     'cta.noCard': 'بدون بطاقة ائتمان مطلوبة',
@@ -474,6 +516,14 @@ const translations = {
     'portfolio.item3.metric2.label': 'درجة الجودة',
     'portfolio.item3.metric3': '300%',
     'portfolio.item3.metric3.label': 'نمو حركة المستخدمين',
+
+    // Portfolio Tags
+    'portfolio.tag.aiChatbot': 'روبوت محادثة ذكي',
+    'portfolio.tag.ecommerce': 'التجارة الإلكترونية',
+    'portfolio.tag.dataAnalytics': 'تحليل البيانات',
+    'portfolio.tag.finance': 'المالية',
+    'portfolio.tag.contentAI': 'محتوى الذكاء الاصطناعي',
+    'portfolio.tag.marketing': 'التسويق',
 
     'portfolio.clients': 'الشركات التي تثق بنا',
     'portfolio.clientsDesc': 'نحن فخورون بالعمل مع قادة الصناعة والشركات الناشئة المبتكرة',
@@ -648,7 +698,9 @@ const translations = {
     'about.values.collaboration.desc': 'نعمل بشكل وثيق مع العملاء كشركاء، فهم احتياجاتهم الفريدة وإنشاء حلول معاً.',
     'about.values.global': 'التأثير العالمي',
     'about.values.global.desc': 'نعتقد أن الذكاء الاصطناعي يجب أن يفيد الجميع، العمل على خلق تغيير إيجابي على نطاق عالمي.',
+    'about.values.badge': 'قيمنا',
     
+    'about.team.badge': 'تعرف على الفريق',
     'about.team.title': 'العقول خلف AIZONIQ',
     'about.team.description': 'خبراء ومهندسون واستراتيجيون من المستوى العالمي',
     'about.team.member1': 'مهند درندري',
@@ -660,6 +712,18 @@ const translations = {
     'about.team.member3': 'إيما ويليامز',
     'about.team.member3.role': 'رئيسة استراتيجية الذكاء الاصطناعي',
     'about.team.member3.bio': 'استشارية ذكاء اصطناعي متخصصة في تحول الأعمال.',
+    'about.team.member4': 'ديفيد مارتينيز',
+    'about.team.member4.role': 'كبير علماء البيانات',
+    'about.team.member4.bio': 'متخصص في معالجة اللغة الطبيعية وتطبيقات الرؤية الحاسوبية.',
+
+    'about.cta.title': 'هل تريد الانضمام لفريقنا؟',
+    'about.cta.desc': 'نبحث دائماً عن أشخاص موهوبين شغوفين بالذكاء الاصطناعي',
+    'about.cta.btn': 'عرض الوظائف الشاغرة',
+
+    'about.stats.founded.value': '2023',
+    'about.stats.team.value': '50+ خبير',
+    'about.stats.countries.value': '25+ خدمنا',
+    'about.stats.awards.value': '15+ فزنا',
 
     // NEW SERVICES - Automation Platforms (Arabic)
     'service.n8n': 'أتمتة سير العمل بـ n8n',
@@ -1013,6 +1077,11 @@ const translations = {
     // Additional
     'footer.description': 'Empowering businesses with cutting-edge artificial intelligence solutions. Transform your operations, elevate your brand, and lead your industry.',
     'footer.services': 'Services',
+    'footer.services.writing': 'AI Content Writing',
+    'footer.services.image': 'Image Generation',
+    'footer.services.chatbot': 'AI Chatbots',
+    'footer.services.analytics': 'Data Analytics',
+    'footer.services.video': 'Video Creation',
     'footer.company': 'Company',
     'footer.newsletter': 'Newsletter',
     'footer.subscribe': 'Subscribe to get the latest AI insights and updates',
@@ -1024,6 +1093,33 @@ const translations = {
     'footer.privacy': 'Privacy Policy',
     'footer.terms': 'Terms of Service',
     'footer.cookies': 'Cookie Policy',
+
+    // Pricing Section
+    'pricing.period': '/month',
+    'pricing.custom': 'Custom Pricing',
+    'pricing.popular': 'Most Popular',
+    'pricing.dedicatedSupport': 'dedicated support 24/7',
+    'pricing.onPremise': 'On-premise deployment',
+    'pricing.starter.feature1': 'AI-generated words 50,000',
+    'pricing.starter.feature2': 'AI images 100',
+    'pricing.starter.feature3': 'Basic chatbot (1,000 messages)',
+    'pricing.starter.feature4': 'Email support',
+    'pricing.starter.feature5': 'projects 5',
+    'pricing.pro.feature1': 'AI-generated words 200,000',
+    'pricing.pro.feature2': 'AI images 500',
+    'pricing.pro.feature3': 'Advanced chatbot (10,000 messages)',
+    'pricing.pro.feature4': 'Priority support',
+    'pricing.pro.feature5': 'projects 20',
+    'pricing.pro.feature6': 'API access',
+    'pricing.pro.feature7': 'Custom integrations',
+    'pricing.enterprise.feature1': 'Unlimited AI content',
+    'pricing.enterprise.feature2': 'Unlimited AI images',
+    'pricing.enterprise.feature3': 'Enterprise chatbot',
+    'pricing.enterprise.feature4': 'dedicated support 24/7',
+    'pricing.enterprise.feature5': 'Unlimited projects',
+    'pricing.enterprise.feature6': 'Full API access',
+    'pricing.enterprise.feature7': 'Custom AI models',
+    'pricing.enterprise.feature8': 'On-premise deployment',
 
     // Services Page - Content Writing
     'service.writing.lead': 'Generate high-quality, engaging content in seconds with our advanced AI writing tools powered by GPT-4 and custom language models.',
@@ -1206,12 +1302,21 @@ const translations = {
     'faq.title': 'Frequently Asked Questions',
     'faq.desc': 'Quick answers to common questions about our services',
     'faq.q1': 'What AI models do you use?',
+    'faq.a1': 'We use state-of-the-art AI models including GPT-4, DALL-E 3, Stable Diffusion, and custom-trained models optimized for specific industries. Our platform automatically selects the best model for your needs.',
     'faq.q2': 'How quickly can I get started?',
+    'faq.a2': 'You can start using our services immediately after signing up. Our onboarding process takes less than 5 minutes, and you\'ll have access to all features in your plan right away.',
     'faq.q3': 'Can I upgrade or downgrade my plan?',
+    'faq.a3': 'Yes! You can change your plan at any time. Upgrades take effect immediately, and downgrades will apply at the start of your next billing cycle.',
     'faq.q4': 'Do you offer custom AI solutions?',
+    'faq.a4': 'Absolutely! Our Enterprise plan includes custom AI model development, tailored integrations, and dedicated support for unique business requirements.',
+    'faq.q5': 'What kind of support do you provide?',
+    'faq.a5': 'Support varies by plan: Starter includes email support, Professional gets priority support with faster response times, and Enterprise receives 24/7 dedicated support with a personal account manager.',
+    'faq.q6': 'Is my data secure?',
+    'faq.a6': 'Yes, security is our top priority. We use enterprise-grade encryption, comply with GDPR and SOC 2 standards, and never use your data to train AI models without explicit permission.',
 
     // Button Labels
     'btn.consultation': 'Free Consultation',
+    'btn.contactSales': 'Contact Sales',
 
     // Testimonials Section
     'testimonials.badge': 'What Our Clients Say',
@@ -1369,6 +1474,7 @@ const translations = {
     'stats.speed': '10x Faster',
     'stats.savings': '60% Cost Reduction',
     'stats.clients.count': '500+ Clients',
+    'stats.clientSatisfaction': 'Client Satisfaction',
 
     // CTA Trust Section
     'cta.noCard': 'No credit card required',
@@ -1410,6 +1516,14 @@ const translations = {
     'portfolio.item3.metric2.label': 'Quality Score',
     'portfolio.item3.metric3': '300%',
     'portfolio.item3.metric3.label': 'Traffic Growth',
+
+    // Portfolio Tags
+    'portfolio.tag.aiChatbot': 'AI Chatbot',
+    'portfolio.tag.ecommerce': 'E-commerce',
+    'portfolio.tag.dataAnalytics': 'Data Analytics',
+    'portfolio.tag.finance': 'Finance',
+    'portfolio.tag.contentAI': 'Content AI',
+    'portfolio.tag.marketing': 'Marketing',
 
     'portfolio.clients': 'Companies That Trust Us',
     'portfolio.clientsDesc': 'We\'re proud to work with industry leaders and innovative startups',
@@ -1596,6 +1710,20 @@ const translations = {
     'about.team.member3': 'Emma Williams',
     'about.team.member3.role': 'Head of AI Strategy',
     'about.team.member3.bio': 'AI consultant with expertise in business transformation.',
+    'about.team.member4': 'David Martinez',
+    'about.team.member4.role': 'Lead Data Scientist',
+    'about.team.member4.bio': 'Specialist in NLP and computer vision applications.',
+    'about.team.badge': 'Meet The Team',
+    'about.values.badge': 'Our Values',
+
+    'about.cta.title': 'Want to Join Our Team?',
+    'about.cta.desc': 'We\'re always looking for talented individuals passionate about AI',
+    'about.cta.btn': 'View Open Positions',
+
+    'about.stats.founded.value': '2023',
+    'about.stats.team.value': '50+ Experts',
+    'about.stats.countries.value': '25+ Served',
+    'about.stats.awards.value': '15+ Won',
 
     // NEW SERVICES - Automation Platforms (English)
     'service.n8n': 'n8n Workflow Automation',
