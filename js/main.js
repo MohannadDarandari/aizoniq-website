@@ -440,15 +440,15 @@ console.log('%c🚀 AIZONIQ - Premium AI Services Agency', 'color: #6366f1; font
 console.log('%cWebsite crafted with ❤️ and AI', 'color: #8b5cf6; font-size: 14px;');
 
 // ============================================
-// PAYMENT SYSTEM
+// PREMIUM CHECKOUT SYSTEM
 // ============================================
-const courseDetails = {
-    basic: {
-        name: 'Beginner Course',
+const planDetails = {
+    starter: {
+        name: 'Starter Course',
         nameAr: 'الدورة التأسيسية',
         price: 99
     },
-    pro: {
+    professional: {
         name: 'Professional Course',
         nameAr: 'الدورة الاحترافية',
         price: 299
@@ -460,24 +460,293 @@ const courseDetails = {
     }
 };
 
-// Initialize payment when user clicks buy button
-function initiatePayment(courseType, price) {
-    const course = courseDetails[courseType];
-    if (!course) return;
+// Open checkout modal
+function openCheckout(planType, price) {
+    const plan = planDetails[planType];
+    if (!plan) return;
     
-    // Show payment modal
-    showPaymentModal(course, price);
-}
-
-// Create and show payment modal
-function showPaymentModal(course, price) {
-    // Check current language
     const isArabic = document.documentElement.lang === 'ar';
     
-    // Remove existing modal if any
-    const existingModal = document.getElementById('payment-modal');
-    if (existingModal) {
-        existingModal.remove();
+    // Remove existing modal
+    const existingModal = document.getElementById('checkout-modal');
+    if (existingModal) existingModal.remove();
+    
+    const modalHTML = `
+        <div id="checkout-modal" class="checkout-overlay">
+            <div class="checkout-modal">
+                <button class="checkout-close" onclick="closeCheckout()">
+                    <i class="fas fa-times"></i>
+                </button>
+                
+                <div class="checkout-header">
+                    <div class="checkout-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h2>${isArabic ? 'إتمام الشراء' : 'Complete Your Purchase'}</h2>
+                    <div class="checkout-plan">
+                        <span class="plan-name">${isArabic ? plan.nameAr : plan.name}</span>
+                        <span class="plan-price">$${price}</span>
+                    </div>
+                </div>
+                
+                <div class="checkout-body">
+                    <div class="payment-options">
+                        <h4>${isArabic ? 'اختر طريقة الدفع' : 'Select Payment Method'}</h4>
+                        
+                        <div class="payment-option" onclick="selectPayment('apple', '${plan.name}', ${price})">
+                            <div class="option-radio"><span></span></div>
+                            <div class="option-icon apple"><i class="fab fa-apple"></i></div>
+                            <div class="option-info">
+                                <strong>Apple Pay</strong>
+                                <span>${isArabic ? 'دفع سريع وآمن' : 'Fast & Secure'}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-option" onclick="selectPayment('google', '${plan.name}', ${price})">
+                            <div class="option-radio"><span></span></div>
+                            <div class="option-icon google"><i class="fab fa-google"></i></div>
+                            <div class="option-info">
+                                <strong>Google Pay</strong>
+                                <span>${isArabic ? 'دفع سريع وآمن' : 'Fast & Secure'}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-option" onclick="selectPayment('paypal', '${plan.name}', ${price})">
+                            <div class="option-radio"><span></span></div>
+                            <div class="option-icon paypal"><i class="fab fa-paypal"></i></div>
+                            <div class="option-info">
+                                <strong>PayPal</strong>
+                                <span>${isArabic ? 'ادفع بحسابك' : 'Pay with your account'}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-option active" onclick="selectPayment('card', '${plan.name}', ${price})">
+                            <div class="option-radio"><span></span></div>
+                            <div class="option-icon card"><i class="fas fa-credit-card"></i></div>
+                            <div class="option-info">
+                                <strong>${isArabic ? 'بطاقة ائتمان / خصم' : 'Credit / Debit Card'}</strong>
+                                <span>Visa, Mastercard, Amex</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="card-form" class="card-form">
+                        <div class="form-field">
+                            <label>${isArabic ? 'البريد الإلكتروني' : 'Email Address'}</label>
+                            <input type="email" id="checkout-email" placeholder="${isArabic ? 'email@example.com' : 'email@example.com'}" required>
+                        </div>
+                        <div class="form-field">
+                            <label>${isArabic ? 'الاسم على البطاقة' : 'Name on Card'}</label>
+                            <input type="text" id="checkout-name" placeholder="${isArabic ? 'الاسم الكامل' : 'Full Name'}" required>
+                        </div>
+                        <div class="form-field">
+                            <label>${isArabic ? 'رقم البطاقة' : 'Card Number'}</label>
+                            <div class="card-input-wrapper">
+                                <input type="text" id="checkout-card" placeholder="1234 5678 9012 3456" maxlength="19" oninput="formatCard(this)" required>
+                                <div class="card-brands">
+                                    <i class="fab fa-cc-visa"></i>
+                                    <i class="fab fa-cc-mastercard"></i>
+                                    <i class="fab fa-cc-amex"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label>${isArabic ? 'تاريخ الانتهاء' : 'Expiry'}</label>
+                                <input type="text" id="checkout-expiry" placeholder="MM/YY" maxlength="5" oninput="formatExp(this)" required>
+                            </div>
+                            <div class="form-field">
+                                <label>CVC</label>
+                                <input type="text" id="checkout-cvc" placeholder="123" maxlength="4" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checkout-footer">
+                    <button class="checkout-btn" onclick="processCheckout('${plan.name}', ${price})">
+                        <i class="fas fa-lock"></i>
+                        <span>${isArabic ? 'ادفع الآن' : 'Pay Now'} - $${price}</span>
+                    </button>
+                    <div class="checkout-security">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>${isArabic ? 'مدفوعات آمنة ومشفرة بـ SSL 256-bit' : '256-bit SSL Encrypted • Secure Payment'}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
+    document.body.style.overflow = 'hidden';
+    
+    setTimeout(() => {
+        document.getElementById('checkout-modal').classList.add('active');
+    }, 10);
+}
+
+// Select payment method
+function selectPayment(method, planName, price) {
+    // Update active state
+    document.querySelectorAll('.payment-option').forEach(opt => opt.classList.remove('active'));
+    event.currentTarget.classList.add('active');
+    
+    // Show/hide card form
+    const cardForm = document.getElementById('card-form');
+    if (method === 'card') {
+        cardForm.style.display = 'block';
+    } else {
+        cardForm.style.display = 'none';
+        // For non-card methods, process immediately
+        setTimeout(() => processCheckout(planName, price, method), 300);
+    }
+}
+
+// Format card number
+function formatCard(input) {
+    let value = input.value.replace(/\s/g, '').replace(/\D/g, '');
+    value = value.match(/.{1,4}/g)?.join(' ') || value;
+    input.value = value;
+}
+
+// Format expiry
+function formatExp(input) {
+    let value = input.value.replace(/\D/g, '');
+    if (value.length >= 2) {
+        value = value.substring(0, 2) + '/' + value.substring(2, 4);
+    }
+    input.value = value;
+}
+
+// Process checkout
+function processCheckout(planName, price, method = 'card') {
+    const isArabic = document.documentElement.lang === 'ar';
+    const modal = document.querySelector('.checkout-modal');
+    
+    // Show processing
+    modal.innerHTML = `
+        <div class="checkout-processing">
+            <div class="processing-animation">
+                <div class="processing-circle"></div>
+                <i class="fas fa-lock"></i>
+            </div>
+            <h3>${isArabic ? 'جاري معالجة الدفع...' : 'Processing Payment...'}</h3>
+            <p>${isArabic ? 'يرجى عدم إغلاق هذه النافذة' : 'Please do not close this window'}</p>
+        </div>
+    `;
+    
+    // Simulate processing
+    setTimeout(() => {
+        showCheckoutSuccess(planName, price, isArabic);
+    }, 2500);
+}
+
+// Show success
+function showCheckoutSuccess(planName, price, isArabic) {
+    const modal = document.querySelector('.checkout-modal');
+    
+    modal.innerHTML = `
+        <div class="checkout-success">
+            <div class="success-animation">
+                <div class="success-circle">
+                    <i class="fas fa-check"></i>
+                </div>
+            </div>
+            <h3>${isArabic ? '🎉 تم الدفع بنجاح!' : '🎉 Payment Successful!'}</h3>
+            <p>${isArabic ? 'تهانينا! تم تسجيلك في الدورة بنجاح' : 'Congratulations! You are now enrolled'}</p>
+            
+            <div class="success-details">
+                <div class="detail-row">
+                    <span>${isArabic ? 'الدورة' : 'Course'}</span>
+                    <strong>${planName}</strong>
+                </div>
+                <div class="detail-row">
+                    <span>${isArabic ? 'المبلغ المدفوع' : 'Amount Paid'}</span>
+                    <strong>$${price}</strong>
+                </div>
+                <div class="detail-row">
+                    <span>${isArabic ? 'رقم الطلب' : 'Order ID'}</span>
+                    <strong>#AIZ${Date.now().toString().slice(-8)}</strong>
+                </div>
+            </div>
+            
+            <div class="success-email">
+                <i class="fas fa-envelope"></i>
+                <p>${isArabic ? 'تم إرسال تفاصيل الوصول إلى بريدك الإلكتروني' : 'Access details have been sent to your email'}</p>
+            </div>
+            
+            <button class="checkout-btn success" onclick="closeCheckout()">
+                <i class="fas fa-play-circle"></i>
+                <span>${isArabic ? 'ابدأ التعلم الآن' : 'Start Learning Now'}</span>
+            </button>
+        </div>
+    `;
+}
+
+// Close checkout
+function closeCheckout() {
+    const modal = document.getElementById('checkout-modal');
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+        setTimeout(() => modal.remove(), 300);
+    }
+}
+
+// Academy FAQ Toggle
+document.addEventListener('click', function(e) {
+    const faqQuestion = e.target.closest('.academy-faq .faq-question');
+    if (faqQuestion) {
+        const faqItem = faqQuestion.closest('.faq-item');
+        faqItem.classList.toggle('active');
+    }
+});
+
+// Counter animation for stats
+document.addEventListener('DOMContentLoaded', function() {
+    const counters = document.querySelectorAll('[data-count]');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const target = entry.target;
+                const count = parseInt(target.getAttribute('data-count'));
+                animateCounter(target, count);
+                observer.unobserve(target);
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    counters.forEach(counter => observer.observe(counter));
+});
+
+function animateCounter(element, target) {
+    let current = 0;
+    const increment = target / 50;
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            element.textContent = target.toLocaleString();
+            clearInterval(timer);
+        } else {
+            element.textContent = Math.floor(current).toLocaleString();
+        }
+    }, 30);
+}
+
+// Close modal on overlay click
+document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('checkout-overlay')) {
+        closeCheckout();
+    }
+});
+
+// Close modal on Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeCheckout();
+    }
+});;
     }
     
     const modalHTML = `

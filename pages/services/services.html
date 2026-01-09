@@ -67,113 +67,484 @@
         </div>
     </section>
 
-    <!-- Service Detail: AI Training & Education -->
-    <section id="training" class="service-detail section-padding" style="background: linear-gradient(180deg, rgba(99, 102, 241, 0.1) 0%, transparent 100%);">
-        <div class="container">
-            <div class="service-detail-grid">
-                <div class="service-detail-content" data-aos="fade-right">
-                    <div class="service-badge" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
-                        <i class="fas fa-graduation-cap"></i>
-                        <span data-i18n="service.training.badge">AI Education</span>
+    <!-- ========================================
+         PREMIUM AI ACADEMY SECTION
+         ======================================== -->
+    <section id="ai-academy" class="ai-academy-section">
+        <!-- Hero Banner -->
+        <div class="academy-hero">
+            <div class="academy-hero-bg">
+                <div class="animated-grid"></div>
+                <div class="floating-elements">
+                    <div class="float-icon float-1"><i class="fas fa-robot"></i></div>
+                    <div class="float-icon float-2"><i class="fas fa-brain"></i></div>
+                    <div class="float-icon float-3"><i class="fas fa-code"></i></div>
+                    <div class="float-icon float-4"><i class="fas fa-chart-line"></i></div>
+                    <div class="float-icon float-5"><i class="fas fa-lightbulb"></i></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="academy-hero-content" data-aos="fade-up">
+                    <div class="academy-badge">
+                        <span class="badge-live"></span>
+                        <span data-i18n="academy.badge">AIZONIQ ACADEMY</span>
                     </div>
-                    <h2 data-i18n="service.training">AI Training & Courses</h2>
-                    <p class="lead" data-i18n="service.training.lead">Master the power of artificial intelligence with our comprehensive training programs. Learn to build websites, chatbots, automation systems, and unlock the full potential of AI tools.</p>
+                    <h1 data-i18n="academy.title">Master AI in <span class="gradient-text">30 Days</span></h1>
+                    <p class="academy-subtitle" data-i18n="academy.subtitle">Learn to build websites, chatbots, and automate your entire business using the power of artificial intelligence. No coding required.</p>
                     
-                    <div class="service-features">
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle" style="color: #10b981;"></i>
-                            <div>
-                                <h4 data-i18n="service.training.feature1">Build AI-Powered Websites</h4>
-                                <p data-i18n="service.training.feature1.desc">Learn to create professional websites using AI tools in hours, not weeks</p>
-                            </div>
+                    <div class="academy-stats-row">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="2847">0</span>
+                            <span class="stat-label" data-i18n="academy.stat.students">Students Enrolled</span>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle" style="color: #10b981;"></i>
-                            <div>
-                                <h4 data-i18n="service.training.feature2">Create Smart Chatbots</h4>
-                                <p data-i18n="service.training.feature2.desc">Build intelligent chatbots for customer service, sales, and support</p>
-                            </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number">4.9</span>
+                            <span class="stat-label" data-i18n="academy.stat.rating">⭐ Course Rating</span>
                         </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle" style="color: #10b981;"></i>
-                            <div>
-                                <h4 data-i18n="service.training.feature3">Workflow Automation</h4>
-                                <p data-i18n="service.training.feature3.desc">Automate repetitive tasks and save hours of work every day</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle" style="color: #10b981;"></i>
-                            <div>
-                                <h4 data-i18n="service.training.feature4">AI Assistant Mastery</h4>
-                                <p data-i18n="service.training.feature4.desc">Discover what AI assistants can do - from coding to content creation to data analysis</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle" style="color: #10b981;"></i>
-                            <div>
-                                <h4 data-i18n="service.training.feature5">Business Applications</h4>
-                                <p data-i18n="service.training.feature5.desc">Apply AI to grow your business, increase productivity, and stay ahead of competition</p>
-                            </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label" data-i18n="academy.stat.guarantee">Money-Back Guarantee</span>
                         </div>
                     </div>
                     
-                    <div class="service-pricing">
-                        <div class="price-tag" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);" data-i18n="service.training.price">Starting at <span>$99</span>/course</div>
-                        <a href="#training-pricing" class="btn btn-primary btn-large" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);" data-i18n="btn.enrollNow">Enroll Now</a>
+                    <a href="#pricing-section" class="btn btn-academy-cta">
+                        <span data-i18n="academy.cta">Start Learning Now</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- What You'll Learn -->
+        <div class="academy-curriculum">
+            <div class="container">
+                <div class="section-header text-center" data-aos="fade-up">
+                    <span class="section-badge emerald" data-i18n="academy.curriculum.badge">Complete Curriculum</span>
+                    <h2 data-i18n="academy.curriculum.title">Everything You'll Master</h2>
+                    <p data-i18n="academy.curriculum.desc">From complete beginner to AI power user in just weeks</p>
+                </div>
+
+                <div class="curriculum-grid" data-aos="fade-up">
+                    <div class="curriculum-card">
+                        <div class="card-icon"><i class="fas fa-globe"></i></div>
+                        <div class="card-number">01</div>
+                        <h3 data-i18n="curriculum.web.title">AI Website Building</h3>
+                        <p data-i18n="curriculum.web.desc">Build stunning, professional websites in hours without any coding knowledge using AI-powered tools</p>
+                        <ul class="card-features">
+                            <li data-i18n="curriculum.web.f1">Landing Pages & Business Sites</li>
+                            <li data-i18n="curriculum.web.f2">E-commerce Stores</li>
+                            <li data-i18n="curriculum.web.f3">Portfolio Websites</li>
+                        </ul>
+                    </div>
+
+                    <div class="curriculum-card featured">
+                        <div class="card-ribbon" data-i18n="card.popular">Most Requested</div>
+                        <div class="card-icon"><i class="fas fa-comments"></i></div>
+                        <div class="card-number">02</div>
+                        <h3 data-i18n="curriculum.chatbot.title">Smart Chatbot Creation</h3>
+                        <p data-i18n="curriculum.chatbot.desc">Create intelligent chatbots that handle customer service, sales, and support 24/7</p>
+                        <ul class="card-features">
+                            <li data-i18n="curriculum.chatbot.f1">Customer Service Bots</li>
+                            <li data-i18n="curriculum.chatbot.f2">Sales & Lead Generation</li>
+                            <li data-i18n="curriculum.chatbot.f3">Multi-Platform Integration</li>
+                        </ul>
+                    </div>
+
+                    <div class="curriculum-card">
+                        <div class="card-icon"><i class="fas fa-cogs"></i></div>
+                        <div class="card-number">03</div>
+                        <h3 data-i18n="curriculum.automation.title">Workflow Automation</h3>
+                        <p data-i18n="curriculum.automation.desc">Automate repetitive tasks and save 20+ hours every week with intelligent automation</p>
+                        <ul class="card-features">
+                            <li data-i18n="curriculum.automation.f1">Email & Marketing Automation</li>
+                            <li data-i18n="curriculum.automation.f2">Data Processing</li>
+                            <li data-i18n="curriculum.automation.f3">Business Workflows</li>
+                        </ul>
+                    </div>
+
+                    <div class="curriculum-card">
+                        <div class="card-icon"><i class="fas fa-pen-fancy"></i></div>
+                        <div class="card-number">04</div>
+                        <h3 data-i18n="curriculum.content.title">AI Content Creation</h3>
+                        <p data-i18n="curriculum.content.desc">Generate high-quality content for blogs, social media, and marketing in minutes</p>
+                        <ul class="card-features">
+                            <li data-i18n="curriculum.content.f1">Blog Posts & Articles</li>
+                            <li data-i18n="curriculum.content.f2">Social Media Content</li>
+                            <li data-i18n="curriculum.content.f3">Marketing Copy</li>
+                        </ul>
+                    </div>
+
+                    <div class="curriculum-card">
+                        <div class="card-icon"><i class="fas fa-image"></i></div>
+                        <div class="card-number">05</div>
+                        <h3 data-i18n="curriculum.images.title">AI Image Generation</h3>
+                        <p data-i18n="curriculum.images.desc">Create stunning visuals, logos, and graphics using AI art generation tools</p>
+                        <ul class="card-features">
+                            <li data-i18n="curriculum.images.f1">Product Images</li>
+                            <li data-i18n="curriculum.images.f2">Brand Assets & Logos</li>
+                            <li data-i18n="curriculum.images.f3">Social Media Graphics</li>
+                        </ul>
+                    </div>
+
+                    <div class="curriculum-card">
+                        <div class="card-icon"><i class="fas fa-chart-pie"></i></div>
+                        <div class="card-number">06</div>
+                        <h3 data-i18n="curriculum.business.title">AI for Business</h3>
+                        <p data-i18n="curriculum.business.desc">Apply AI to grow revenue, optimize operations, and outperform competitors</p>
+                        <ul class="card-features">
+                            <li data-i18n="curriculum.business.f1">Business Strategy with AI</li>
+                            <li data-i18n="curriculum.business.f2">Customer Analytics</li>
+                            <li data-i18n="curriculum.business.f3">Competitive Advantage</li>
+                        </ul>
                     </div>
                 </div>
-                
-                <div class="service-detail-visual" data-aos="fade-left">
-                    <div class="visual-card" style="border-color: #10b981;">
-                        <div class="training-preview">
-                            <div class="training-header" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 20px; border-radius: 12px 12px 0 0; color: white;">
-                                <i class="fas fa-play-circle" style="font-size: 2rem; margin-bottom: 10px;"></i>
-                                <h4 data-i18n="service.training.coursePreview">What You'll Learn</h4>
-                            </div>
-                            <div class="training-modules" style="padding: 20px;">
-                                <div class="module-item" style="display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
-                                    <i class="fas fa-globe" style="color: #10b981; width: 24px;"></i>
-                                    <span data-i18n="service.training.module1">AI Website Building</span>
-                                </div>
-                                <div class="module-item" style="display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
-                                    <i class="fas fa-robot" style="color: #10b981; width: 24px;"></i>
-                                    <span data-i18n="service.training.module2">Chatbot Development</span>
-                                </div>
-                                <div class="module-item" style="display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
-                                    <i class="fas fa-cogs" style="color: #10b981; width: 24px;"></i>
-                                    <span data-i18n="service.training.module3">Automation Tools</span>
-                                </div>
-                                <div class="module-item" style="display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
-                                    <i class="fas fa-brain" style="color: #10b981; width: 24px;"></i>
-                                    <span data-i18n="service.training.module4">AI Capabilities Deep Dive</span>
-                                </div>
-                                <div class="module-item" style="display: flex; align-items: center; gap: 12px; padding: 12px 0;">
-                                    <i class="fas fa-certificate" style="color: #10b981; width: 24px;"></i>
-                                    <span data-i18n="service.training.module5">Certification & Projects</span>
-                                </div>
-                            </div>
+            </div>
+        </div>
+
+        <!-- Instructor Section -->
+        <div class="academy-instructor">
+            <div class="container">
+                <div class="instructor-card" data-aos="fade-up">
+                    <div class="instructor-image">
+                        <div class="instructor-avatar">
+                            <i class="fas fa-user-tie"></i>
                         </div>
-                        <div class="stats-mini">
-                            <div class="stat-mini-item">
-                                <i class="fas fa-users" style="color: #10b981;"></i>
-                                <div>
-                                    <h5 data-i18n="service.training.stat1">500+ Students</h5>
-                                    <p data-i18n="service.training.stat1.desc">Already enrolled</p>
-                                </div>
+                        <div class="instructor-badge">
+                            <i class="fas fa-certificate"></i>
+                            <span data-i18n="instructor.certified">Certified AI Expert</span>
+                        </div>
+                    </div>
+                    <div class="instructor-info">
+                        <span class="instructor-label" data-i18n="instructor.label">Your Instructor</span>
+                        <h3 data-i18n="instructor.name">AIZONIQ Expert Team</h3>
+                        <p data-i18n="instructor.bio">Our team of AI specialists has trained thousands of professionals worldwide. With years of experience implementing AI solutions for Fortune 500 companies, we've distilled our knowledge into this comprehensive program.</p>
+                        <div class="instructor-stats">
+                            <div class="ins-stat">
+                                <strong>10+</strong>
+                                <span data-i18n="instructor.years">Years Experience</span>
                             </div>
-                            <div class="stat-mini-item">
-                                <i class="fas fa-star" style="color: #10b981;"></i>
-                                <div>
-                                    <h5 data-i18n="service.training.stat2">4.9/5 Rating</h5>
-                                    <p data-i18n="service.training.stat2.desc">Student satisfaction</p>
-                                </div>
+                            <div class="ins-stat">
+                                <strong>5000+</strong>
+                                <span data-i18n="instructor.trained">Students Trained</span>
+                            </div>
+                            <div class="ins-stat">
+                                <strong>50+</strong>
+                                <span data-i18n="instructor.companies">Companies Served</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Pricing Section -->
+        <div id="pricing-section" class="academy-pricing">
+            <div class="container">
+                <div class="section-header text-center" data-aos="fade-up">
+                    <span class="section-badge emerald" data-i18n="pricing.badge">Choose Your Path</span>
+                    <h2 data-i18n="pricing.title">Invest in Your Future</h2>
+                    <p data-i18n="pricing.subtitle">Select the plan that matches your goals. All plans include lifetime access.</p>
+                </div>
+
+                <div class="pricing-cards" data-aos="fade-up">
+                    <!-- Starter Plan -->
+                    <div class="price-card">
+                        <div class="price-header">
+                            <span class="price-tier" data-i18n="plan.starter">Starter</span>
+                            <div class="price-amount">
+                                <span class="currency">$</span>
+                                <span class="amount">99</span>
+                            </div>
+                            <span class="price-period" data-i18n="plan.oneTime">One-time payment</span>
+                        </div>
+                        <div class="price-body">
+                            <ul class="price-features">
+                                <li><i class="fas fa-check"></i> <span data-i18n="starter.f1">10 Hours of HD Video</span></li>
+                                <li><i class="fas fa-check"></i> <span data-i18n="starter.f2">AI Fundamentals Course</span></li>
+                                <li><i class="fas fa-check"></i> <span data-i18n="starter.f3">Basic Chatbot Training</span></li>
+                                <li><i class="fas fa-check"></i> <span data-i18n="starter.f4">Downloadable Resources</span></li>
+                                <li><i class="fas fa-check"></i> <span data-i18n="starter.f5">Email Support</span></li>
+                                <li><i class="fas fa-check"></i> <span data-i18n="starter.f6">Certificate of Completion</span></li>
+                                <li class="disabled"><i class="fas fa-times"></i> <span data-i18n="starter.f7">Advanced Modules</span></li>
+                                <li class="disabled"><i class="fas fa-times"></i> <span data-i18n="starter.f8">1-on-1 Mentoring</span></li>
+                            </ul>
+                            <button class="btn-price" onclick="openCheckout('starter', 99)">
+                                <span data-i18n="btn.getStarted">Get Started</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Professional Plan -->
+                    <div class="price-card featured">
+                        <div class="featured-badge" data-i18n="plan.bestValue">BEST VALUE</div>
+                        <div class="price-header">
+                            <span class="price-tier" data-i18n="plan.professional">Professional</span>
+                            <div class="price-amount">
+                                <span class="currency">$</span>
+                                <span class="amount">299</span>
+                            </div>
+                            <span class="price-period" data-i18n="plan.oneTime">One-time payment</span>
+                            <div class="price-savings" data-i18n="plan.save">Save $200</div>
+                        </div>
+                        <div class="price-body">
+                            <ul class="price-features">
+                                <li><i class="fas fa-check"></i> <span data-i18n="pro.f1">40+ Hours of HD Video</span></li>
+                                <li><i class="fas fa-check"></i> <span data-i18n="pro.f2">Complete AI Mastery Program</span></li>
+                                <li><i class="fas fa-check"></i> <span data-i18n="pro.f3">Website Building with AI</span></li>
+                                <li><i class="fas fa-check"></i> <span data-i18n="pro.f4">Advanced Chatbot Development</span></li>
+                                <li><i class="fas fa-check"></i> <span data-i18n="pro.f5">Full Automation Systems</span></li>
+                                <li><i class="fas fa-check"></i> <span data-i18n="pro.f6">AI Business Applications</span></li>
+                                <li><i class="fas fa-check"></i> <span data-i18n="pro.f7">1 Live Mentoring Session</span></li>
+                                <li><i class="fas fa-check"></i> <span data-i18n="pro.f8">Priority Support</span></li>
+                                <li><i class="fas fa-check"></i> <span data-i18n="pro.f9">Professional Certificate</span></li>
+                            </ul>
+                            <button class="btn-price featured" onclick="openCheckout('professional', 299)">
+                                <span data-i18n="btn.enrollNow">Enroll Now</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Master Plan -->
+                    <div class="price-card premium">
+                        <div class="price-header">
+                            <span class="price-tier" data-i18n="plan.master">Master</span>
+                            <div class="price-amount">
+                                <span class="currency">$</span>
+                                <span class="amount">599</span>
+                            </div>
+                            <span class="price-period" data-i18n="plan.oneTime">One-time payment</span>
+                        </div>
+                        <div class="price-body">
+                            <ul class="price-features">
+                                <li><i class="fas fa-check"></i> <span data-i18n="master.f1">80+ Hours of HD Video</span></li>
+                                <li><i class="fas fa-check"></i> <span data-i18n="master.f2">Everything in Professional</span></li>
+                                <li><i class="fas fa-check"></i> <span data-i18n="master.f3">Build Your Own AI Tools</span></li>
+                                <li><i class="fas fa-check"></i> <span data-i18n="master.f4">Enterprise Solutions Training</span></li>
+                                <li><i class="fas fa-check"></i> <span data-i18n="master.f5">5 Live Mentoring Sessions</span></li>
+                                <li><i class="fas fa-check"></i> <span data-i18n="master.f6">Private Community Access</span></li>
+                                <li><i class="fas fa-check"></i> <span data-i18n="master.f7">Lifetime Updates</span></li>
+                                <li><i class="fas fa-check"></i> <span data-i18n="master.f8">VIP Support Channel</span></li>
+                                <li><i class="fas fa-check"></i> <span data-i18n="master.f9">Master Certificate</span></li>
+                            </ul>
+                            <button class="btn-price premium" onclick="openCheckout('master', 599)">
+                                <span data-i18n="btn.goMaster">Go Master</span>
+                                <i class="fas fa-crown"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Methods Showcase -->
+                <div class="payment-showcase" data-aos="fade-up">
+                    <div class="payment-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4 data-i18n="payment.title">Secure & Trusted Payment Methods</h4>
+                    </div>
+                    <div class="payment-methods-row">
+                        <div class="payment-method">
+                            <div class="method-icon apple">
+                                <i class="fab fa-apple"></i>
+                            </div>
+                            <span>Apple Pay</span>
+                        </div>
+                        <div class="payment-method">
+                            <div class="method-icon google">
+                                <i class="fab fa-google"></i>
+                            </div>
+                            <span>Google Pay</span>
+                        </div>
+                        <div class="payment-method">
+                            <div class="method-icon stripe">
+                                <i class="fab fa-stripe-s"></i>
+                            </div>
+                            <span>Stripe</span>
+                        </div>
+                        <div class="payment-method">
+                            <div class="method-icon paypal">
+                                <i class="fab fa-paypal"></i>
+                            </div>
+                            <span>PayPal</span>
+                        </div>
+                        <div class="payment-method">
+                            <div class="method-icon visa">
+                                <i class="fab fa-cc-visa"></i>
+                            </div>
+                            <span>Visa</span>
+                        </div>
+                        <div class="payment-method">
+                            <div class="method-icon mastercard">
+                                <i class="fab fa-cc-mastercard"></i>
+                            </div>
+                            <span>Mastercard</span>
+                        </div>
+                        <div class="payment-method">
+                            <div class="method-icon amex">
+                                <i class="fab fa-cc-amex"></i>
+                            </div>
+                            <span>Amex</span>
+                        </div>
+                    </div>
+                    <div class="payment-trust">
+                        <div class="trust-item">
+                            <i class="fas fa-lock"></i>
+                            <span data-i18n="trust.ssl">256-bit SSL Encryption</span>
+                        </div>
+                        <div class="trust-item">
+                            <i class="fas fa-undo"></i>
+                            <span data-i18n="trust.refund">30-Day Money Back</span>
+                        </div>
+                        <div class="trust-item">
+                            <i class="fas fa-infinity"></i>
+                            <span data-i18n="trust.lifetime">Lifetime Access</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonials -->
+        <div class="academy-testimonials">
+            <div class="container">
+                <div class="section-header text-center" data-aos="fade-up">
+                    <span class="section-badge emerald" data-i18n="testimonials.badge">Success Stories</span>
+                    <h2 data-i18n="testimonials.title">What Our Students Say</h2>
+                </div>
+
+                <div class="testimonials-slider" data-aos="fade-up">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text" data-i18n="testimonial.1.text">"This course completely transformed how I work. I built my company's entire website in just 2 days using what I learned. Absolutely incredible value!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">S</div>
+                            <div class="author-info">
+                                <strong data-i18n="testimonial.1.name">Sarah Johnson</strong>
+                                <span data-i18n="testimonial.1.role">Startup Founder</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text" data-i18n="testimonial.2.text">"I automated 80% of my customer support using the chatbot skills I learned. My team now focuses on high-value tasks. Best investment ever!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">M</div>
+                            <div class="author-info">
+                                <strong data-i18n="testimonial.2.name">Mohammed Al-Rashid</strong>
+                                <span data-i18n="testimonial.2.role">E-commerce Owner</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text" data-i18n="testimonial.3.text">"As someone with zero tech background, I was amazed at how easy it was to follow. Now I'm freelancing and making $5K/month building AI solutions!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">A</div>
+                            <div class="author-info">
+                                <strong data-i18n="testimonial.3.name">Alex Chen</strong>
+                                <span data-i18n="testimonial.3.role">Freelancer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="academy-faq">
+            <div class="container">
+                <div class="section-header text-center" data-aos="fade-up">
+                    <span class="section-badge emerald" data-i18n="faq.badge">Questions?</span>
+                    <h2 data-i18n="faq.title">Frequently Asked Questions</h2>
+                </div>
+
+                <div class="faq-accordion" data-aos="fade-up">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span data-i18n="academy.faq.q1">Do I need any technical background?</span>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p data-i18n="academy.faq.a1">Not at all! This course is designed for complete beginners. We start from the basics and guide you step-by-step. If you can use a computer and browse the internet, you can master AI.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span data-i18n="academy.faq.q2">How long do I have access?</span>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p data-i18n="academy.faq.a2">You get lifetime access! Once you enroll, you can access all course materials forever, including all future updates we add to the curriculum.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span data-i18n="academy.faq.q3">What if I'm not satisfied?</span>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p data-i18n="academy.faq.a3">We offer a 30-day money-back guarantee. If you're not completely satisfied with the course, just email us within 30 days for a full refund. No questions asked.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span data-i18n="academy.faq.q4">Is the certificate recognized?</span>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p data-i18n="academy.faq.a4">Yes! Our certificate is recognized by employers and can be added to your LinkedIn profile. Many of our graduates have used it to land jobs and freelance clients.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Final CTA -->
+        <div class="academy-final-cta">
+            <div class="container">
+                <div class="cta-card" data-aos="fade-up">
+                    <div class="cta-content">
+                        <h2 data-i18n="cta.title">Ready to Transform Your Future?</h2>
+                        <p data-i18n="cta.subtitle">Join thousands of students already mastering AI. Start today and see results within your first week.</p>
+                        <a href="#pricing-section" class="btn btn-academy-cta large">
+                            <span data-i18n="cta.button">Start Your AI Journey Now</span>
+                            <i class="fas fa-rocket"></i>
+                        </a>
+                        <div class="cta-guarantee">
+                            <i class="fas fa-shield-alt"></i>
+                            <span data-i18n="cta.guarantee">30-Day Money-Back Guarantee • Secure Payment • Instant Access</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+    <!-- END AI ACADEMY SECTION -->
 
     <!-- Service Detail: AI Content Writing -->
     <section id="writing" class="service-detail section-padding">
@@ -1060,117 +1431,6 @@
                     </ul>
                     <a href="../contact/contact.html" class="btn btn-secondary btn-block" data-i18n="btn.contactSales">Contact Sales</a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- AI Training Pricing Section -->
-    <section id="training-pricing" class="training-pricing-section section-padding" style="background: linear-gradient(180deg, rgba(16, 185, 129, 0.1) 0%, transparent 100%);">
-        <div class="container">
-            <div class="section-header text-center" data-aos="fade-up">
-                <span class="section-badge" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);" data-i18n="training.pricing.badge">AI Training Courses</span>
-                <h2 data-i18n="training.pricing.title">Invest in Your AI Skills</h2>
-                <p data-i18n="training.pricing.desc">Choose the course that fits your learning goals and start mastering AI today</p>
-            </div>
-            
-            <div class="pricing-grid">
-                <!-- Basic Course -->
-                <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="pricing-header" style="border-color: #10b981;">
-                        <h3 data-i18n="training.course.basic">Beginner Course</h3>
-                        <div class="pricing-amount">
-                            <span class="currency">$</span>
-                            <span class="amount">99</span>
-                            <span class="period" data-i18n="training.oneTime">one-time</span>
-                        </div>
-                    </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check" style="color: #10b981;"></i> <span data-i18n="training.basic.feature1">AI Fundamentals (10 hours)</span></li>
-                        <li><i class="fas fa-check" style="color: #10b981;"></i> <span data-i18n="training.basic.feature2">Basic Chatbot Building</span></li>
-                        <li><i class="fas fa-check" style="color: #10b981;"></i> <span data-i18n="training.basic.feature3">Simple Automation Tasks</span></li>
-                        <li><i class="fas fa-check" style="color: #10b981;"></i> <span data-i18n="training.basic.feature4">Email Support</span></li>
-                        <li><i class="fas fa-check" style="color: #10b981;"></i> <span data-i18n="training.basic.feature5">Certificate of Completion</span></li>
-                    </ul>
-                    <button onclick="initiatePayment('basic', 99)" class="btn btn-secondary btn-block" style="border-color: #10b981; color: #10b981;" data-i18n="btn.buyNow">Buy Now</button>
-                </div>
-                
-                <!-- Pro Course -->
-                <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="200" style="border-color: #10b981;">
-                    <div class="popular-badge" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);" data-i18n="training.popular">Most Popular</div>
-                    <div class="pricing-header" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
-                        <h3 data-i18n="training.course.pro">Professional Course</h3>
-                        <div class="pricing-amount">
-                            <span class="currency">$</span>
-                            <span class="amount">299</span>
-                            <span class="period" data-i18n="training.oneTime">one-time</span>
-                        </div>
-                    </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check" style="color: #10b981;"></i> <span data-i18n="training.pro.feature1">Complete AI Mastery (40 hours)</span></li>
-                        <li><i class="fas fa-check" style="color: #10b981;"></i> <span data-i18n="training.pro.feature2">Build Websites with AI</span></li>
-                        <li><i class="fas fa-check" style="color: #10b981;"></i> <span data-i18n="training.pro.feature3">Advanced Chatbots</span></li>
-                        <li><i class="fas fa-check" style="color: #10b981;"></i> <span data-i18n="training.pro.feature4">Full Automation Systems</span></li>
-                        <li><i class="fas fa-check" style="color: #10b981;"></i> <span data-i18n="training.pro.feature5">AI Business Applications</span></li>
-                        <li><i class="fas fa-check" style="color: #10b981;"></i> <span data-i18n="training.pro.feature6">1-on-1 Mentoring Session</span></li>
-                        <li><i class="fas fa-check" style="color: #10b981;"></i> <span data-i18n="training.pro.feature7">Priority Support</span></li>
-                        <li><i class="fas fa-check" style="color: #10b981;"></i> <span data-i18n="training.pro.feature8">Professional Certificate</span></li>
-                    </ul>
-                    <button onclick="initiatePayment('pro', 299)" class="btn btn-primary btn-block" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);" data-i18n="btn.buyNow">Buy Now</button>
-                </div>
-                
-                <!-- Master Course -->
-                <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="pricing-header" style="border-color: #10b981;">
-                        <h3 data-i18n="training.course.master">Master Course</h3>
-                        <div class="pricing-amount">
-                            <span class="currency">$</span>
-                            <span class="amount">599</span>
-                            <span class="period" data-i18n="training.oneTime">one-time</span>
-                        </div>
-                    </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check" style="color: #10b981;"></i> <span data-i18n="training.master.feature1">Everything in Professional</span></li>
-                        <li><i class="fas fa-check" style="color: #10b981;"></i> <span data-i18n="training.master.feature2">80+ Hours of Content</span></li>
-                        <li><i class="fas fa-check" style="color: #10b981;"></i> <span data-i18n="training.master.feature3">Build Your Own AI Tools</span></li>
-                        <li><i class="fas fa-check" style="color: #10b981;"></i> <span data-i18n="training.master.feature4">Enterprise Solutions</span></li>
-                        <li><i class="fas fa-check" style="color: #10b981;"></i> <span data-i18n="training.master.feature5">5 Mentoring Sessions</span></li>
-                        <li><i class="fas fa-check" style="color: #10b981;"></i> <span data-i18n="training.master.feature6">Lifetime Access</span></li>
-                        <li><i class="fas fa-check" style="color: #10b981;"></i> <span data-i18n="training.master.feature7">Private Community Access</span></li>
-                        <li><i class="fas fa-check" style="color: #10b981;"></i> <span data-i18n="training.master.feature8">Master Certificate</span></li>
-                    </ul>
-                    <button onclick="initiatePayment('master', 599)" class="btn btn-secondary btn-block" style="border-color: #10b981; color: #10b981;" data-i18n="btn.buyNow">Buy Now</button>
-                </div>
-            </div>
-            
-            <!-- Payment Methods -->
-            <div class="payment-methods" data-aos="fade-up" style="margin-top: 60px; text-align: center;">
-                <h4 data-i18n="payment.methods" style="margin-bottom: 20px; color: var(--text-secondary);">Secure Payment Methods</h4>
-                <div class="payment-icons" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-                    <div class="payment-icon" style="background: #fff; padding: 12px 20px; border-radius: 8px; display: flex; align-items: center; gap: 8px;">
-                        <i class="fab fa-apple" style="font-size: 1.5rem; color: #000;"></i>
-                        <span style="color: #000; font-weight: 600;">Pay</span>
-                    </div>
-                    <div class="payment-icon" style="background: #fff; padding: 12px 20px; border-radius: 8px; display: flex; align-items: center; gap: 8px;">
-                        <i class="fab fa-google" style="font-size: 1.5rem; color: #4285f4;"></i>
-                        <span style="color: #000; font-weight: 600;">Pay</span>
-                    </div>
-                    <div class="payment-icon" style="background: #fff; padding: 12px 20px; border-radius: 8px;">
-                        <i class="fab fa-cc-stripe" style="font-size: 1.8rem; color: #6772e5;"></i>
-                    </div>
-                    <div class="payment-icon" style="background: #fff; padding: 12px 20px; border-radius: 8px;">
-                        <i class="fab fa-cc-paypal" style="font-size: 1.8rem; color: #003087;"></i>
-                    </div>
-                    <div class="payment-icon" style="background: #fff; padding: 12px 20px; border-radius: 8px;">
-                        <i class="fab fa-cc-visa" style="font-size: 1.8rem; color: #1a1f71;"></i>
-                    </div>
-                    <div class="payment-icon" style="background: #fff; padding: 12px 20px; border-radius: 8px;">
-                        <i class="fab fa-cc-mastercard" style="font-size: 1.8rem; color: #eb001b;"></i>
-                    </div>
-                </div>
-                <p style="margin-top: 20px; color: var(--text-muted); font-size: 0.9rem;">
-                    <i class="fas fa-lock" style="margin-right: 8px;"></i>
-                    <span data-i18n="payment.secure">256-bit SSL Encrypted. Your payment info is secure.</span>
-                </p>
             </div>
         </div>
     </section>
