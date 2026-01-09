@@ -440,27 +440,27 @@ console.log('%c🚀 AIZONIQ - Premium AI Services Agency', 'color: #6366f1; font
 console.log('%cWebsite crafted with ❤️ and AI', 'color: #8b5cf6; font-size: 14px;');
 
 // ============================================
-// PREMIUM CHECKOUT SYSTEM
+// PREMIUM CHECKOUT SYSTEM - SAUDI ARABIA 🇸🇦
 // ============================================
 const planDetails = {
     starter: {
         name: 'Starter Course',
         nameAr: 'الدورة التأسيسية',
-        price: 99
+        price: 369
     },
     professional: {
         name: 'Professional Course',
         nameAr: 'الدورة الاحترافية',
-        price: 299
+        price: 1099
     },
     master: {
         name: 'Master Course',
         nameAr: 'دورة الماستر',
-        price: 599
+        price: 2199
     }
 };
 
-// Open checkout modal
+// Open checkout modal - Saudi Version
 function openCheckout(planType, price) {
     const plan = planDetails[planType];
     if (!plan) return;
@@ -473,7 +473,7 @@ function openCheckout(planType, price) {
     
     const modalHTML = `
         <div id="checkout-modal" class="checkout-overlay">
-            <div class="checkout-modal">
+            <div class="checkout-modal saudi-checkout">
                 <button class="checkout-close" onclick="closeCheckout()">
                     <i class="fas fa-times"></i>
                 </button>
@@ -485,15 +485,42 @@ function openCheckout(planType, price) {
                     <h2>${isArabic ? 'إتمام الشراء' : 'Complete Your Purchase'}</h2>
                     <div class="checkout-plan">
                         <span class="plan-name">${isArabic ? plan.nameAr : plan.name}</span>
-                        <span class="plan-price">$${price}</span>
+                        <span class="plan-price">${price.toLocaleString()} ${isArabic ? 'ر.س' : 'SAR'}</span>
                     </div>
+                    <div class="saudi-flag">🇸🇦</div>
                 </div>
                 
                 <div class="checkout-body">
                     <div class="payment-options">
                         <h4>${isArabic ? 'اختر طريقة الدفع' : 'Select Payment Method'}</h4>
                         
-                        <div class="payment-option" onclick="selectPayment('apple', '${plan.name}', ${price})">
+                        <!-- مدى - الأكثر استخداماً في السعودية -->
+                        <div class="payment-option featured active" onclick="selectPayment('mada', '${isArabic ? plan.nameAr : plan.name}', ${price})">
+                            <div class="option-radio"><span></span></div>
+                            <div class="option-icon mada">
+                                <svg viewBox="0 0 60 24"><text x="0" y="18" font-size="16" font-weight="bold" fill="#1D4ED8">mada</text></svg>
+                            </div>
+                            <div class="option-info">
+                                <strong>${isArabic ? 'مدى' : 'Mada'}</strong>
+                                <span>${isArabic ? 'الأكثر استخداماً في السعودية' : 'Most Popular in Saudi'}</span>
+                            </div>
+                            <div class="popular-tag">${isArabic ? 'الأكثر استخداماً' : 'Most Popular'}</div>
+                        </div>
+                        
+                        <!-- STC Pay -->
+                        <div class="payment-option" onclick="selectPayment('stcpay', '${isArabic ? plan.nameAr : plan.name}', ${price})">
+                            <div class="option-radio"><span></span></div>
+                            <div class="option-icon stcpay">
+                                <svg viewBox="0 0 60 24"><rect width="60" height="24" rx="4" fill="#4F3C8B"/><text x="30" y="16" text-anchor="middle" font-size="10" fill="white" font-weight="bold">STC Pay</text></svg>
+                            </div>
+                            <div class="option-info">
+                                <strong>STC Pay</strong>
+                                <span>${isArabic ? 'ادفع برصيدك' : 'Pay with balance'}</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Apple Pay -->
+                        <div class="payment-option" onclick="selectPayment('apple', '${isArabic ? plan.nameAr : plan.name}', ${price})">
                             <div class="option-radio"><span></span></div>
                             <div class="option-icon apple"><i class="fab fa-apple"></i></div>
                             <div class="option-info">
@@ -502,38 +529,55 @@ function openCheckout(planType, price) {
                             </div>
                         </div>
                         
-                        <div class="payment-option" onclick="selectPayment('google', '${plan.name}', ${price})">
+                        <!-- Tamara - تقسيط -->
+                        <div class="payment-option installment" onclick="selectPayment('tamara', '${isArabic ? plan.nameAr : plan.name}', ${price})">
                             <div class="option-radio"><span></span></div>
-                            <div class="option-icon google"><i class="fab fa-google"></i></div>
-                            <div class="option-info">
-                                <strong>Google Pay</strong>
-                                <span>${isArabic ? 'دفع سريع وآمن' : 'Fast & Secure'}</span>
+                            <div class="option-icon tamara">
+                                <svg viewBox="0 0 60 24"><rect width="60" height="24" rx="4" fill="#3CAEA3"/><text x="30" y="16" text-anchor="middle" font-size="9" fill="white" font-weight="bold">TAMARA</text></svg>
                             </div>
+                            <div class="option-info">
+                                <strong>${isArabic ? 'تمارا' : 'Tamara'}</strong>
+                                <span>${isArabic ? 'قسّط على 4 دفعات بدون فوائد' : 'Split into 4 interest-free payments'}</span>
+                            </div>
+                            <div class="installment-tag">${isArabic ? 'تقسيط' : 'Installments'}</div>
                         </div>
                         
-                        <div class="payment-option" onclick="selectPayment('paypal', '${plan.name}', ${price})">
+                        <!-- Tabby - تقسيط -->
+                        <div class="payment-option installment" onclick="selectPayment('tabby', '${isArabic ? plan.nameAr : plan.name}', ${price})">
                             <div class="option-radio"><span></span></div>
-                            <div class="option-icon paypal"><i class="fab fa-paypal"></i></div>
-                            <div class="option-info">
-                                <strong>PayPal</strong>
-                                <span>${isArabic ? 'ادفع بحسابك' : 'Pay with your account'}</span>
+                            <div class="option-icon tabby">
+                                <svg viewBox="0 0 60 24"><rect width="60" height="24" rx="4" fill="#292929"/><text x="30" y="16" text-anchor="middle" font-size="10" fill="#D4FF00" font-weight="bold">tabby</text></svg>
                             </div>
+                            <div class="option-info">
+                                <strong>${isArabic ? 'تابي' : 'Tabby'}</strong>
+                                <span>${isArabic ? 'اشتر الآن وادفع لاحقاً' : 'Buy now, pay later'}</span>
+                            </div>
+                            <div class="installment-tag">${isArabic ? 'تقسيط' : 'Installments'}</div>
                         </div>
                         
-                        <div class="payment-option active" onclick="selectPayment('card', '${plan.name}', ${price})">
+                        <!-- Credit Card -->
+                        <div class="payment-option" onclick="selectPayment('card', '${isArabic ? plan.nameAr : plan.name}', ${price})">
                             <div class="option-radio"><span></span></div>
                             <div class="option-icon card"><i class="fas fa-credit-card"></i></div>
                             <div class="option-info">
                                 <strong>${isArabic ? 'بطاقة ائتمان / خصم' : 'Credit / Debit Card'}</strong>
-                                <span>Visa, Mastercard, Amex</span>
+                                <span>Visa, Mastercard</span>
                             </div>
                         </div>
                     </div>
                     
-                    <div id="card-form" class="card-form">
+                    <!-- Card Form - Hidden by default for Saudi -->
+                    <div id="card-form" class="card-form" style="display: none;">
                         <div class="form-field">
                             <label>${isArabic ? 'البريد الإلكتروني' : 'Email Address'}</label>
                             <input type="email" id="checkout-email" placeholder="${isArabic ? 'email@example.com' : 'email@example.com'}" required>
+                        </div>
+                        <div class="form-field">
+                            <label>${isArabic ? 'رقم الجوال' : 'Mobile Number'}</label>
+                            <div class="phone-input-wrapper">
+                                <span class="country-code">+966</span>
+                                <input type="tel" id="checkout-phone" placeholder="5XXXXXXXX" maxlength="9" required>
+                            </div>
                         </div>
                         <div class="form-field">
                             <label>${isArabic ? 'الاسم على البطاقة' : 'Name on Card'}</label>
@@ -546,7 +590,6 @@ function openCheckout(planType, price) {
                                 <div class="card-brands">
                                     <i class="fab fa-cc-visa"></i>
                                     <i class="fab fa-cc-mastercard"></i>
-                                    <i class="fab fa-cc-amex"></i>
                                 </div>
                             </div>
                         </div>
@@ -556,21 +599,49 @@ function openCheckout(planType, price) {
                                 <input type="text" id="checkout-expiry" placeholder="MM/YY" maxlength="5" oninput="formatExp(this)" required>
                             </div>
                             <div class="form-field">
-                                <label>CVC</label>
+                                <label>CVV</label>
                                 <input type="text" id="checkout-cvc" placeholder="123" maxlength="4" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Installment Details for Tamara/Tabby -->
+                    <div id="installment-details" class="installment-details" style="display: none;">
+                        <div class="installment-breakdown">
+                            <h5>${isArabic ? 'تفاصيل التقسيط' : 'Installment Details'}</h5>
+                            <div class="installment-item">
+                                <span>${isArabic ? 'اليوم' : 'Today'}</span>
+                                <strong id="first-payment">${(price / 4).toFixed(0)} ${isArabic ? 'ر.س' : 'SAR'}</strong>
+                            </div>
+                            <div class="installment-item">
+                                <span>${isArabic ? 'بعد شهر' : 'In 1 month'}</span>
+                                <strong>${(price / 4).toFixed(0)} ${isArabic ? 'ر.س' : 'SAR'}</strong>
+                            </div>
+                            <div class="installment-item">
+                                <span>${isArabic ? 'بعد شهرين' : 'In 2 months'}</span>
+                                <strong>${(price / 4).toFixed(0)} ${isArabic ? 'ر.س' : 'SAR'}</strong>
+                            </div>
+                            <div class="installment-item">
+                                <span>${isArabic ? 'بعد 3 أشهر' : 'In 3 months'}</span>
+                                <strong>${(price / 4).toFixed(0)} ${isArabic ? 'ر.س' : 'SAR'}</strong>
+                            </div>
+                            <div class="installment-total">
+                                <span>${isArabic ? 'المجموع' : 'Total'}</span>
+                                <strong>${price.toLocaleString()} ${isArabic ? 'ر.س' : 'SAR'}</strong>
+                                <small>${isArabic ? 'بدون فوائد' : 'Interest-free'}</small>
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="checkout-footer">
-                    <button class="checkout-btn" onclick="processCheckout('${plan.name}', ${price})">
+                    <button class="checkout-btn" id="pay-btn" onclick="processCheckout('${isArabic ? plan.nameAr : plan.name}', ${price})">
                         <i class="fas fa-lock"></i>
-                        <span>${isArabic ? 'ادفع الآن' : 'Pay Now'} - $${price}</span>
+                        <span id="pay-btn-text">${isArabic ? 'ادفع الآن' : 'Pay Now'} - ${price.toLocaleString()} ${isArabic ? 'ر.س' : 'SAR'}</span>
                     </button>
                     <div class="checkout-security">
                         <i class="fas fa-shield-alt"></i>
-                        <span>${isArabic ? 'مدفوعات آمنة ومشفرة بـ SSL 256-bit' : '256-bit SSL Encrypted • Secure Payment'}</span>
+                        <span>${isArabic ? 'مدفوعات آمنة ومشفرة • معتمد من مؤسسة النقد السعودي' : 'Secure & Encrypted • SAMA Approved'}</span>
                     </div>
                 </div>
             </div>
@@ -585,20 +656,39 @@ function openCheckout(planType, price) {
     }, 10);
 }
 
-// Select payment method
+// Select payment method - Saudi version
+let selectedPaymentMethod = 'mada';
+
 function selectPayment(method, planName, price) {
+    selectedPaymentMethod = method;
+    const isArabic = document.documentElement.lang === 'ar';
+    
     // Update active state
     document.querySelectorAll('.payment-option').forEach(opt => opt.classList.remove('active'));
     event.currentTarget.classList.add('active');
     
-    // Show/hide card form
+    // Show/hide appropriate forms
     const cardForm = document.getElementById('card-form');
+    const installmentDetails = document.getElementById('installment-details');
+    const payBtn = document.getElementById('pay-btn-text');
+    
+    // Hide all by default
+    cardForm.style.display = 'none';
+    installmentDetails.style.display = 'none';
+    
     if (method === 'card') {
         cardForm.style.display = 'block';
-    } else {
-        cardForm.style.display = 'none';
-        // For non-card methods, process immediately
-        setTimeout(() => processCheckout(planName, price, method), 300);
+        payBtn.textContent = `${isArabic ? 'ادفع الآن' : 'Pay Now'} - ${price.toLocaleString()} ${isArabic ? 'ر.س' : 'SAR'}`;
+    } else if (method === 'tamara' || method === 'tabby') {
+        installmentDetails.style.display = 'block';
+        const firstPayment = Math.ceil(price / 4);
+        payBtn.textContent = `${isArabic ? 'ادفع' : 'Pay'} ${firstPayment.toLocaleString()} ${isArabic ? 'ر.س الآن' : 'SAR Now'}`;
+    } else if (method === 'mada') {
+        payBtn.textContent = `${isArabic ? 'الدفع بـ مدى' : 'Pay with Mada'} - ${price.toLocaleString()} ${isArabic ? 'ر.س' : 'SAR'}`;
+    } else if (method === 'stcpay') {
+        payBtn.textContent = `${isArabic ? 'الدفع بـ STC Pay' : 'Pay with STC Pay'} - ${price.toLocaleString()} ${isArabic ? 'ر.س' : 'SAR'}`;
+    } else if (method === 'apple') {
+        payBtn.textContent = `${isArabic ? 'الدفع بـ Apple Pay' : 'Pay with Apple Pay'} - ${price.toLocaleString()} ${isArabic ? 'ر.س' : 'SAR'}`;
     }
 }
 
@@ -618,10 +708,23 @@ function formatExp(input) {
     input.value = value;
 }
 
-// Process checkout
-function processCheckout(planName, price, method = 'card') {
+// Process checkout - Saudi Version
+function processCheckout(planName, price, method = null) {
     const isArabic = document.documentElement.lang === 'ar';
     const modal = document.querySelector('.checkout-modal');
+    const paymentMethod = method || selectedPaymentMethod;
+    
+    // Get payment method display name
+    let methodName = paymentMethod;
+    const methodNames = {
+        'mada': isArabic ? 'مدى' : 'Mada',
+        'stcpay': 'STC Pay',
+        'apple': 'Apple Pay',
+        'tamara': isArabic ? 'تمارا' : 'Tamara',
+        'tabby': isArabic ? 'تابي' : 'Tabby',
+        'card': isArabic ? 'بطاقة' : 'Card'
+    };
+    methodName = methodNames[paymentMethod] || paymentMethod;
     
     // Show processing
     modal.innerHTML = `
@@ -631,27 +734,32 @@ function processCheckout(planName, price, method = 'card') {
                 <i class="fas fa-lock"></i>
             </div>
             <h3>${isArabic ? 'جاري معالجة الدفع...' : 'Processing Payment...'}</h3>
-            <p>${isArabic ? 'يرجى عدم إغلاق هذه النافذة' : 'Please do not close this window'}</p>
+            <p>${isArabic ? 'جاري الاتصال بـ ' + methodName : 'Connecting to ' + methodName}</p>
+            <p class="processing-note">${isArabic ? 'يرجى عدم إغلاق هذه النافذة' : 'Please do not close this window'}</p>
         </div>
     `;
     
     // Simulate processing
     setTimeout(() => {
-        showCheckoutSuccess(planName, price, isArabic);
+        showCheckoutSuccess(planName, price, isArabic, paymentMethod);
     }, 2500);
 }
 
-// Show success
-function showCheckoutSuccess(planName, price, isArabic) {
+// Show success - Saudi Version
+function showCheckoutSuccess(planName, price, isArabic, paymentMethod) {
     const modal = document.querySelector('.checkout-modal');
+    const isTamara = paymentMethod === 'tamara';
+    const isTabby = paymentMethod === 'tabby';
+    const isInstallment = isTamara || isTabby;
     
     modal.innerHTML = `
-        <div class="checkout-success">
+        <div class="checkout-success saudi-success">
             <div class="success-animation">
                 <div class="success-circle">
                     <i class="fas fa-check"></i>
                 </div>
             </div>
+            <div class="success-flag">🇸🇦</div>
             <h3>${isArabic ? '🎉 تم الدفع بنجاح!' : '🎉 Payment Successful!'}</h3>
             <p>${isArabic ? 'تهانينا! تم تسجيلك في الدورة بنجاح' : 'Congratulations! You are now enrolled'}</p>
             
@@ -661,18 +769,31 @@ function showCheckoutSuccess(planName, price, isArabic) {
                     <strong>${planName}</strong>
                 </div>
                 <div class="detail-row">
-                    <span>${isArabic ? 'المبلغ المدفوع' : 'Amount Paid'}</span>
-                    <strong>$${price}</strong>
+                    <span>${isArabic ? (isInstallment ? 'المدفوع اليوم' : 'المبلغ المدفوع') : (isInstallment ? 'Paid Today' : 'Amount Paid')}</span>
+                    <strong>${isInstallment ? Math.ceil(price / 4).toLocaleString() : price.toLocaleString()} ${isArabic ? 'ر.س' : 'SAR'}</strong>
                 </div>
+                ${isInstallment ? `
+                <div class="detail-row installment-note">
+                    <span>${isArabic ? 'المتبقي' : 'Remaining'}</span>
+                    <strong>${(Math.ceil(price / 4) * 3).toLocaleString()} ${isArabic ? 'ر.س على 3 دفعات' : 'SAR in 3 payments'}</strong>
+                </div>
+                ` : ''}
                 <div class="detail-row">
                     <span>${isArabic ? 'رقم الطلب' : 'Order ID'}</span>
-                    <strong>#AIZ${Date.now().toString().slice(-8)}</strong>
+                    <strong>#AIZ-SA-${Date.now().toString().slice(-8)}</strong>
                 </div>
             </div>
             
             <div class="success-email">
                 <i class="fas fa-envelope"></i>
                 <p>${isArabic ? 'تم إرسال تفاصيل الوصول إلى بريدك الإلكتروني' : 'Access details have been sent to your email'}</p>
+            </div>
+            
+            <div class="success-whatsapp">
+                <a href="https://wa.me/966XXXXXXXXX" target="_blank" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>${isArabic ? 'تواصل معنا على واتساب' : 'Contact us on WhatsApp'}</span>
+                </a>
             </div>
             
             <button class="checkout-btn success" onclick="closeCheckout()">

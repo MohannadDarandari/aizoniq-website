@@ -2974,3 +2974,366 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* ============================================
+   Saudi Arabia Checkout Enhancements 🇸🇦
+   ============================================ */
+
+/* Saudi Checkout Modal */
+.saudi-checkout .checkout-header {
+    position: relative;
+}
+
+.saudi-checkout .saudi-flag {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-size: 1.5rem;
+}
+
+[dir="rtl"] .saudi-checkout .saudi-flag {
+    left: auto;
+    right: 20px;
+}
+
+/* Mada Payment Icon */
+.option-icon.mada {
+    background: linear-gradient(135deg, #1D4ED8, #3B82F6);
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.7rem;
+}
+
+.option-icon.mada svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* STC Pay Icon */
+.option-icon.stcpay {
+    background: #4F3C8B;
+    padding: 4px;
+}
+
+.option-icon.stcpay svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Tamara Icon */
+.option-icon.tamara {
+    background: #3CAEA3;
+    padding: 4px;
+}
+
+.option-icon.tamara svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Tabby Icon */
+.option-icon.tabby {
+    background: #292929;
+    padding: 4px;
+}
+
+.option-icon.tabby svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Popular Tag */
+.payment-option .popular-tag {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-left: auto;
+}
+
+[dir="rtl"] .payment-option .popular-tag {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+/* Installment Tag */
+.payment-option .installment-tag {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-left: auto;
+}
+
+[dir="rtl"] .payment-option .installment-tag {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+/* Featured Payment Option */
+.payment-option.featured {
+    border-color: rgba(16, 185, 129, 0.4);
+    background: rgba(16, 185, 129, 0.08);
+}
+
+/* Installment Payment Option */
+.payment-option.installment {
+    border-color: rgba(245, 158, 11, 0.3);
+}
+
+.payment-option.installment:hover {
+    border-color: rgba(245, 158, 11, 0.5);
+    background: rgba(245, 158, 11, 0.1);
+}
+
+.payment-option.installment.active {
+    border-color: #f59e0b;
+    background: rgba(245, 158, 11, 0.15);
+}
+
+/* Phone Input with Country Code */
+.phone-input-wrapper {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.03);
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.phone-input-wrapper:focus-within {
+    border-color: #10b981;
+    background: rgba(16, 185, 129, 0.05);
+}
+
+.phone-input-wrapper .country-code {
+    padding: 14px 15px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+    font-weight: 600;
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[dir="rtl"] .phone-input-wrapper .country-code {
+    border-right: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.phone-input-wrapper input {
+    border: none;
+    background: transparent;
+    flex: 1;
+}
+
+.phone-input-wrapper input:focus {
+    border: none;
+    background: transparent;
+}
+
+/* Installment Details Box */
+.installment-details {
+    margin-top: 20px;
+    background: rgba(245, 158, 11, 0.08);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.installment-breakdown h5 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #f59e0b;
+    margin-bottom: 15px;
+}
+
+.installment-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+}
+
+.installment-item:last-child {
+    border-bottom: none;
+}
+
+.installment-item span {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.installment-item strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.installment-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    margin-top: 10px;
+    border-top: 2px solid rgba(245, 158, 11, 0.3);
+}
+
+.installment-total span {
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.installment-total strong {
+    color: #f59e0b;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.installment-total small {
+    color: #10b981;
+    font-size: 0.75rem;
+    margin-left: 10px;
+}
+
+[dir="rtl"] .installment-total small {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+/* Saudi Success Page */
+.saudi-success .success-flag {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.success-whatsapp {
+    margin: 20px 0;
+}
+
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 25px;
+    background: #25D366;
+    color: #fff;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    background: #128C7E;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-btn i {
+    font-size: 1.3rem;
+}
+
+/* Installment Note in Success */
+.detail-row.installment-note {
+    background: rgba(245, 158, 11, 0.1);
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin: 5px -10px;
+}
+
+.detail-row.installment-note strong {
+    color: #f59e0b;
+}
+
+/* Saudi Payment Methods Showcase */
+.payment-showcase .saudi-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(135deg, rgba(0, 128, 53, 0.2), rgba(0, 88, 38, 0.2));
+    color: #10b981;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-left: 15px;
+}
+
+[dir="rtl"] .payment-showcase .saudi-badge {
+    margin-left: 0;
+    margin-right: 15px;
+}
+
+.payment-method.featured {
+    position: relative;
+    border: 2px solid rgba(16, 185, 129, 0.4);
+    background: rgba(16, 185, 129, 0.08);
+}
+
+.payment-method .method-badge {
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: #fff;
+    font-size: 0.55rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 10px;
+    white-space: nowrap;
+}
+
+.payment-method .method-badge.installment {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.method-icon.mada {
+    background: linear-gradient(135deg, #1D4ED8, #3B82F6);
+    color: #fff;
+}
+
+.method-icon.stcpay {
+    background: #4F3C8B;
+}
+
+.method-icon.tamara {
+    background: #3CAEA3;
+}
+
+.method-icon.tabby {
+    background: #292929;
+}
+
+.processing-note {
+    font-size: 0.85rem;
+    margin-top: 10px;
+}
+
+/* Price Amount - SAR styling */
+.price-amount {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 8px;
+}
+
+.price-amount .amount {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.price-amount .currency {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}

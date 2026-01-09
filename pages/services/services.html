@@ -254,8 +254,8 @@
                         <div class="price-header">
                             <span class="price-tier" data-i18n="plan.starter">Starter</span>
                             <div class="price-amount">
-                                <span class="currency">$</span>
-                                <span class="amount">99</span>
+                                <span class="amount">369</span>
+                                <span class="currency" data-i18n="currency.sar">SAR</span>
                             </div>
                             <span class="price-period" data-i18n="plan.oneTime">One-time payment</span>
                         </div>
@@ -270,7 +270,7 @@
                                 <li class="disabled"><i class="fas fa-times"></i> <span data-i18n="starter.f7">Advanced Modules</span></li>
                                 <li class="disabled"><i class="fas fa-times"></i> <span data-i18n="starter.f8">1-on-1 Mentoring</span></li>
                             </ul>
-                            <button class="btn-price" onclick="openCheckout('starter', 99)">
+                            <button class="btn-price" onclick="openCheckout('starter', 369)">
                                 <span data-i18n="btn.getStarted">Get Started</span>
                                 <i class="fas fa-arrow-right"></i>
                             </button>
@@ -283,11 +283,11 @@
                         <div class="price-header">
                             <span class="price-tier" data-i18n="plan.professional">Professional</span>
                             <div class="price-amount">
-                                <span class="currency">$</span>
-                                <span class="amount">299</span>
+                                <span class="amount">1,099</span>
+                                <span class="currency" data-i18n="currency.sar">SAR</span>
                             </div>
                             <span class="price-period" data-i18n="plan.oneTime">One-time payment</span>
-                            <div class="price-savings" data-i18n="plan.save">Save $200</div>
+                            <div class="price-savings" data-i18n="plan.save">وفر 750 ريال</div>
                         </div>
                         <div class="price-body">
                             <ul class="price-features">
@@ -301,7 +301,7 @@
                                 <li><i class="fas fa-check"></i> <span data-i18n="pro.f8">Priority Support</span></li>
                                 <li><i class="fas fa-check"></i> <span data-i18n="pro.f9">Professional Certificate</span></li>
                             </ul>
-                            <button class="btn-price featured" onclick="openCheckout('professional', 299)">
+                            <button class="btn-price featured" onclick="openCheckout('professional', 1099)">
                                 <span data-i18n="btn.enrollNow">Enroll Now</span>
                                 <i class="fas fa-arrow-right"></i>
                             </button>
@@ -313,8 +313,8 @@
                         <div class="price-header">
                             <span class="price-tier" data-i18n="plan.master">Master</span>
                             <div class="price-amount">
-                                <span class="currency">$</span>
-                                <span class="amount">599</span>
+                                <span class="amount">2,199</span>
+                                <span class="currency" data-i18n="currency.sar">SAR</span>
                             </div>
                             <span class="price-period" data-i18n="plan.oneTime">One-time payment</span>
                         </div>
@@ -330,7 +330,7 @@
                                 <li><i class="fas fa-check"></i> <span data-i18n="master.f8">VIP Support Channel</span></li>
                                 <li><i class="fas fa-check"></i> <span data-i18n="master.f9">Master Certificate</span></li>
                             </ul>
-                            <button class="btn-price premium" onclick="openCheckout('master', 599)">
+                            <button class="btn-price premium" onclick="openCheckout('master', 2199)">
                                 <span data-i18n="btn.goMaster">Go Master</span>
                                 <i class="fas fa-crown"></i>
                             </button>
@@ -338,36 +338,46 @@
                     </div>
                 </div>
 
-                <!-- Payment Methods Showcase -->
+                <!-- Payment Methods Showcase - Saudi Arabia -->
                 <div class="payment-showcase" data-aos="fade-up">
                     <div class="payment-header">
                         <i class="fas fa-shield-alt"></i>
-                        <h4 data-i18n="payment.title">Secure & Trusted Payment Methods</h4>
+                        <h4 data-i18n="payment.title">طرق دفع آمنة وموثوقة</h4>
+                        <span class="saudi-badge">🇸🇦 <span data-i18n="payment.saudi">معتمد في السعودية</span></span>
                     </div>
                     <div class="payment-methods-row">
+                        <div class="payment-method featured">
+                            <div class="method-icon mada">
+                                <svg viewBox="0 0 48 48" fill="currentColor"><path d="M24 4C12.954 4 4 12.954 4 24s8.954 20 20 20 20-8.954 20-20S35.046 4 24 4zm0 36c-8.837 0-16-7.163-16-16S15.163 8 24 8s16 7.163 16 16-7.163 16-16 16z"/><text x="24" y="28" text-anchor="middle" font-size="12" font-weight="bold">mada</text></svg>
+                            </div>
+                            <span data-i18n="payment.mada">مدى</span>
+                            <div class="method-badge" data-i18n="payment.popular">الأكثر استخداماً</div>
+                        </div>
+                        <div class="payment-method">
+                            <div class="method-icon stcpay">
+                                <svg viewBox="0 0 48 48" fill="currentColor"><circle cx="24" cy="24" r="20" fill="#4F3C8B"/><text x="24" y="28" text-anchor="middle" font-size="8" fill="white" font-weight="bold">STC</text></svg>
+                            </div>
+                            <span>STC Pay</span>
+                        </div>
+                        <div class="payment-method">
+                            <div class="method-icon tamara">
+                                <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="#3CAEA3"/><text x="24" y="28" text-anchor="middle" font-size="7" fill="white" font-weight="bold">TAMARA</text></svg>
+                            </div>
+                            <span data-i18n="payment.tamara">تمارا</span>
+                            <div class="method-badge installment" data-i18n="payment.installment">تقسيط</div>
+                        </div>
+                        <div class="payment-method">
+                            <div class="method-icon tabby">
+                                <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="#292929"/><text x="24" y="28" text-anchor="middle" font-size="8" fill="#D4FF00" font-weight="bold">tabby</text></svg>
+                            </div>
+                            <span data-i18n="payment.tabby">تابي</span>
+                            <div class="method-badge installment" data-i18n="payment.installment">تقسيط</div>
+                        </div>
                         <div class="payment-method">
                             <div class="method-icon apple">
                                 <i class="fab fa-apple"></i>
                             </div>
                             <span>Apple Pay</span>
-                        </div>
-                        <div class="payment-method">
-                            <div class="method-icon google">
-                                <i class="fab fa-google"></i>
-                            </div>
-                            <span>Google Pay</span>
-                        </div>
-                        <div class="payment-method">
-                            <div class="method-icon stripe">
-                                <i class="fab fa-stripe-s"></i>
-                            </div>
-                            <span>Stripe</span>
-                        </div>
-                        <div class="payment-method">
-                            <div class="method-icon paypal">
-                                <i class="fab fa-paypal"></i>
-                            </div>
-                            <span>PayPal</span>
                         </div>
                         <div class="payment-method">
                             <div class="method-icon visa">
@@ -381,25 +391,19 @@
                             </div>
                             <span>Mastercard</span>
                         </div>
-                        <div class="payment-method">
-                            <div class="method-icon amex">
-                                <i class="fab fa-cc-amex"></i>
-                            </div>
-                            <span>Amex</span>
-                        </div>
                     </div>
                     <div class="payment-trust">
                         <div class="trust-item">
                             <i class="fas fa-lock"></i>
-                            <span data-i18n="trust.ssl">256-bit SSL Encryption</span>
+                            <span data-i18n="trust.ssl">تشفير SSL 256-bit</span>
                         </div>
                         <div class="trust-item">
                             <i class="fas fa-undo"></i>
-                            <span data-i18n="trust.refund">30-Day Money Back</span>
+                            <span data-i18n="trust.refund">ضمان استرداد 30 يوم</span>
                         </div>
                         <div class="trust-item">
-                            <i class="fas fa-infinity"></i>
-                            <span data-i18n="trust.lifetime">Lifetime Access</span>
+                            <i class="fas fa-check-circle"></i>
+                            <span data-i18n="trust.saudi">معتمد من مؤسسة النقد</span>
                         </div>
                     </div>
                 </div>
