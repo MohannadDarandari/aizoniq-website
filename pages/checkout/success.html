@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تم الدفع بنجاح! - AIZONIQ Academy</title>
+    <title>🎉 تم الدفع بنجاح - AIZONIQ Academy</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     
     <style>
         * {
@@ -18,112 +18,161 @@
         }
         
         body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #0a0a0f 100%);
-            min-height: 100vh;
+            font-family: 'Tajawal', sans-serif;
+            background: #0a0a0f;
             color: #fff;
+            min-height: 100vh;
             direction: rtl;
         }
         
-        .success-container {
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(at 30% 30%, rgba(16, 185, 129, 0.1) 0px, transparent 50%),
+                radial-gradient(at 70% 70%, rgba(99, 102, 241, 0.1) 0px, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .success-wrapper {
+            position: relative;
+            z-index: 1;
             max-width: 800px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 60px 24px;
         }
         
+        /* Confetti Animation */
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            top: -10px;
+            animation: confetti-fall 3s linear forwards;
+        }
+        
+        @keyframes confetti-fall {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+        }
+        
+        /* Success Animation */
         .success-header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 48px;
         }
         
-        .success-icon {
-            width: 100px;
-            height: 100px;
+        .success-circle {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 24px;
+            position: relative;
+        }
+        
+        .success-circle::before {
+            content: '';
+            position: absolute;
+            inset: 0;
             background: linear-gradient(135deg, #10b981, #059669);
             border-radius: 50%;
+            animation: pulse-success 2s ease-in-out infinite;
+        }
+        
+        .success-circle i {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 25px;
-            animation: successPulse 2s ease-in-out infinite;
-        }
-        
-        .success-icon i {
-            font-size: 50px;
+            font-size: 3rem;
             color: #fff;
+            animation: checkmark-pop 0.5s ease-out;
         }
         
-        @keyframes successPulse {
-            0%, 100% {
-                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
-            }
-            50% {
-                box-shadow: 0 0 0 25px rgba(16, 185, 129, 0);
-            }
+        @keyframes pulse-success {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+            50% { transform: scale(1.05); box-shadow: 0 0 30px 10px rgba(16, 185, 129, 0); }
         }
         
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 10px;
-            color: #10b981;
+        @keyframes checkmark-pop {
+            0% { transform: scale(0); opacity: 0; }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); opacity: 1; }
         }
         
-        .success-message {
-            font-size: 1.1rem;
-            color: #888;
-            line-height: 1.7;
+        .success-header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, #10b981, #34d399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .success-header p {
+            color: #a1a1aa;
+            font-size: 1.15rem;
         }
         
         /* Invoice Card */
         .invoice-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
-            padding: 30px;
-            margin-bottom: 30px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 24px;
+            padding: 40px;
+            margin-bottom: 32px;
         }
         
         .invoice-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 40px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
         
         .invoice-logo {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: 800;
         }
         
-        .invoice-logo .logo-ai {
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+        .invoice-logo .ai {
+            background: linear-gradient(135deg, #6366f1, #a855f7);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
         
-        .invoice-title {
+        .invoice-meta {
             text-align: left;
         }
         
-        .invoice-title h2 {
-            font-size: 1.2rem;
-            color: #6366f1;
-            margin-bottom: 5px;
+        .invoice-meta h3 {
+            font-size: 1.3rem;
+            color: #10b981;
+            margin-bottom: 8px;
         }
         
-        .invoice-title span {
-            color: #888;
+        .invoice-meta p {
+            color: #71717a;
             font-size: 0.9rem;
         }
         
+        /* Invoice Grid */
         .invoice-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin-bottom: 30px;
+            gap: 32px;
+            margin-bottom: 40px;
         }
         
         @media (max-width: 600px) {
@@ -133,213 +182,290 @@
         }
         
         .invoice-section h4 {
+            color: #71717a;
             font-size: 0.85rem;
-            color: #888;
-            margin-bottom: 10px;
+            font-weight: 500;
             text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 16px;
         }
         
         .invoice-section p {
-            font-size: 1rem;
-            margin-bottom: 5px;
+            color: #e4e4e7;
+            font-size: 1.05rem;
+            line-height: 1.8;
         }
         
-        .invoice-table {
+        /* Product Table */
+        .product-table {
             width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
+            margin-bottom: 32px;
         }
         
-        .invoice-table th,
-        .invoice-table td {
-            padding: 15px;
+        .product-table thead {
+            background: rgba(99, 102, 241, 0.08);
+        }
+        
+        .product-table th {
+            padding: 16px 20px;
             text-align: right;
-        }
-        
-        .invoice-table th {
-            background: rgba(99, 102, 241, 0.1);
-            color: #6366f1;
+            font-weight: 600;
+            color: #a1a1aa;
             font-size: 0.85rem;
-            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
         
-        .invoice-table td {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        .product-table th:first-child {
+            border-radius: 0 12px 12px 0;
         }
         
-        .invoice-table .total-row {
-            background: rgba(16, 185, 129, 0.1);
+        .product-table th:last-child {
+            border-radius: 12px 0 0 12px;
+            text-align: left;
         }
         
-        .invoice-table .total-row td {
-            font-weight: 700;
-            font-size: 1.1rem;
-            color: #10b981;
-            border-bottom: none;
+        .product-table td {
+            padding: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
         }
         
-        .invoice-status {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(16, 185, 129, 0.2);
-            color: #10b981;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
+        .product-table td:last-child {
+            text-align: left;
         }
         
-        .invoice-actions {
+        .product-info {
             display: flex;
-            gap: 15px;
-            justify-content: center;
-            margin-top: 20px;
+            align-items: center;
+            gap: 16px;
         }
         
-        .btn-print {
+        .product-icon {
+            width: 56px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.1));
+            border-radius: 12px;
+            font-size: 1.5rem;
+        }
+        
+        .product-name h5 {
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+        
+        .product-name span {
+            color: #71717a;
+            font-size: 0.9rem;
+        }
+        
+        /* Invoice Totals */
+        .invoice-totals {
+            margin-right: auto;
+            width: 300px;
+            margin-left: 0;
+        }
+        
+        @media (max-width: 600px) {
+            .invoice-totals {
+                width: 100%;
+            }
+        }
+        
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            color: #a1a1aa;
+        }
+        
+        .total-row.discount span:last-child {
+            color: #10b981;
+        }
+        
+        .total-row.final {
+            padding-top: 20px;
+            margin-top: 12px;
+            border-top: 2px solid rgba(16, 185, 129, 0.3);
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #fff;
+        }
+        
+        .total-row.final span:last-child {
+            color: #10b981;
+        }
+        
+        /* Payment Badge */
+        .payment-badge {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            background: rgba(99, 102, 241, 0.1);
-            color: #6366f1;
+            gap: 10px;
             padding: 12px 24px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-size: 0.9rem;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 100px;
+            color: #10b981;
             font-weight: 600;
-            border: 1px solid rgba(99, 102, 241, 0.3);
+            margin-top: 24px;
+        }
+        
+        .payment-badge i {
+            font-size: 1.1rem;
+        }
+        
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            flex: 1;
+            min-width: 200px;
+            padding: 18px 32px;
+            background: linear-gradient(135deg, #10b981, #059669);
+            border: none;
+            border-radius: 14px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
             cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-family: inherit;
+            text-decoration: none;
             transition: all 0.3s;
         }
         
-        .btn-print:hover {
-            background: rgba(99, 102, 241, 0.2);
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(16, 185, 129, 0.3);
+        }
+        
+        .btn-secondary {
+            flex: 1;
+            min-width: 200px;
+            padding: 18px 32px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 14px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #a1a1aa;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-family: inherit;
+            transition: all 0.3s;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 255, 255, 0.2);
         }
         
         /* Next Steps */
         .next-steps {
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(99, 102, 241, 0.05));
-            border: 1px solid rgba(99, 102, 241, 0.2);
-            border-radius: 16px;
-            padding: 30px;
-            margin-bottom: 30px;
+            background: rgba(99, 102, 241, 0.05);
+            border: 1px solid rgba(99, 102, 241, 0.15);
+            border-radius: 20px;
+            padding: 32px;
+            margin-top: 32px;
         }
         
         .next-steps h3 {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-            color: #6366f1;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
+            font-size: 1.2rem;
+            margin-bottom: 24px;
+        }
+        
+        .next-steps h3 i {
+            color: #6366f1;
+        }
+        
+        .steps-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
         
         .step-item {
             display: flex;
+            gap: 20px;
             align-items: flex-start;
-            gap: 15px;
-            padding: 15px 0;
-            border-bottom: 1px solid rgba(99, 102, 241, 0.1);
-        }
-        
-        .step-item:last-child {
-            border-bottom: none;
         }
         
         .step-number {
-            width: 35px;
-            height: 35px;
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
-            border-radius: 50%;
+            width: 40px;
+            height: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.9rem;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            border-radius: 50%;
             font-weight: 700;
             flex-shrink: 0;
         }
         
         .step-content h4 {
-            font-size: 1rem;
-            margin-bottom: 5px;
+            font-size: 1.05rem;
+            margin-bottom: 6px;
         }
         
         .step-content p {
-            color: #888;
-            font-size: 0.9rem;
+            color: #71717a;
+            font-size: 0.95rem;
         }
         
-        /* WhatsApp Button */
-        .whatsapp-btn {
-            display: inline-flex;
+        /* Footer */
+        .success-footer {
+            text-align: center;
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        
+        .success-footer p {
+            color: #71717a;
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+        }
+        
+        .success-footer a {
+            color: #6366f1;
+            text-decoration: none;
+        }
+        
+        .success-footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-item {
+            display: flex;
             align-items: center;
             gap: 10px;
-            background: linear-gradient(135deg, #25D366, #128C7E);
-            color: #fff;
-            padding: 18px 40px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 700;
-            transition: all 0.3s;
-            margin-bottom: 20px;
+            color: #a1a1aa;
         }
         
-        .whatsapp-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
-        }
-        
-        .whatsapp-btn i {
-            font-size: 1.5rem;
-        }
-        
-        .home-link {
-            color: #888;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s;
-        }
-        
-        .home-link:hover {
+        .contact-item i {
             color: #6366f1;
-        }
-        
-        .actions-center {
-            text-align: center;
-            margin-top: 30px;
-        }
-        
-        /* Confetti */
-        .confetti {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            overflow: hidden;
-            z-index: -1;
-        }
-        
-        .confetti-piece {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background: #6366f1;
-            animation: confettiFall 3s ease-out forwards;
-        }
-        
-        @keyframes confettiFall {
-            0% {
-                transform: translateY(-100vh) rotate(0deg);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(100vh) rotate(720deg);
-                opacity: 0;
-            }
         }
         
         /* Print Styles */
@@ -349,218 +475,244 @@
                 color: #000;
             }
             
-            .confetti, .whatsapp-btn, .home-link, .btn-print, .next-steps {
-                display: none !important;
+            body::before {
+                display: none;
+            }
+            
+            .success-header,
+            .action-buttons,
+            .next-steps,
+            .success-footer {
+                display: none;
             }
             
             .invoice-card {
-                border: 2px solid #000;
-                box-shadow: none;
+                border: 1px solid #ddd;
+                padding: 24px;
             }
             
-            .invoice-table th {
-                background: #f0f0f0;
-                color: #000;
+            .invoice-logo .ai {
+                -webkit-text-fill-color: #6366f1;
+            }
+            
+            .invoice-meta h3 {
+                color: #10b981;
             }
         }
     </style>
 </head>
 <body>
-    <div class="confetti" id="confetti"></div>
-    
-    <div class="success-container">
+    <div class="success-wrapper">
+        <!-- Success Header -->
         <div class="success-header">
-            <div class="success-icon">
+            <div class="success-circle">
                 <i class="fas fa-check"></i>
             </div>
-            <h1>🎉 تم الدفع بنجاح!</h1>
-            <p class="success-message">
-                مبروك! تم تسجيلك في دورة AI for Business<br>
-                تم إرسال الفاتورة على إيميلك
-            </p>
+            <h1>مبروك! تم الدفع بنجاح 🎉</h1>
+            <p>شكراً لثقتك فينا، الفاتورة أرسلناها على إيميلك</p>
         </div>
         
-        <!-- Invoice -->
+        <!-- Invoice Card -->
         <div class="invoice-card" id="invoice">
             <div class="invoice-header">
                 <div class="invoice-logo">
-                    <span class="logo-ai">AI</span><span>ZONIQ</span>
+                    <span class="ai">AI</span>ZONIQ
                 </div>
-                <div class="invoice-title">
-                    <h2><i class="fas fa-file-invoice"></i> فاتورة ضريبية</h2>
-                    <span id="display-invoice-number">INV-2026-XXXXX</span>
+                <div class="invoice-meta">
+                    <h3>فاتورة رسمية</h3>
+                    <p>رقم: <strong id="invoice-number">-</strong></p>
+                    <p>التاريخ: <span id="invoice-date">-</span></p>
                 </div>
             </div>
             
             <div class="invoice-grid">
                 <div class="invoice-section">
                     <h4>معلومات العميل</h4>
-                    <p><strong id="display-name">-</strong></p>
-                    <p id="display-email">-</p>
-                    <p id="display-phone">-</p>
-                    <p id="display-city"></p>
+                    <p>
+                        <strong id="customer-name">-</strong><br>
+                        <span id="customer-email">-</span><br>
+                        <span id="customer-phone">-</span><br>
+                        <span id="customer-city">-</span>
+                    </p>
                 </div>
                 <div class="invoice-section">
-                    <h4>معلومات الفاتورة</h4>
-                    <p><strong>رقم الفاتورة:</strong> <span id="display-invoice-number-2">-</span></p>
-                    <p><strong>التاريخ:</strong> <span id="display-date">-</span></p>
-                    <p><strong>طريقة الدفع:</strong> بطاقة ائتمان</p>
-                    <p><span class="invoice-status"><i class="fas fa-check-circle"></i> مدفوعة</span></p>
+                    <h4>معلومات الدفع</h4>
+                    <p>
+                        رقم العملية: <strong id="payment-id">-</strong><br>
+                        الحالة: <span style="color: #10b981;">تم الدفع ✓</span><br>
+                        طريقة الدفع: <span id="payment-method">بطاقة ائتمانية</span>
+                    </p>
                 </div>
             </div>
             
-            <table class="invoice-table">
+            <table class="product-table">
                 <thead>
                     <tr>
                         <th>المنتج</th>
-                        <th>الوصف</th>
                         <th>الكمية</th>
                         <th>السعر</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>🎓 دورة AI for Business</td>
-                        <td>تعلم الذكاء الاصطناعي في 30 يوم</td>
+                        <td>
+                            <div class="product-info">
+                                <div class="product-icon">🎓</div>
+                                <div class="product-name">
+                                    <h5>الدليل الشامل لاستخدام AI</h5>
+                                    <span>وصول مدى الحياة + دعم واتساب</span>
+                                </div>
+                            </div>
+                        </td>
                         <td>1</td>
-                        <td>499 ر.س</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3" style="text-align: left;">المجموع الفرعي</td>
-                        <td>499 ر.س</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3" style="text-align: left;">VAT (0%)</td>
-                        <td>0 ر.س</td>
-                    </tr>
-                    <tr class="total-row">
-                        <td colspan="3" style="text-align: left;">الإجمالي</td>
-                        <td>499 ر.س</td>
+                        <td>299 ر.س</td>
                     </tr>
                 </tbody>
             </table>
             
-            <div class="invoice-actions">
-                <button class="btn-print" onclick="window.print()">
-                    <i class="fas fa-print"></i> طباعة الفاتورة
-                </button>
-                <button class="btn-print" onclick="downloadInvoice()">
-                    <i class="fas fa-download"></i> تحميل PDF
-                </button>
+            <div class="invoice-totals">
+                <div class="total-row">
+                    <span>السعر الأصلي</span>
+                    <span style="text-decoration: line-through;">599 ر.س</span>
+                </div>
+                <div class="total-row discount">
+                    <span>الخصم (50%)</span>
+                    <span>-300 ر.س</span>
+                </div>
+                <div class="total-row final">
+                    <span>الإجمالي المدفوع</span>
+                    <span>299 ر.س</span>
+                </div>
             </div>
+            
+            <div style="text-align: center;">
+                <div class="payment-badge">
+                    <i class="fas fa-circle-check"></i>
+                    تم الدفع بنجاح
+                </div>
+            </div>
+        </div>
+        
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+            <a href="https://wa.me/966540303098?text=مرحبا، اشتريت الدليل الشامل لاستخدام AI 📘" class="btn-primary">
+                <i class="fab fa-whatsapp"></i>
+                ابدأ الآن - واتساب
+            </a>
+            <button class="btn-secondary" onclick="window.print()">
+                <i class="fas fa-print"></i>
+                طباعة الفاتورة
+            </button>
         </div>
         
         <!-- Next Steps -->
         <div class="next-steps">
-            <h3><i class="fas fa-list-check"></i> الخطوات التالية</h3>
-            
-            <div class="step-item">
-                <div class="step-number">1</div>
-                <div class="step-content">
-                    <h4>تحقق من إيميلك</h4>
-                    <p>راح يوصلك إيميل تأكيد مع الفاتورة والتفاصيل</p>
+            <h3>
+                <i class="fas fa-rocket"></i>
+                الخطوات الجاية
+            </h3>
+            <div class="steps-list">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>راح توصلك رسالة واتساب</h4>
+                        <p>خلال دقائق راح نتواصل معك على الرقم اللي سجلته</p>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="step-item">
-                <div class="step-number">2</div>
-                <div class="step-content">
-                    <h4>انتظر تواصلنا</h4>
-                    <p>راح نتواصل معك على الواتساب خلال 24 ساعة لإضافتك للدورة</p>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>راح نضيفك لقروب الطلاب</h4>
+                        <p>قروب واتساب حصري للدعم والنقاشات مع باقي الطلاب</p>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="step-item">
-                <div class="step-number">3</div>
-                <div class="step-content">
-                    <h4>ابدأ التعلم! 🚀</h4>
-                    <p>ابدأ رحلتك مع الذكاء الاصطناعي واستعد لتطوير شغلك</p>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>ابدأ رحلتك في AI!</h4>
+                        <p>راح تستلم رابط تحميل الدليل PDF على إيميلك</p>
+                    </div>
                 </div>
             </div>
         </div>
         
-        <div class="actions-center">
-            <a href="https://wa.me/966540303098?text=مرحبا!%20دفعت%20للدورة%20ورقم%20الفاتورة%20هو%20" target="_blank" class="whatsapp-btn" id="whatsapp-link">
-                <i class="fab fa-whatsapp"></i>
-                تواصل معنا الآن
-            </a>
-            
-            <br><br>
-            
-            <a href="../home/index.html" class="home-link">
-                <i class="fas fa-home"></i> العودة للرئيسية
-            </a>
+        <!-- Footer -->
+        <div class="success-footer">
+            <p>لأي استفسار، لا تتردد تتواصل معنا</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>+966 54 030 3098</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>support@aizoniq.com</span>
+                </div>
+            </div>
         </div>
     </div>
     
     <script>
         // ========================================
-        // LOAD CUSTOMER DATA & DISPLAY INVOICE
+        // SUCCESS PAGE SCRIPT
         // ========================================
         
         // Get customer data from localStorage
         const customerData = JSON.parse(localStorage.getItem('aizoniq_customer') || '{}');
         
-        // Get payment info from URL if available (Moyasar callback)
-        const urlParams = new URLSearchParams(window.location.search);
-        const paymentId = urlParams.get('id');
-        const paymentStatus = urlParams.get('status');
-        
-        // Use URL invoice ID or stored one
-        const invoiceNumber = paymentId || customerData.invoiceNumber || 'INV-2026-' + Math.random().toString(36).substr(2, 5).toUpperCase();
-        
-        // Display customer info
+        // Fill invoice data
         if (customerData.name) {
-            document.getElementById('display-name').textContent = customerData.name;
+            document.getElementById('customer-name').textContent = customerData.name;
         }
         if (customerData.email) {
-            document.getElementById('display-email').textContent = customerData.email;
+            document.getElementById('customer-email').textContent = customerData.email;
         }
         if (customerData.phone) {
-            document.getElementById('display-phone').textContent = customerData.phone;
+            document.getElementById('customer-phone').textContent = customerData.phone;
         }
         if (customerData.city) {
-            document.getElementById('display-city').textContent = customerData.city;
+            document.getElementById('customer-city').textContent = customerData.city;
+        }
+        if (customerData.invoiceNumber) {
+            document.getElementById('invoice-number').textContent = customerData.invoiceNumber;
+        }
+        if (customerData.paymentId) {
+            document.getElementById('payment-id').textContent = customerData.paymentId;
         }
         
-        // Display invoice info
-        document.getElementById('display-invoice-number').textContent = invoiceNumber;
-        document.getElementById('display-invoice-number-2').textContent = invoiceNumber;
-        
+        // Set date
         const now = new Date();
-        const dateOptions = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
-        document.getElementById('display-date').textContent = now.toLocaleDateString('ar-SA', dateOptions);
+        const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('invoice-date').textContent = now.toLocaleDateString('ar-SA', dateOptions);
         
-        // Update WhatsApp link with invoice number
-        const whatsappLink = document.getElementById('whatsapp-link');
-        whatsappLink.href = `https://wa.me/966540303098?text=مرحبا!%20دفعت%20للدورة%20ورقم%20الفاتورة%20هو%20${invoiceNumber}`;
+        // Get payment ID from URL params (from Moyasar redirect)
+        const urlParams = new URLSearchParams(window.location.search);
+        const paymentId = urlParams.get('id') || urlParams.get('payment_id');
+        if (paymentId) {
+            document.getElementById('payment-id').textContent = paymentId;
+        }
         
-        // Confetti animation
+        // Create confetti effect
         function createConfetti() {
-            const confettiContainer = document.getElementById('confetti');
-            const colors = ['#6366f1', '#8b5cf6', '#10b981', '#f59e0b', '#ef4444', '#ec4899'];
+            const colors = ['#10b981', '#6366f1', '#a855f7', '#f59e0b', '#ec4899'];
             
             for (let i = 0; i < 50; i++) {
-                const piece = document.createElement('div');
-                piece.className = 'confetti-piece';
-                piece.style.left = Math.random() * 100 + '%';
-                piece.style.background = colors[Math.floor(Math.random() * colors.length)];
-                piece.style.animationDelay = Math.random() * 2 + 's';
-                piece.style.animationDuration = (Math.random() * 2 + 2) + 's';
-                confettiContainer.appendChild(piece);
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.style.left = Math.random() * 100 + 'vw';
+                    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+                    confetti.style.animationDuration = (Math.random() * 2 + 2) + 's';
+                    document.body.appendChild(confetti);
+                    
+                    setTimeout(() => confetti.remove(), 3000);
+                }, i * 50);
             }
         }
         
+        // Run confetti on load
         createConfetti();
-        
-        // Download invoice as image (simple solution)
-        function downloadInvoice() {
-            alert('جاري تحميل الفاتورة...\nللحصول على نسخة PDF، اضغط طباعة ثم "حفظ كـ PDF"');
-            window.print();
-        }
-        
-        // Clear customer data after showing (optional)
-        // localStorage.removeItem('aizoniq_customer');
     </script>
 </body>
 </html>

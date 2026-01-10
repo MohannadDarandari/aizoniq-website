@@ -73,7 +73,7 @@ export const SERVICES = [
   {
     id: 'analytics',
     name: 'Data Analytics',
-    startPrice: 499
+    startPrice: 299
   },
   {
     id: 'video',

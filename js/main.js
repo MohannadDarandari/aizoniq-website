@@ -446,7 +446,7 @@ const planDetails = {
     course: {
         name: 'AI for Business',
         nameAr: 'AI للبزنس',
-        price: 499
+        price: 299
     }
 };
 
