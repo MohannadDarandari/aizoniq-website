@@ -41,7 +41,15 @@ html[dir="rtl"] {
     direction: rtl;
 }
 
+html[dir="rtl"] .nav-wrapper {
+    flex-direction: row-reverse;
+}
+
 html[dir="rtl"] .nav-menu {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .nav-buttons {
     flex-direction: row-reverse;
 }
 
