@@ -23,32 +23,33 @@
             min-height: 100vh;
             color: #fff;
             direction: rtl;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
         
         .success-container {
-            max-width: 500px;
+            max-width: 800px;
             margin: 0 auto;
             padding: 40px 20px;
+        }
+        
+        .success-header {
             text-align: center;
+            margin-bottom: 40px;
         }
         
         .success-icon {
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
             background: linear-gradient(135deg, #10b981, #059669);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 30px;
+            margin: 0 auto 25px;
             animation: successPulse 2s ease-in-out infinite;
         }
         
         .success-icon i {
-            font-size: 60px;
+            font-size: 50px;
             color: #fff;
         }
         
@@ -57,76 +58,177 @@
                 box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
             }
             50% {
-                box-shadow: 0 0 0 30px rgba(16, 185, 129, 0);
+                box-shadow: 0 0 0 25px rgba(16, 185, 129, 0);
             }
         }
         
         h1 {
             font-size: 2rem;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             color: #10b981;
         }
         
         .success-message {
             font-size: 1.1rem;
             color: #888;
-            margin-bottom: 30px;
             line-height: 1.7;
         }
         
-        .order-details {
+        /* Invoice Card */
+        .invoice-card {
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 16px;
-            padding: 24px;
+            padding: 30px;
             margin-bottom: 30px;
-            text-align: right;
         }
         
-        .order-details h3 {
-            font-size: 1rem;
-            margin-bottom: 20px;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .order-details h3 i {
-            color: #6366f1;
-        }
-        
-        .detail-row {
+        .invoice-header {
             display: flex;
             justify-content: space-between;
-            padding: 12px 0;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
         
-        .detail-row:last-child {
-            border-bottom: none;
+        .invoice-logo {
+            font-size: 1.5rem;
+            font-weight: 800;
         }
         
-        .detail-row span:first-child {
+        .invoice-logo .logo-ai {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .invoice-title {
+            text-align: left;
+        }
+        
+        .invoice-title h2 {
+            font-size: 1.2rem;
+            color: #6366f1;
+            margin-bottom: 5px;
+        }
+        
+        .invoice-title span {
             color: #888;
+            font-size: 0.9rem;
         }
         
-        .detail-row span:last-child {
+        .invoice-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        @media (max-width: 600px) {
+            .invoice-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .invoice-section h4 {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        
+        .invoice-section p {
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+        
+        .invoice-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        
+        .invoice-table th,
+        .invoice-table td {
+            padding: 15px;
+            text-align: right;
+        }
+        
+        .invoice-table th {
+            background: rgba(99, 102, 241, 0.1);
+            color: #6366f1;
+            font-size: 0.85rem;
             font-weight: 600;
         }
         
+        .invoice-table td {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .invoice-table .total-row {
+            background: rgba(16, 185, 129, 0.1);
+        }
+        
+        .invoice-table .total-row td {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #10b981;
+            border-bottom: none;
+        }
+        
+        .invoice-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(16, 185, 129, 0.2);
+            color: #10b981;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .invoice-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .btn-print {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(99, 102, 241, 0.1);
+            color: #6366f1;
+            padding: 12px 24px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-print:hover {
+            background: rgba(99, 102, 241, 0.2);
+        }
+        
+        /* Next Steps */
         .next-steps {
             background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(99, 102, 241, 0.05));
             border: 1px solid rgba(99, 102, 241, 0.2);
             border-radius: 16px;
-            padding: 24px;
+            padding: 30px;
             margin-bottom: 30px;
-            text-align: right;
         }
         
         .next-steps h3 {
-            font-size: 1rem;
-            margin-bottom: 15px;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
             color: #6366f1;
             display: flex;
             align-items: center;
@@ -137,28 +239,38 @@
             display: flex;
             align-items: flex-start;
             gap: 15px;
-            padding: 12px 0;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+        }
+        
+        .step-item:last-child {
+            border-bottom: none;
         }
         
         .step-number {
-            width: 30px;
-            height: 30px;
+            width: 35px;
+            height: 35px;
             background: linear-gradient(135deg, #6366f1, #8b5cf6);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             font-weight: 700;
             flex-shrink: 0;
         }
         
-        .step-text {
-            color: #ccc;
-            font-size: 0.95rem;
-            line-height: 1.5;
+        .step-content h4 {
+            font-size: 1rem;
+            margin-bottom: 5px;
         }
         
+        .step-content p {
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        /* WhatsApp Button */
         .whatsapp-btn {
             display: inline-flex;
             align-items: center;
@@ -194,6 +306,12 @@
             color: #6366f1;
         }
         
+        .actions-center {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        /* Confetti */
         .confetti {
             position: fixed;
             top: 0;
@@ -223,79 +341,199 @@
                 opacity: 0;
             }
         }
+        
+        /* Print Styles */
+        @media print {
+            body {
+                background: #fff;
+                color: #000;
+            }
+            
+            .confetti, .whatsapp-btn, .home-link, .btn-print, .next-steps {
+                display: none !important;
+            }
+            
+            .invoice-card {
+                border: 2px solid #000;
+                box-shadow: none;
+            }
+            
+            .invoice-table th {
+                background: #f0f0f0;
+                color: #000;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="confetti" id="confetti"></div>
     
     <div class="success-container">
-        <div class="success-icon">
-            <i class="fas fa-check"></i>
+        <div class="success-header">
+            <div class="success-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            <h1>🎉 تم الدفع بنجاح!</h1>
+            <p class="success-message">
+                مبروك! تم تسجيلك في دورة AI for Business<br>
+                تم إرسال الفاتورة على إيميلك
+            </p>
         </div>
         
-        <h1>🎉 تم الدفع بنجاح!</h1>
-        <p class="success-message">
-            مبروك! تم تسجيلك في دورة AI for Business<br>
-            راح نتواصل معك خلال 24 ساعة
-        </p>
-        
-        <div class="order-details">
-            <h3><i class="fas fa-receipt"></i> تفاصيل الطلب</h3>
-            <div class="detail-row">
-                <span>رقم الطلب</span>
-                <span id="orderNumber">AIZONIQ-2026-XXXX</span>
+        <!-- Invoice -->
+        <div class="invoice-card" id="invoice">
+            <div class="invoice-header">
+                <div class="invoice-logo">
+                    <span class="logo-ai">AI</span><span>ZONIQ</span>
+                </div>
+                <div class="invoice-title">
+                    <h2><i class="fas fa-file-invoice"></i> فاتورة ضريبية</h2>
+                    <span id="display-invoice-number">INV-2026-XXXXX</span>
+                </div>
             </div>
-            <div class="detail-row">
-                <span>الدورة</span>
-                <span>AI for Business</span>
+            
+            <div class="invoice-grid">
+                <div class="invoice-section">
+                    <h4>معلومات العميل</h4>
+                    <p><strong id="display-name">-</strong></p>
+                    <p id="display-email">-</p>
+                    <p id="display-phone">-</p>
+                    <p id="display-city"></p>
+                </div>
+                <div class="invoice-section">
+                    <h4>معلومات الفاتورة</h4>
+                    <p><strong>رقم الفاتورة:</strong> <span id="display-invoice-number-2">-</span></p>
+                    <p><strong>التاريخ:</strong> <span id="display-date">-</span></p>
+                    <p><strong>طريقة الدفع:</strong> بطاقة ائتمان</p>
+                    <p><span class="invoice-status"><i class="fas fa-check-circle"></i> مدفوعة</span></p>
+                </div>
             </div>
-            <div class="detail-row">
-                <span>المبلغ المدفوع</span>
-                <span style="color: #10b981;">499 ر.س</span>
-            </div>
-            <div class="detail-row">
-                <span>التاريخ</span>
-                <span id="orderDate"></span>
+            
+            <table class="invoice-table">
+                <thead>
+                    <tr>
+                        <th>المنتج</th>
+                        <th>الوصف</th>
+                        <th>الكمية</th>
+                        <th>السعر</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>🎓 دورة AI for Business</td>
+                        <td>تعلم الذكاء الاصطناعي في 30 يوم</td>
+                        <td>1</td>
+                        <td>499 ر.س</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="text-align: left;">المجموع الفرعي</td>
+                        <td>499 ر.س</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="text-align: left;">VAT (0%)</td>
+                        <td>0 ر.س</td>
+                    </tr>
+                    <tr class="total-row">
+                        <td colspan="3" style="text-align: left;">الإجمالي</td>
+                        <td>499 ر.س</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="invoice-actions">
+                <button class="btn-print" onclick="window.print()">
+                    <i class="fas fa-print"></i> طباعة الفاتورة
+                </button>
+                <button class="btn-print" onclick="downloadInvoice()">
+                    <i class="fas fa-download"></i> تحميل PDF
+                </button>
             </div>
         </div>
         
+        <!-- Next Steps -->
         <div class="next-steps">
             <h3><i class="fas fa-list-check"></i> الخطوات التالية</h3>
+            
             <div class="step-item">
                 <div class="step-number">1</div>
-                <div class="step-text">راح يوصلك إيميل تأكيد خلال دقائق</div>
+                <div class="step-content">
+                    <h4>تحقق من إيميلك</h4>
+                    <p>راح يوصلك إيميل تأكيد مع الفاتورة والتفاصيل</p>
+                </div>
             </div>
+            
             <div class="step-item">
                 <div class="step-number">2</div>
-                <div class="step-text">راح نتواصل معك على الواتساب لإضافتك للدورة</div>
+                <div class="step-content">
+                    <h4>انتظر تواصلنا</h4>
+                    <p>راح نتواصل معك على الواتساب خلال 24 ساعة لإضافتك للدورة</p>
+                </div>
             </div>
+            
             <div class="step-item">
                 <div class="step-number">3</div>
-                <div class="step-text">ابدأ رحلتك مع الذكاء الاصطناعي! 🚀</div>
+                <div class="step-content">
+                    <h4>ابدأ التعلم! 🚀</h4>
+                    <p>ابدأ رحلتك مع الذكاء الاصطناعي واستعد لتطوير شغلك</p>
+                </div>
             </div>
         </div>
         
-        <a href="https://wa.me/966540303098?text=مرحبا!%20دفعت%20للدورة%20وأبغى%20أبدأ" target="_blank" class="whatsapp-btn">
-            <i class="fab fa-whatsapp"></i>
-            تواصل معنا الآن
-        </a>
-        
-        <br><br>
-        
-        <a href="../home/index.html" class="home-link">
-            <i class="fas fa-home"></i> العودة للرئيسية
-        </a>
+        <div class="actions-center">
+            <a href="https://wa.me/966540303098?text=مرحبا!%20دفعت%20للدورة%20ورقم%20الفاتورة%20هو%20" target="_blank" class="whatsapp-btn" id="whatsapp-link">
+                <i class="fab fa-whatsapp"></i>
+                تواصل معنا الآن
+            </a>
+            
+            <br><br>
+            
+            <a href="../home/index.html" class="home-link">
+                <i class="fas fa-home"></i> العودة للرئيسية
+            </a>
+        </div>
     </div>
     
     <script>
-        // Generate order number
-        const orderNum = 'AIZONIQ-2026-' + Math.random().toString(36).substr(2, 6).toUpperCase();
-        document.getElementById('orderNumber').textContent = orderNum;
+        // ========================================
+        // LOAD CUSTOMER DATA & DISPLAY INVOICE
+        // ========================================
         
-        // Set current date
+        // Get customer data from localStorage
+        const customerData = JSON.parse(localStorage.getItem('aizoniq_customer') || '{}');
+        
+        // Get payment info from URL if available (Moyasar callback)
+        const urlParams = new URLSearchParams(window.location.search);
+        const paymentId = urlParams.get('id');
+        const paymentStatus = urlParams.get('status');
+        
+        // Use URL invoice ID or stored one
+        const invoiceNumber = paymentId || customerData.invoiceNumber || 'INV-2026-' + Math.random().toString(36).substr(2, 5).toUpperCase();
+        
+        // Display customer info
+        if (customerData.name) {
+            document.getElementById('display-name').textContent = customerData.name;
+        }
+        if (customerData.email) {
+            document.getElementById('display-email').textContent = customerData.email;
+        }
+        if (customerData.phone) {
+            document.getElementById('display-phone').textContent = customerData.phone;
+        }
+        if (customerData.city) {
+            document.getElementById('display-city').textContent = customerData.city;
+        }
+        
+        // Display invoice info
+        document.getElementById('display-invoice-number').textContent = invoiceNumber;
+        document.getElementById('display-invoice-number-2').textContent = invoiceNumber;
+        
         const now = new Date();
-        const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
-        document.getElementById('orderDate').textContent = now.toLocaleDateString('ar-SA', options);
+        const dateOptions = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+        document.getElementById('display-date').textContent = now.toLocaleDateString('ar-SA', dateOptions);
+        
+        // Update WhatsApp link with invoice number
+        const whatsappLink = document.getElementById('whatsapp-link');
+        whatsappLink.href = `https://wa.me/966540303098?text=مرحبا!%20دفعت%20للدورة%20ورقم%20الفاتورة%20هو%20${invoiceNumber}`;
         
         // Confetti animation
         function createConfetti() {
@@ -315,11 +553,14 @@
         
         createConfetti();
         
-        // Get payment info from URL if available
-        const urlParams = new URLSearchParams(window.location.search);
-        if (urlParams.get('id')) {
-            document.getElementById('orderNumber').textContent = urlParams.get('id');
+        // Download invoice as image (simple solution)
+        function downloadInvoice() {
+            alert('جاري تحميل الفاتورة...\nللحصول على نسخة PDF، اضغط طباعة ثم "حفظ كـ PDF"');
+            window.print();
         }
+        
+        // Clear customer data after showing (optional)
+        // localStorage.removeItem('aizoniq_customer');
     </script>
 </body>
 </html>
