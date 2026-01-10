@@ -1752,6 +1752,71 @@
     box-shadow: 0 10px 30px rgba(245, 158, 11, 0.3);
 }
 
+/* WhatsApp Button */
+.btn-price.whatsapp-btn {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    border-color: transparent;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.btn-price.whatsapp-btn i {
+    font-size: 1.4rem;
+    margin-right: 10px;
+}
+
+[dir="rtl"] .btn-price.whatsapp-btn i {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+.btn-price.whatsapp-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
+}
+
+/* Simple Payment Showcase */
+.payment-showcase.simple {
+    text-align: center;
+    padding: 40px;
+}
+
+.payment-showcase.simple .payment-header {
+    flex-direction: column;
+    gap: 15px;
+}
+
+.payment-showcase.simple .payment-header h4 {
+    margin: 0;
+}
+
+.payment-desc {
+    color: var(--text-secondary);
+    margin: 20px 0;
+    font-size: 1rem;
+}
+
+.payment-methods-simple {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.payment-methods-simple span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.payment-methods-simple i {
+    color: #10b981;
+}
+
 /* Payment Showcase */
 .payment-showcase {
     margin-top: 80px;
