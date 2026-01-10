@@ -247,91 +247,31 @@
                     <p data-i18n="pricing.subtitle">Select the plan that matches your goals. All plans include lifetime access.</p>
                 </div>
 
-                <div class="pricing-cards" data-aos="fade-up">
-                    <!-- Starter Plan -->
-                    <div class="price-card">
+                <div class="pricing-cards single-plan" data-aos="fade-up">
+                    <!-- Single Course -->
+                    <div class="price-card featured single">
                         <div class="price-header">
-                            <span class="price-tier" data-i18n="plan.starter">Starter</span>
+                            <span class="price-tier" data-i18n="course.title">AI for Business</span>
                             <div class="price-amount">
-                                <span class="amount">369</span>
+                                <span class="amount">499</span>
                                 <span class="currency" data-i18n="currency.sar">SAR</span>
                             </div>
                             <span class="price-period" data-i18n="plan.oneTime">One-time payment</span>
                         </div>
                         <div class="price-body">
                             <ul class="price-features">
-                                <li><i class="fas fa-check"></i> <span data-i18n="starter.f1">10 Hours of HD Video</span></li>
-                                <li><i class="fas fa-check"></i> <span data-i18n="starter.f2">AI Fundamentals Course</span></li>
-                                <li><i class="fas fa-check"></i> <span data-i18n="starter.f3">Basic Chatbot Training</span></li>
-                                <li><i class="fas fa-check"></i> <span data-i18n="starter.f4">Downloadable Resources</span></li>
-                                <li><i class="fas fa-check"></i> <span data-i18n="starter.f5">Email Support</span></li>
-                                <li><i class="fas fa-check"></i> <span data-i18n="starter.f6">Certificate of Completion</span></li>
-                                <li class="disabled"><i class="fas fa-times"></i> <span data-i18n="starter.f7">Advanced Modules</span></li>
-                                <li class="disabled"><i class="fas fa-times"></i> <span data-i18n="starter.f8">1-on-1 Mentoring</span></li>
+                                <li><i class="fas fa-check"></i> <span data-i18n="course.f1">كيف تستخدم AI في البزنس</span></li>
+                                <li><i class="fas fa-check"></i> <span data-i18n="course.f2">أتمتة المهام اليومية</span></li>
+                                <li><i class="fas fa-check"></i> <span data-i18n="course.f3">إنشاء محتوى بالذكاء الاصطناعي</span></li>
+                                <li><i class="fas fa-check"></i> <span data-i18n="course.f4">بناء شات بوت لخدمة العملاء</span></li>
+                                <li><i class="fas fa-check"></i> <span data-i18n="course.f5">تحليل البيانات بـ AI</span></li>
+                                <li><i class="fas fa-check"></i> <span data-i18n="course.f6">دعم مباشر على واتساب</span></li>
+                                <li><i class="fas fa-check"></i> <span data-i18n="course.f7">شهادة إتمام</span></li>
+                                <li><i class="fas fa-check"></i> <span data-i18n="course.f8">وصول مدى الحياة</span></li>
                             </ul>
-                            <button class="btn-price" onclick="openCheckout('starter', 369)">
-                                <span data-i18n="btn.getStarted">Get Started</span>
+                            <button class="btn-price featured" onclick="openCheckout('course', 499)">
+                                <span data-i18n="btn.enrollNow">سجّل الآن</span>
                                 <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Professional Plan -->
-                    <div class="price-card featured">
-                        <div class="featured-badge" data-i18n="plan.bestValue">BEST VALUE</div>
-                        <div class="price-header">
-                            <span class="price-tier" data-i18n="plan.professional">Professional</span>
-                            <div class="price-amount">
-                                <span class="amount">1,099</span>
-                                <span class="currency" data-i18n="currency.sar">SAR</span>
-                            </div>
-                            <span class="price-period" data-i18n="plan.oneTime">One-time payment</span>
-                            <div class="price-savings" data-i18n="plan.save">وفر 750 ريال</div>
-                        </div>
-                        <div class="price-body">
-                            <ul class="price-features">
-                                <li><i class="fas fa-check"></i> <span data-i18n="pro.f1">40+ Hours of HD Video</span></li>
-                                <li><i class="fas fa-check"></i> <span data-i18n="pro.f2">Complete AI Mastery Program</span></li>
-                                <li><i class="fas fa-check"></i> <span data-i18n="pro.f3">Website Building with AI</span></li>
-                                <li><i class="fas fa-check"></i> <span data-i18n="pro.f4">Advanced Chatbot Development</span></li>
-                                <li><i class="fas fa-check"></i> <span data-i18n="pro.f5">Full Automation Systems</span></li>
-                                <li><i class="fas fa-check"></i> <span data-i18n="pro.f6">AI Business Applications</span></li>
-                                <li><i class="fas fa-check"></i> <span data-i18n="pro.f7">1 Live Mentoring Session</span></li>
-                                <li><i class="fas fa-check"></i> <span data-i18n="pro.f8">Priority Support</span></li>
-                                <li><i class="fas fa-check"></i> <span data-i18n="pro.f9">Professional Certificate</span></li>
-                            </ul>
-                            <button class="btn-price featured" onclick="openCheckout('professional', 1099)">
-                                <span data-i18n="btn.enrollNow">Enroll Now</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Master Plan -->
-                    <div class="price-card premium">
-                        <div class="price-header">
-                            <span class="price-tier" data-i18n="plan.master">Master</span>
-                            <div class="price-amount">
-                                <span class="amount">2,199</span>
-                                <span class="currency" data-i18n="currency.sar">SAR</span>
-                            </div>
-                            <span class="price-period" data-i18n="plan.oneTime">One-time payment</span>
-                        </div>
-                        <div class="price-body">
-                            <ul class="price-features">
-                                <li><i class="fas fa-check"></i> <span data-i18n="master.f1">80+ Hours of HD Video</span></li>
-                                <li><i class="fas fa-check"></i> <span data-i18n="master.f2">Everything in Professional</span></li>
-                                <li><i class="fas fa-check"></i> <span data-i18n="master.f3">Build Your Own AI Tools</span></li>
-                                <li><i class="fas fa-check"></i> <span data-i18n="master.f4">Enterprise Solutions Training</span></li>
-                                <li><i class="fas fa-check"></i> <span data-i18n="master.f5">5 Live Mentoring Sessions</span></li>
-                                <li><i class="fas fa-check"></i> <span data-i18n="master.f6">Private Community Access</span></li>
-                                <li><i class="fas fa-check"></i> <span data-i18n="master.f7">Lifetime Updates</span></li>
-                                <li><i class="fas fa-check"></i> <span data-i18n="master.f8">VIP Support Channel</span></li>
-                                <li><i class="fas fa-check"></i> <span data-i18n="master.f9">Master Certificate</span></li>
-                            </ul>
-                            <button class="btn-price premium" onclick="openCheckout('master', 2199)">
-                                <span data-i18n="btn.goMaster">Go Master</span>
-                                <i class="fas fa-crown"></i>
                             </button>
                         </div>
                     </div>

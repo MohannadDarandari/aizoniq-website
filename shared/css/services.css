@@ -1556,6 +1556,22 @@
     align-items: stretch;
 }
 
+/* Single Plan Layout */
+.pricing-cards.single-plan {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.price-card.single {
+    transform: none;
+}
+
+.price-card.single:hover {
+    transform: translateY(-10px);
+}
+
 .price-card {
     position: relative;
     background: rgba(255, 255, 255, 0.02);

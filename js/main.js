@@ -443,20 +443,10 @@ console.log('%cWebsite crafted with ❤️ and AI', 'color: #8b5cf6; font-size: 
 // PREMIUM CHECKOUT SYSTEM - SAUDI ARABIA 🇸🇦
 // ============================================
 const planDetails = {
-    starter: {
-        name: 'Starter Course',
-        nameAr: 'الدورة التأسيسية',
-        price: 369
-    },
-    professional: {
-        name: 'Professional Course',
-        nameAr: 'الدورة الاحترافية',
-        price: 1099
-    },
-    master: {
-        name: 'Master Course',
-        nameAr: 'دورة الماستر',
-        price: 2199
+    course: {
+        name: 'AI for Business',
+        nameAr: 'AI للبزنس',
+        price: 499
     }
 };
 
