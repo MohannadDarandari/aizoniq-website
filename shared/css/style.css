@@ -41,16 +41,28 @@ html[dir="rtl"] {
     direction: rtl;
 }
 
-html[dir="rtl"] .nav-wrapper {
+html[dir="rtl"] .navbar .nav-wrapper {
     flex-direction: row-reverse;
 }
 
-html[dir="rtl"] .nav-menu {
+html[dir="rtl"] .navbar .nav-menu {
     flex-direction: row-reverse;
 }
 
-html[dir="rtl"] .nav-buttons {
+html[dir="rtl"] .navbar .nav-buttons {
     flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .navbar .logo {
+    order: 3;
+}
+
+html[dir="rtl"] .navbar .nav-menu {
+    order: 2;
+}
+
+html[dir="rtl"] .navbar .nav-buttons {
+    order: 1;
 }
 
 html[dir="rtl"] .footer-content {
