@@ -101,7 +101,7 @@ export class ChatbotWidget {
             <div class="quick-replies-label">${isArabic ? 'اختر من الأسئلة الشائعة:' : 'Quick questions:'}</div>
             <button class="quick-reply">${isArabic ? 'ما الخدمات التي تقدمونها؟' : 'What services do you offer?'}</button>
             <button class="quick-reply">${isArabic ? 'كم أسعاركم؟' : 'How much do you charge?'}</button>
-            <button class="quick-reply">${isArabic ? 'أخبرني عن محفظتكم' : 'Tell me about your portfolio'}</button>
+            <button class="quick-reply">${isArabic ? 'أخبرني عن الدورة' : 'Tell me about the course'}</button>
             <button class="quick-reply">${isArabic ? 'معلومات التواصل' : 'Contact information'}</button>
           ` : ''}
         </div>
@@ -281,9 +281,9 @@ export class ChatbotWidget {
       return this.i18n.get('chatbot.pricing');
     }
 
-    // Portfolio
-    if (/portfolio|project|case|work|محفظة|مشروع|دراسة حالة/i.test(lower + lowerAr)) {
-      return this.i18n.get('chatbot.portfolio');
+    // Academy/Course
+    if (/course|academy|دورة|كورس|دراسة|تعلم|learn/i.test(lower + lowerAr)) {
+      return this.i18n.get('chatbot.academy');
     }
 
     // Contact

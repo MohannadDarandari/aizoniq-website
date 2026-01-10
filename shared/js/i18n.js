@@ -2661,3 +2661,13 @@ i18n.translations.ar['faq.cta.title'] = 'هل لديك أسئلة أخرى؟';
 
 i18n.translations.en['faq.cta.subtitle'] = 'Get in touch with our team for personalized support and consultation.';
 i18n.translations.ar['faq.cta.subtitle'] = 'تواصل مع فريقنا للحصول على دعم واستشارة مخصصة.';
+
+// WhatsApp Payment Translations
+i18n.translations.en['payment.whatsapp.title'] = 'Pay via WhatsApp';
+i18n.translations.ar['payment.whatsapp.title'] = 'الدفع عبر واتساب';
+
+i18n.translations.en['payment.whatsapp.desc'] = 'Click the button above and we will contact you directly to complete the payment process in the way that suits you';
+i18n.translations.ar['payment.whatsapp.desc'] = 'اضغط على الزر أعلاه وراح نتواصل معك مباشرة لإتمام عملية الدفع بالطريقة اللي تناسبك';
+
+i18n.translations.en['academy.register'] = 'Register Now via WhatsApp';
+i18n.translations.ar['academy.register'] = 'سجّل الآن عبر واتساب';
